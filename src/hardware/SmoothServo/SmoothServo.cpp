@@ -5,7 +5,7 @@
 // // Description:  This file contains class definitions for
 // //               a servo class with smoother movement
 // /////////////////////////////////////////////////////////////
-#include "SmoothServo.h"
+#include "hardware/SmoothServo/SmoothServo.h"
 #include "arduino_freertos.h"
 
 SmoothServo::SmoothServo(int pin)

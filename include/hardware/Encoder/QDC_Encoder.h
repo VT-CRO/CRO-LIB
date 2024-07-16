@@ -11,7 +11,7 @@
 #define QDC_ENCODER_H
 
 #include "arduino_freertos.h"
-#include "QDC.h"
+#include "hardware/QDC/QDC.h"
 
 #define MAX_NUM_ENCODER_INSTANCES 4
 

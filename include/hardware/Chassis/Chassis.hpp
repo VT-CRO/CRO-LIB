@@ -14,7 +14,7 @@
 #include "ros.h"
 #include "geometry_msgs/Twist.h"
 
-#include "MotorControl.h"
+#include "hardware/Motor/MotorControl.h"
 
 #define NUM_MOTORS 4
 #define tskCHASSIS_PRIORITY 1

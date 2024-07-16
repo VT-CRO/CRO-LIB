@@ -1,4 +1,5 @@
-#include "util/PID.h"
+#include "util/PID.hpp"
+#include "math.h"
 
 PID pidInit(float fKP, float fKI, float fKD, float fEpsilonInner, float fEpsilonOuter, float dInner, float dOuter)
 {
@@ -11,7 +12,6 @@ PID pidInit(float fKP, float fKI, float fKD, float fEpsilonInner, float fEpsilon
 	pid.EpsilonOuter = fEpsilonOuter;
 	pid.sigma = 0;
 	pid.lastValue = 0;
-	pid.lastTime = millis();
 	pid.dInner = dInner;
 	pid.dOuter = dOuter;
 
@@ -28,7 +28,7 @@ PID pidInit(float fKP, float fKI, float fKD, float fEpsilonInner, float fEpsilon
  * @return output value constrained from -255 to 255
  */
 
-float pidCalculate(PID pid, float fSetPoint, float fProcessVariable)
+float pidCalculate(PID pid, float fSetPoint, float fProcessVariable, float dt)
 {
 	if (fSetPoint != pid.lastTarget)
 	{
@@ -36,9 +36,7 @@ float pidCalculate(PID pid, float fSetPoint, float fProcessVariable)
 		pid.lastTarget = fSetPoint;
 	}
 
-	float fDeltaTime = (float)(millis() - pid.lastTime) / 1000.0;
-
-	pid.lastTime = millis();
+	float fDeltaTime = dt / 1000.0;
 
 	float fDeltaPV = 0;
 	if (fDeltaTime > 0)

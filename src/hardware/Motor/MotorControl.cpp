@@ -9,7 +9,7 @@
 //                so that we can take advantage of c++ objects and threads
 //                with RTOS
 /////////////////////////////////////////////////////////////
-#include <MotorControl.h>
+#include <hardware/Motor/MotorControl.h>
 
 // Notes:
 //  Have a function that allows the encoder to listen to state of motor

@@ -6,7 +6,7 @@
 //               definitions for an Encoder based on the QDC
 //               peripheral (only available on Teensy 4.x)
 ///////////////////////////////////////////////////////////// 
-#include "QDC_Encoder.h"
+#include "hardware/Encoder/QDC_Encoder.h"
 
 QDC_Encoder* QDC_Encoder::instances[5];
 

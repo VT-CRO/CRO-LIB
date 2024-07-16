@@ -1,5 +1,4 @@
-#include "QTR_8.h"
-#include "HardwareDefs.h"
+#include "hardware/LineFollowing/QTR_8.h"
 
 #define tskLINEFOLLOWING_PRIO 1 //TODO: review this value. not sure what the real value should be. -Robert
 #define CONTROL_LOOP_PERIOD 50      //TODO: this value might need to change as well -Robert

@@ -16,7 +16,7 @@ typedef struct{
 	float LastSetPoint;
 } PID;
 
-extern PID pidInit(float fKP, float fKI, float fKD, float fEpsilonInner, float fEpsilonOuter,float dInner, float dOuter);
-extern float pidCalculate(PID pid, float fSetPoint, float fProcessVariable);
+PID pidInit(float fKP, float fKI, float fKD, float fEpsilonInner, float fEpsilonOuter,float dInner, float dOuter);
+float pidCalculate(PID pid, float fSetPoint, float fProcessVariable, float dt);
 
 #endif

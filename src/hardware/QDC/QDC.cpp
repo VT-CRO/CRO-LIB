@@ -13,7 +13,7 @@
 //               but imports didn't work for some reason
 //               as a .c file, so I just kept it as .cpp
 ///////////////////////////////////////////////////////////// 
-#include "QDC.h"
+#include "hardware/QDC/QDC.h"
 
 static void xbara_pin_map(QDC_t *qdc, uint16_t pin, QDC_pin func, uint8_t PUS);
 static void xbar_connect(unsigned int input, unsigned int output);

@@ -6,6 +6,7 @@
 #include <atomic>
 
 #define NUM_SENSORS 16
+#define QTR_THRESHOLD 0.5
 
 typedef struct
 {

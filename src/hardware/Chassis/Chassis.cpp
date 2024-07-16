@@ -7,8 +7,7 @@
 // Description:  This file contains class declarations for
 //               a mecannum chassis object
 /////////////////////////////////////////////////////////////
-#include "Chassis/Chassis.hpp"
-#include <HardwareDefs.h>
+#include "hardware/Chassis/Chassis.hpp"
 
 void Chassis_init(Chassis_t* chassis_ptr, MotorControl m1, MotorControl m2, MotorControl m3, MotorControl m4) {
   // initialize motor tasks here
@@ -23,7 +22,7 @@ void Chassis_meccanum_kinematics(Chassis_t* chassis_ptr, geometry_msgs::Twist cm
   float y = cmd_vel.linear.y;
   float w = cmd_vel.angular.z;
 
-  float lw = LENGTH + WIDTH;
+  float lw = 0;
 
   // Standard inverse kinematic algorithm for a mecanum drive
   // adapted from:
