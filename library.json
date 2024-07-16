@@ -1,0 +1,31 @@
+{
+    "name": "VTCRO-Libraries",
+    "version": "1.0.0",
+    "description": "A set of commonly used Teensy libraries used by the Southeastcon team of VTCRO",
+    "keywords": "teensy",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/VT-CRO/VTCRO-Libraries.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Jayson De La Vega",
+        "email": "jaysond21@vt.edu"
+      }
+    ],
+    "dependencies": [
+      {
+        "name": "freertos-teensy",
+        "version": "https://github.com/tsandmann/freertos-teensy.git"
+      },
+      {
+        "owner": "frankjoshua",
+        "name": "Rosserial Arduino Library",
+        "version": "^0.9.1"
+      }
+    ],
+    "frameworks": "arduino",
+    "platforms": "*"
+  }
