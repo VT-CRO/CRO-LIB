@@ -17,7 +17,7 @@ jobs:
           && apt-get install -y doxygen
 
       - name: Build HTML
-        uses: ammaskar/sphinx-action@master
+        uses: ammaraskar/sphinx-action@master
         with:
           docs-folder: "docs/"
 
