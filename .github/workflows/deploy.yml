@@ -25,7 +25,7 @@ jobs:
         run: pip install sphinx sphinx_rtd_theme breathe
 
       - name: Build Documentation
-        run: cd doc && make html
+        run: cd doc && sudo make html
 
       - name: Override Jekyll
         run: touch doc/_build/html/.nojekyll
