@@ -18,12 +18,12 @@ jobs:
           working-directory: "doc"
 
       - name: Build HTML
-          run: sudo apt-get update
-            && apt-get install sphinx-doc
-            && pip3 install sphinx-rtd-theme
-            && pip3 install breathe
-            && cd doc
-            && make html
+        run: sudo apt-get update
+          && sudo apt-get install sphinx-doc
+          && pip3 install sphinx-rtd-theme
+          && pip3 install breathe
+          && cd doc
+          && make html
 
       - name: Override Jekyll
         run: touch doc/_build/html/.nojekyll
