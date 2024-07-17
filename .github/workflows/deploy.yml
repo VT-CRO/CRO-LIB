@@ -15,7 +15,7 @@ jobs:
       - name: Build Doxygen
         uses: mattnotmitt/doxygen-action@v1.9.8
         with:
-          doxyfile-path: doc/Doxyfile
+          working-directory: "doc"
 
       - name: Build HTML
         uses: ammaraskar/sphinx-action@master
