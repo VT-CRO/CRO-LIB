@@ -35,7 +35,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          folder: docs/_build/html
+          folder: doc/_build/html
           branch: main
           repository-name: jdv52/libtest-docs
           target-folder: lib
