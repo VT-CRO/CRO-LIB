@@ -15,7 +15,7 @@ jobs:
       - name: Build HTML
         uses: ammaraskar/sphinx-action@master
         with:
-          pre-build-command: "apt-get update && apt-get install -y doxygen && pip3 install breathe spinx-rtd-theme"
+          pre-build-command: "apt-get update -y && apt-get install -y doxygen && pip3 install breathe spinx-rtd-theme"
           docs-folder: "doc/"
 
       - name: Override Jekyll
