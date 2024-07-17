@@ -21,7 +21,7 @@ jobs:
         uses: ammaraskar/sphinx-action@master
         with:
           docs-folder: "doc/"
-          pre-build-command: "apt-get update && apt-get install -y python-breathe python-sphinx-rtd-theme"
+          pre-build-command: "apt install -y python-breathe python-sphinx-rtd-theme"
 
       - name: Override Jekyll
         run: touch doc/_build/html/.nojekyll
