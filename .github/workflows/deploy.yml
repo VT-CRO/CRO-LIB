@@ -12,16 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Doxygen
-        run: sudo apt-get update && sudo apt-get install -y doxygen
-
       - name: Build HTML
         uses: ammaraskar/sphinx-action@master
         with:
+          pre-build-command: "apt-get update && apt-get install -y doxygen && pip3 install breathe spinx-rtd-theme"
           docs-folder: "doc/"
 
       - name: Override Jekyll
-        run: touch docs/_build/html/.nojekyll
+        run: touch doc/_build/html/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
