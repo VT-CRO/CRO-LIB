@@ -1,0 +1,31 @@
+name: Docs
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Doxygen
+        run: apt-get update && apt-get upgrade -y
+          && apt-get install -y doxygen
+
+      - name: Build HTML
+        uses: ammaskar/sphinx-action@master
+        with:
+          docs-folder: "docs/"
+        run: touch docs/_build/html/.nojekyll
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          folder: docs/_build/html
+          branch: main
+          repository-name: jdv52/libtest-docs
+          target-folder: docs
