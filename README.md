@@ -1,6 +1,6 @@
 # VTCRO-LIB
 
-This library contains a bunch of VTCRO stuff.
+This is a test project for testing documentation and Github workflows.
 
 ## Requirements
 
@@ -15,11 +15,3 @@ To use this library in your own project, include it as a dependency in your proj
 ```
 [add the link here]
 ```
-
-## TODO:
-
-- Create utility libraries (PID, LERP, MoveTowards, etc.)
-- Write unit tests
-- Remove any dependencies of modules on roslib and freertos (unless absolutely needed)
-- Finish QDC code
-- Implement smoothing servo

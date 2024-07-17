@@ -6,6 +6,8 @@
 Welcome to VTCRO-LIB's documentation!
 =====================================
 
+For now, this is a test website for testing documentation generation and hosting with github actions!
+
 Table of Contents
 ^^^^^^^^^^^^^^^^^
 

@@ -9,3 +9,6 @@
 # Sphinx and Doxygen
 
 _build
+
+# vscode
+.vscode
