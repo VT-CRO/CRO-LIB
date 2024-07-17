@@ -18,10 +18,12 @@ jobs:
           working-directory: "doc"
 
       - name: Build HTML
-        uses: ammaraskar/sphinx-action@master
-        with:
-          pre-build-command: "pip install breathe sphinx-rtd-theme"
-          docs-folder: "doc/"
+        run: sudo apt-get update &&
+          sudo apt-get upgrade -y &&
+          sudo apt-get install python3 python3-pip python3-venv &&
+          python3 -m venv ./tmp &&
+          source tmp/bin/activate &&
+          pip3 install breathe sphinx-rtd-theme sphinx-doc
 
       - name: Override Jekyll
         run: touch doc/_build/html/.nojekyll
