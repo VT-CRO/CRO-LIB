@@ -20,7 +20,7 @@ jobs:
       - name: Build HTML
         uses: ammaraskar/sphinx-action@master
         with:
-          pre-build-command: "sudo -H pip install "
+          pre-build-command: "sudo -H pip install breathe sphinx-rtd-theme"
           docs-folder: "doc/"
 
       - name: Override Jekyll
