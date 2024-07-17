@@ -20,6 +20,8 @@ jobs:
         uses: ammaskar/sphinx-action@master
         with:
           docs-folder: "docs/"
+
+      - name: Override Jekyll
         run: touch docs/_build/html/.nojekyll
 
       - name: Deploy
