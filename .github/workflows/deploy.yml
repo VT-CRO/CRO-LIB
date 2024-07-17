@@ -23,12 +23,14 @@ jobs:
 
       - name: Install Sphinx & Dependencies
         run: |
-          sudo apt-get install python3-sphinx python3-breathe python3-sphinx-rtd-theme
+          sudo apt-get install python3-sphinx
+          sudo apt-get install python3-breathe
+          sudo apt-get install python3-sphinx-rtd-theme
           cd doc
           sudo make html
 
       - name: Override Jekyll
-        run: touch doc/_build/html/.nojekyll
+        run: sudo touch doc/_build/html/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
