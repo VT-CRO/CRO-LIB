@@ -9,9 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
       - uses: actions/checkout@v4
 
@@ -30,10 +27,10 @@ jobs:
           sudo apt-get install python3-breathe
           sudo apt-get install python3-sphinx-rtd-theme
           cd doc
-          make html
+          sudo make html
 
       - name: Override Jekyll
-        run: touch doc/_build/html/.nojekyll
+        run: sudo touch doc/_build/html/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
@@ -42,3 +39,4 @@ jobs:
           branch: main
           repository-name: jdv52/libtest-docs
           target-folder: lib
+          token: ${{ secrets.GHPAGES_TOKEN }}
