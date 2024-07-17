@@ -1,6 +1,9 @@
 #ifndef PID_H
 #define PID_H
 
+/*
+ * This is a struct that contains PID parameters.
+ */
 typedef struct{
 	float kP;
 	float kI;
