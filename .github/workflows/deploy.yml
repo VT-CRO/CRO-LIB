@@ -22,7 +22,7 @@ jobs:
           python-version: "3.x"
 
       - name: Install Sphinx & Dependencies
-        run: pip install sphinx sphinx_rtd_theme breathe
+        run: python3 -m pip install sphinx sphinx_rtd_theme breathe
 
       - name: Build Documentation
         run: cd doc && sudo make html
