@@ -9,8 +9,6 @@
 from sphinx.builders.html import StandaloneHTMLBuilder
 import subprocess, os
 
-subprocess.call('doxygen', shell=True)
-
 project = 'VTCRO-LIB'
 copyright = '2024, Jayson D'
 author = 'Jayson D'

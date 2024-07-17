@@ -12,19 +12,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build HTML
-        uses: ammaraskar/sphinx-action@master
+      - name: Build Doxygen
+        uses: mattnotmitt/doxygen-action@v1.9.8
         with:
-          pre-build-command: "apt-get update && apt-get install -y doxygen && pip3 install breathe spinx-rtd-theme"
-          docs-folder: "doc/"
+          working-directory: "doc"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install Sphinx & Dependencies
+        run: |
+          sudo apt-get install python3-sphinx
+          sudo apt-get install python3-breathe
+          sudo apt-get install python3-sphinx-rtd-theme
+          cd doc
+          sudo make html
 
       - name: Override Jekyll
-        run: touch doc/_build/html/.nojekyll
+        run: sudo touch doc/_build/html/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          folder: docs/_build/html
+          folder: doc/_build/html
           branch: main
           repository-name: jdv52/libtest-docs
           target-folder: lib
+          token: ${{ secrets.GHPAGES_TOKEN }}
