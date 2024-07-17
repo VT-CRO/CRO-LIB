@@ -22,7 +22,7 @@ jobs:
           source tmp/bin/activate &&
           pip3 install breathe sphinx-rtd-theme sphinx &&
           cd doc &&
-          make html
+          sudo make html
 
       - name: Override Jekyll
         run: touch doc/_build/html/.nojekyll
