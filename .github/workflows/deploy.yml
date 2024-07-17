@@ -17,11 +17,15 @@ jobs:
         with:
           working-directory: "doc"
 
-      - name: Build HTML
-        uses: ammaraskar/sphinx-action@master
+      - uses: actions/setup-python@v5
         with:
-          docs-folder: "doc/"
-          pre-build-command: "python -m pip install breathe sphinx-rtd-theme docutils"
+          python-version: "3.x"
+
+      - name: Install Sphinx & Dependencies
+        run: pip install sphinx sphinx_rtd_theme breathe
+
+      - name: Build Documentation
+        run: cd doc && make html
 
       - name: Override Jekyll
         run: touch doc/_build/html/.nojekyll
