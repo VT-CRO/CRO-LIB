@@ -23,8 +23,7 @@ jobs:
 
       - name: Install Sphinx & Dependencies
         run: |
-          sudo apt-get install python3-sphinx
-          python -m pip install breathe sphinx-rtd-theme
+          sudo apt-get install python3-sphinx python3-breathe python3-sphinx-rtd-theme
           cd doc
           sudo make html
 
