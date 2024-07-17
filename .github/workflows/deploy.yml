@@ -18,8 +18,8 @@ jobs:
           working-directory: "doc"
 
       - name: Build HTML
-        run: python3 -m venv ./tmp &&
-          source tmp/bin/activate &&
+        run: pyvenv install 3.6.8 &&
+          pyvenv local 3.6.9 &&
           pip3 install breathe sphinx-rtd-theme sphinx &&
           cd doc &&
           sudo make html
