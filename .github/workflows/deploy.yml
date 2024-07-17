@@ -21,7 +21,7 @@ jobs:
         run: python3 -m venv ./tmp &&
           source tmp/bin/activate &&
           pip3 install breathe sphinx-rtd-theme sphinx &&
-          cd build &&
+          cd doc &&
           make html
 
       - name: Override Jekyll
