@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Build Doxygen
+        uses: mattnotmitt/doxygen-action@v1.9.8
+
       - name: Build HTML
         uses: ammaraskar/sphinx-action@master
         with:
