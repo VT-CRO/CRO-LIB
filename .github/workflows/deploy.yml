@@ -18,7 +18,7 @@ jobs:
       - name: Build HTML
         uses: ammaraskar/sphinx-action@master
         with:
-          docs-folder: "docs/"
+          docs-folder: "doc/"
 
       - name: Override Jekyll
         run: touch docs/_build/html/.nojekyll
@@ -29,4 +29,4 @@ jobs:
           folder: docs/_build/html
           branch: main
           repository-name: jdv52/libtest-docs
-          target-folder: docs
+          target-folder: lib
