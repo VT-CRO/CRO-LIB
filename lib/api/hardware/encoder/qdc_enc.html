@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QDC Encoder &mdash; VTCRO-LIB  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="QTR8" href="../linefollowing/qtr8.html" />
+    <link rel="prev" title="Smooth Servo" href="../smoothservo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> VTCRO-LIB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribution_guide.html">How To Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../style_guide.html">Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../documentation_guide.html">How To Write Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../testing_guide.html">How To Write Tests</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#table-of-contents">Table of Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../chassis.html">Chassis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motor.html">Motor Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../qdc.html">QDC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../smoothservo.html">Smooth Servo</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">QDC Encoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../linefollowing/qtr8.html">QTR8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/pid.html">PID</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">VTCRO-LIB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">API Reference</a> &raquo;</li>
+      <li>QDC Encoder</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/api/hardware/encoder/qdc_enc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qdc-encoder">
+<h1>QDC Encoder<a class="headerlink" href="#qdc-encoder" title="Permalink to this headline"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MAX_NUM_ENCODER_INSTANCES">
+<span class="target" id="QDC__Encoder_8h_1aa63376cdf1cacac4769cbef75fd1feaa"></span><span class="sig-name descname"><span class="n"><span class="pre">MAX_NUM_ENCODER_INSTANCES</span></span></span><a class="headerlink" href="#c.MAX_NUM_ENCODER_INSTANCES" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv419QDC_Encoder_state_t">
+<span id="_CPPv319QDC_Encoder_state_t"></span><span id="_CPPv219QDC_Encoder_state_t"></span><span id="QDC_Encoder_state_t"></span><span class="target" id="QDC__Encoder_8h_1a7d86c3a606eebf9a2c31a18aadbd5ae0"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv415Encoder_state_t" title="Encoder_state_t"><span class="n"><span class="pre">Encoder_state_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_Encoder_state_t</span></span></span><a class="headerlink" href="#_CPPv419QDC_Encoder_state_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv415Encoder_state_t">
+<span id="_CPPv315Encoder_state_t"></span><span id="_CPPv215Encoder_state_t"></span><span id="Encoder_state_t"></span><span class="target" id="structEncoder__state__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Encoder_state_t</span></span></span><a class="headerlink" href="#_CPPv415Encoder_state_t" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15Encoder_state_t3posE">
+<span id="_CPPv3N15Encoder_state_t3posE"></span><span id="_CPPv2N15Encoder_state_t3posE"></span><span id="Encoder_state_t::pos__i"></span><span class="target" id="structEncoder__state__t_1abe3909bea9fb3b25cac24f875f6aaf7b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pos</span></span></span><a class="headerlink" href="#_CPPv4N15Encoder_state_t3posE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15Encoder_state_t7posDiffE">
+<span id="_CPPv3N15Encoder_state_t7posDiffE"></span><span id="_CPPv2N15Encoder_state_t7posDiffE"></span><span id="Encoder_state_t::posDiff__i"></span><span class="target" id="structEncoder__state__t_1a4da1540ce9daf2cd9f20e7758bd57192"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">posDiff</span></span></span><a class="headerlink" href="#_CPPv4N15Encoder_state_t7posDiffE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv411QDC_Encoder">
+<span id="_CPPv311QDC_Encoder"></span><span id="_CPPv211QDC_Encoder"></span><span id="QDC_Encoder"></span><span class="target" id="classQDC__Encoder"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_Encoder</span></span></span><a class="headerlink" href="#_CPPv411QDC_Encoder" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder7QDC_isrE">
+<span id="_CPPv3N11QDC_Encoder7QDC_isrE"></span><span id="_CPPv2N11QDC_Encoder7QDC_isrE"></span><span id="QDC_Encoder::QDC_isr"></span><span class="target" id="classQDC__Encoder_1a23f714dc6f18bace6222e966d2711f84"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_isr</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7QDC_isrE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t">
+<span id="_CPPv3N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="_CPPv2N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="QDC_Encoder::QDC_Encoder__uint8_t.uint8_t.uint8_t.uint8_t.uint8_t.uint8_t.uint8_t"></span><span class="target" id="classQDC__Encoder_1a25cc341edab5911a6c95a5b37edf8bce"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_Encoder</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">channel</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phaseA</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phaseB</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">home</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">trigger</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin_pus</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_EncoderD0Ev">
+<span id="_CPPv3N11QDC_EncoderD0Ev"></span><span id="_CPPv2N11QDC_EncoderD0Ev"></span><span id="QDC_Encoder::~QDC_Encoder"></span><span class="target" id="classQDC__Encoder_1aeb811cd4ee07f9712dae4e9c86d0a530"></span><span class="sig-name descname"><span class="n"><span class="pre">~QDC_Encoder</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_EncoderD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder9setConfigEP12QDC_config_t">
+<span id="_CPPv3N11QDC_Encoder9setConfigEP12QDC_config_t"></span><span id="_CPPv2N11QDC_Encoder9setConfigEP12QDC_config_t"></span><span id="QDC_Encoder::setConfig__QDC_config_tP"></span><span class="target" id="classQDC__Encoder_1a7a1c9bd1059144343a2cb93aebf656e4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setConfig</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../qdc.html#_CPPv412QDC_config_t" title="QDC_config_t"><span class="n"><span class="pre">QDC_config_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder9setConfigEP12QDC_config_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder16enableInterruptsEv">
+<span id="_CPPv3N11QDC_Encoder16enableInterruptsEv"></span><span id="_CPPv2N11QDC_Encoder16enableInterruptsEv"></span><span id="QDC_Encoder::enableInterrupts"></span><span class="target" id="classQDC__Encoder_1a226b1adbdb552a3168ba90160dc05548"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableInterrupts</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder16enableInterruptsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder17disableInterruptsE7uint8_t">
+<span id="_CPPv3N11QDC_Encoder17disableInterruptsE7uint8_t"></span><span id="_CPPv2N11QDC_Encoder17disableInterruptsE7uint8_t"></span><span id="QDC_Encoder::disableInterrupts__uint8_t"></span><span class="target" id="classQDC__Encoder_1a55d1c2fb79c5bee00eefa5d6be168971"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disableInterrupts</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder17disableInterruptsE7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder19clearInterruptFlagsE7uint8_t">
+<span id="_CPPv3N11QDC_Encoder19clearInterruptFlagsE7uint8_t"></span><span id="_CPPv2N11QDC_Encoder19clearInterruptFlagsE7uint8_t"></span><span id="QDC_Encoder::clearInterruptFlags__uint8_t"></span><span class="target" id="classQDC__Encoder_1a71fe1810892e974c21b75642b2a4fe05"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearInterruptFlags</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder19clearInterruptFlagsE7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder4initEv">
+<span id="_CPPv3N11QDC_Encoder4initEv"></span><span id="_CPPv2N11QDC_Encoder4initEv"></span><span id="QDC_Encoder::init"></span><span class="target" id="classQDC__Encoder_1a2e14e838e0d535986623bf438e5081cb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder4initEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder15setInitialCountE8uint32_t">
+<span id="_CPPv3N11QDC_Encoder15setInitialCountE8uint32_t"></span><span id="_CPPv2N11QDC_Encoder15setInitialCountE8uint32_t"></span><span id="QDC_Encoder::setInitialCount__uint32_t"></span><span class="target" id="classQDC__Encoder_1a43a03fb6c1b3b7e5c61e1ac8b44a7965"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setInitialCount</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">initial_pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder15setInitialCountE8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder11getPositionEv">
+<span id="_CPPv3N11QDC_Encoder11getPositionEv"></span><span id="_CPPv2N11QDC_Encoder11getPositionEv"></span><span id="QDC_Encoder::getPosition"></span><span class="target" id="classQDC__Encoder_1af4a498f473353038f35fe5e57a1791f4"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPosition</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder11getPositionEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder15getPositionHoldEv">
+<span id="_CPPv3N11QDC_Encoder15getPositionHoldEv"></span><span id="_CPPv2N11QDC_Encoder15getPositionHoldEv"></span><span id="QDC_Encoder::getPositionHold"></span><span class="target" id="classQDC__Encoder_1aab8ea5d324b8df64ef9f1c361e477ccd"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionHold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder15getPositionHoldEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder21getPositionDifferenceEv">
+<span id="_CPPv3N11QDC_Encoder21getPositionDifferenceEv"></span><span id="_CPPv2N11QDC_Encoder21getPositionDifferenceEv"></span><span id="QDC_Encoder::getPositionDifference"></span><span class="target" id="classQDC__Encoder_1a1394f00515a64592fec2a21b786cea11"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionDifference</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder21getPositionDifferenceEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder25getPositionDifferenceHoldEv">
+<span id="_CPPv3N11QDC_Encoder25getPositionDifferenceHoldEv"></span><span id="_CPPv2N11QDC_Encoder25getPositionDifferenceHoldEv"></span><span id="QDC_Encoder::getPositionDifferenceHold"></span><span class="target" id="classQDC__Encoder_1a114e5f3fce60150f57e5453678733805"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionDifferenceHold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder25getPositionDifferenceHoldEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder14getRevolutionsEv">
+<span id="_CPPv3N11QDC_Encoder14getRevolutionsEv"></span><span id="_CPPv2N11QDC_Encoder14getRevolutionsEv"></span><span id="QDC_Encoder::getRevolutions"></span><span class="target" id="classQDC__Encoder_1a0076d18b60c5e2a3f03d347c761b441f"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRevolutions</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder14getRevolutionsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder18getRevolutionsHoldEv">
+<span id="_CPPv3N11QDC_Encoder18getRevolutionsHoldEv"></span><span id="_CPPv2N11QDC_Encoder18getRevolutionsHoldEv"></span><span id="QDC_Encoder::getRevolutionsHold"></span><span class="target" id="classQDC__Encoder_1a6f651782b5ea5f3759fdf0e11979a96f"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRevolutionsHold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder18getRevolutionsHoldEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder8getSpeedEv">
+<span id="_CPPv3N11QDC_Encoder8getSpeedEv"></span><span id="_CPPv2N11QDC_Encoder8getSpeedEv"></span><span id="QDC_Encoder::getSpeed"></span><span class="target" id="classQDC__Encoder_1ae681589b82b43c457091e85aa5adfcb6"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSpeed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder8getSpeedEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder9self_testEv">
+<span id="_CPPv3N11QDC_Encoder9self_testEv"></span><span id="_CPPv2N11QDC_Encoder9self_testEv"></span><span id="QDC_Encoder::self_test"></span><span class="target" id="classQDC__Encoder_1ae1188e0bac4b1679a6dd58a0dedd53b3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">self_test</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder9self_testEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder7isrEnc1Ev">
+<span id="_CPPv3N11QDC_Encoder7isrEnc1Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc1Ev"></span><span id="QDC_Encoder::isrEnc1"></span><span class="target" id="classQDC__Encoder_1ac718a2c708bae65d3c07f561b0ced017"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc1</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc1Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder7isrEnc2Ev">
+<span id="_CPPv3N11QDC_Encoder7isrEnc2Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc2Ev"></span><span id="QDC_Encoder::isrEnc2"></span><span class="target" id="classQDC__Encoder_1a1fb13193ea32f0a19d591cc33e1aba4e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc2</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc2Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder7isrEnc3Ev">
+<span id="_CPPv3N11QDC_Encoder7isrEnc3Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc3Ev"></span><span id="QDC_Encoder::isrEnc3"></span><span class="target" id="classQDC__Encoder_1a650ee39fe60b355e6258e02f787c5aa1"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc3</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc3Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder7isrEnc4Ev">
+<span id="_CPPv3N11QDC_Encoder7isrEnc4Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc4Ev"></span><span id="QDC_Encoder::isrEnc4"></span><span class="target" id="classQDC__Encoder_1ac7fc93705c31b1905ce4b98193788564"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc4</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc4Ev" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder3isrEv">
+<span id="_CPPv3N11QDC_Encoder3isrEv"></span><span id="_CPPv2N11QDC_Encoder3isrEv"></span><span id="QDC_Encoder::isr"></span><span class="target" id="classQDC__Encoder_1ab5de2cdedc1129932838df4edc0a0461"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isr</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder3isrEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder3qdcE">
+<span id="_CPPv3N11QDC_Encoder3qdcE"></span><span id="_CPPv2N11QDC_Encoder3qdcE"></span><span id="QDC_Encoder::qdc__QDC_t"></span><span class="target" id="classQDC__Encoder_1a0efe4e90784c302cc925b5d0e9037458"></span><a class="reference internal" href="../qdc.html#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qdc</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder3qdcE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder12indexCounterE">
+<span id="_CPPv3N11QDC_Encoder12indexCounterE"></span><span id="_CPPv2N11QDC_Encoder12indexCounterE"></span><span id="QDC_Encoder::indexCounter__uint16_t"></span><span class="target" id="classQDC__Encoder_1a4b3b06e11737d2a3d37f07d1538e6c1d"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">indexCounter</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder12indexCounterE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder11homeCounterE">
+<span id="_CPPv3N11QDC_Encoder11homeCounterE"></span><span id="_CPPv2N11QDC_Encoder11homeCounterE"></span><span id="QDC_Encoder::homeCounter__uint16_t"></span><span class="target" id="classQDC__Encoder_1a1eb1e128845959140bba8200558a29ff"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">homeCounter</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder11homeCounterE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder16compareValueFlagE">
+<span id="_CPPv3N11QDC_Encoder16compareValueFlagE"></span><span id="_CPPv2N11QDC_Encoder16compareValueFlagE"></span><span id="QDC_Encoder::compareValueFlag__uint16_t"></span><span class="target" id="classQDC__Encoder_1afffb06b772c57c0c0edb42b90ec52377"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compareValueFlag</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder16compareValueFlagE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-static-attributes">Private Static Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder9instancesE">
+<span id="_CPPv3N11QDC_Encoder9instancesE"></span><span id="_CPPv2N11QDC_Encoder9instancesE"></span><span id="QDC_Encoder::instances__QDC_EncoderPA"></span><span class="target" id="classQDC__Encoder_1a7915ba1a0c3744c7f8b6ca818b294410"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">instances</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">5</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder9instancesE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder4isrsE">
+<span id="_CPPv3N11QDC_Encoder4isrsE"></span><span id="_CPPv2N11QDC_Encoder4isrsE"></span><span id="QDC_Encoder::isrs__QDC_isrA"></span><span class="target" id="classQDC__Encoder_1a4ff8d963f7cce3394e87e77d2a15461a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7QDC_isrE" title="QDC_Encoder::QDC_isr"><span class="n"><span class="pre">QDC_isr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrs</span></span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder4isrsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../smoothservo.html" class="btn btn-neutral float-left" title="Smooth Servo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../linefollowing/qtr8.html" class="btn btn-neutral float-right" title="QTR8" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Jayson D.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

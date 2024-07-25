@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How To Write Documentation &mdash; VTCRO-LIB  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How To Write Tests" href="testing_guide.html" />
+    <link rel="prev" title="Style Guide" href="style_guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> VTCRO-LIB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribution_guide.html">How To Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style_guide.html">Style Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How To Write Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#documenting-your-code">Documenting Your Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-guides">Writing Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#previewing-documentation">Previewing Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing_guide.html">How To Write Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">VTCRO-LIB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>How To Write Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/documentation_guide.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-write-documentation">
+<span id="documentation-guide"></span><h1>How To Write Documentation<a class="headerlink" href="#how-to-write-documentation" title="Permalink to this headline"></a></h1>
+<p>Documentation for this project is written with reStructuredText and API documentation is generated using Doxygen and Sphinx.</p>
+<p>When implementing a new feature, it is important to provide adequate documentation so other members of the team know how to use your code.</p>
+<section id="documenting-your-code">
+<h2>Documenting Your Code<a class="headerlink" href="#documenting-your-code" title="Permalink to this headline"></a></h2>
+<p>In this section, we detail how to comment your code so that it can be read by Doxygen.</p>
+<p>After commenting your code, you need to add extra files sos that it can be found on the website.
+All you need to do is navigate to <cite>doc/api</cite>. The structure of this folder follows the structure of the <cite>include</cite> directory.
+Simply navigate to the correct folder for your module (or create it if necesesary) and create a new .rst file following the template below:</p>
+<p>The path listed above is relative to the <cite>include</cite> directory.</p>
+</section>
+<section id="writing-guides">
+<h2>Writing Guides<a class="headerlink" href="#writing-guides" title="Permalink to this headline"></a></h2>
+<p>[TODO]</p>
+</section>
+<section id="previewing-documentation">
+<h2>Previewing Documentation<a class="headerlink" href="#previewing-documentation" title="Permalink to this headline"></a></h2>
+<p>The documentation shown on this site reflects the most recent code on the <cite>release</cite> branch of the <cite>VTCRO-LIB</cite> repo.
+If your local branch contains any new documentation not on <cite>release</cite>, you can build the documentation locally.
+You only need to install the following:</p>
+<ul class="simple">
+<li><p>python-venv</p></li>
+<li><p>doxygen</p></li>
+<li><p>sphinx</p></li>
+<li><p>breathe</p></li>
+<li><p>sphinx-rtd-theme</p></li>
+</ul>
+<p>[TODO: Add steps in the dockerfile to set this up automatically]. The last 3 dependencies should just be installed using pip.</p>
+<p>To build the documentation, navigate to the doc directory and run the following command: <cite>make html</cite>.
+The following command allows you to rebuild the documentation whenever a file is changed: <cite>sphinx-autobuild . _build/html</cite>.
+The generated documentation can be viewed by opening <cite>_build/html/index.html</cite> via a web browser.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="style_guide.html" class="btn btn-neutral float-left" title="Style Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="testing_guide.html" class="btn btn-neutral float-right" title="How To Write Tests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Jayson D.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

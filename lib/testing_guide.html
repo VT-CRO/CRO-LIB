@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How To Write Tests &mdash; VTCRO-LIB  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="api/index.html" />
+    <link rel="prev" title="How To Write Documentation" href="documentation_guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> VTCRO-LIB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribution_guide.html">How To Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style_guide.html">Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation_guide.html">How To Write Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How To Write Tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#testing-basics">Testing Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generating-mocks">Generating Mocks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">VTCRO-LIB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>How To Write Tests</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/testing_guide.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-to-write-tests">
+<span id="testing-guide"></span><h1>How To Write Tests<a class="headerlink" href="#how-to-write-tests" title="Permalink to this headline"></a></h1>
+<section id="testing-basics">
+<h2>Testing Basics<a class="headerlink" href="#testing-basics" title="Permalink to this headline"></a></h2>
+<p>Unit tests are located in the <cite>test</cite> directory which contains its own subfolders.
+The folder structure of the <cite>test</cite> directory should look like:</p>
+<div class="line-block">
+<div class="line">test</div>
+<div class="line">├── embedded</div>
+<div class="line">│   └── …</div>
+<div class="line">└── modules</div>
+<div class="line-block">
+<div class="line">└── …</div>
+</div>
+</div>
+<p>the <cite>embedded</cite> directory contains all unit tests for hardware-dependent components (motors, sensors, etc.),
+while the <cite>modules</cite> directory contains all unit tests without a hardware dependency (e.g. PID, math libraries, etc.).</p>
+<p>If you create a new folder for your test, be sure to prefix it with <cite>test_</cite> so that PlatformIO can find it.</p>
+<p>[TODO: How to run tests, process for running hardware vs. software tests]</p>
+</section>
+<section id="generating-mocks">
+<h2>Generating Mocks<a class="headerlink" href="#generating-mocks" title="Permalink to this headline"></a></h2>
+<p>For certain features, it may be helpful to generate mocks to aid in testing.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="documentation_guide.html" class="btn btn-neutral float-left" title="How To Write Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api/index.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Jayson D.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PID &mdash; VTCRO-LIB  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="QTR8" href="../hardware/linefollowing/qtr8.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> VTCRO-LIB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribution_guide.html">How To Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../style_guide.html">Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation_guide.html">How To Write Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testing_guide.html">How To Write Tests</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#table-of-contents">Table of Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../hardware/chassis.html">Chassis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/motor.html">Motor Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/qdc.html">QDC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/smoothservo.html">Smooth Servo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/encoder/qdc_enc.html">QDC Encoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/linefollowing/qtr8.html">QTR8</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PID</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">VTCRO-LIB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">API Reference</a> &raquo;</li>
+      <li>PID</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api/modules/pid.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pid">
+<h1>PID<a class="headerlink" href="#pid" title="Permalink to this headline"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv47pidInitfffffff">
+<span id="_CPPv37pidInitfffffff"></span><span id="_CPPv27pidInitfffffff"></span><span id="pidInit__float.float.float.float.float.float.float"></span><span class="target" id="PID_8hpp_1a219726363a7ed106fd12ded5bbae7e49"></span><a class="reference internal" href="#_CPPv43PID" title="PID"><span class="n"><span class="pre">PID</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pidInit</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fKP</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fKI</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fKD</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fEpsilonInner</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fEpsilonOuter</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dInner</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dOuter</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv47pidInitfffffff" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412pidCalculate3PIDfff">
+<span id="_CPPv312pidCalculate3PIDfff"></span><span id="_CPPv212pidCalculate3PIDfff"></span><span id="pidCalculate__PID.float.float.float"></span><span class="target" id="PID_8hpp_1a3e8929bf8fd7607ca5d42f0199c0dbcc"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pidCalculate</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv43PID" title="PID"><span class="n"><span class="pre">PID</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">pid</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fSetPoint</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fProcessVariable</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412pidCalculate3PIDfff" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv43PID">
+<span id="_CPPv33PID"></span><span id="_CPPv23PID"></span><span id="PID"></span><span class="target" id="structPID"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PID</span></span></span><a class="headerlink" href="#_CPPv43PID" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID2kPE">
+<span id="_CPPv3N3PID2kPE"></span><span id="_CPPv2N3PID2kPE"></span><span id="PID::kP__float"></span><span class="target" id="structPID_1ac4815cca85109a6e13b10c2415104328"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kP</span></span></span><a class="headerlink" href="#_CPPv4N3PID2kPE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID2kIE">
+<span id="_CPPv3N3PID2kIE"></span><span id="_CPPv2N3PID2kIE"></span><span id="PID::kI__float"></span><span class="target" id="structPID_1ac686925341bcab06b11df109533b6807"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kI</span></span></span><a class="headerlink" href="#_CPPv4N3PID2kIE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID2kDE">
+<span id="_CPPv3N3PID2kDE"></span><span id="_CPPv2N3PID2kDE"></span><span id="PID::kD__float"></span><span class="target" id="structPID_1a5a07dca1e267a62af08ebd07781f1e9e"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kD</span></span></span><a class="headerlink" href="#_CPPv4N3PID2kDE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID12EpsilonInnerE">
+<span id="_CPPv3N3PID12EpsilonInnerE"></span><span id="_CPPv2N3PID12EpsilonInnerE"></span><span id="PID::EpsilonInner__float"></span><span class="target" id="structPID_1a483a6a80698e8a98d76a716a836f3460"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EpsilonInner</span></span></span><a class="headerlink" href="#_CPPv4N3PID12EpsilonInnerE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID12EpsilonOuterE">
+<span id="_CPPv3N3PID12EpsilonOuterE"></span><span id="_CPPv2N3PID12EpsilonOuterE"></span><span id="PID::EpsilonOuter__float"></span><span class="target" id="structPID_1a164d4313215d5ebf7fbb3571c4944b9d"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EpsilonOuter</span></span></span><a class="headerlink" href="#_CPPv4N3PID12EpsilonOuterE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID6dInnerE">
+<span id="_CPPv3N3PID6dInnerE"></span><span id="_CPPv2N3PID6dInnerE"></span><span id="PID::dInner__float"></span><span class="target" id="structPID_1a3186bd7daf2c58908a5c7276cf2922d4"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dInner</span></span></span><a class="headerlink" href="#_CPPv4N3PID6dInnerE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID6dOuterE">
+<span id="_CPPv3N3PID6dOuterE"></span><span id="_CPPv2N3PID6dOuterE"></span><span id="PID::dOuter__float"></span><span class="target" id="structPID_1a01c032b206be6cfde6f3e6a05514176f"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dOuter</span></span></span><a class="headerlink" href="#_CPPv4N3PID6dOuterE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID5sigmaE">
+<span id="_CPPv3N3PID5sigmaE"></span><span id="_CPPv2N3PID5sigmaE"></span><span id="PID::sigma__float"></span><span class="target" id="structPID_1a0d4d132200d0aae42bc976e124986f44"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sigma</span></span></span><a class="headerlink" href="#_CPPv4N3PID5sigmaE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID9lastValueE">
+<span id="_CPPv3N3PID9lastValueE"></span><span id="_CPPv2N3PID9lastValueE"></span><span id="PID::lastValue__float"></span><span class="target" id="structPID_1ac5286c095f796613280a2f436809acc8"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastValue</span></span></span><a class="headerlink" href="#_CPPv4N3PID9lastValueE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID10lastTargetE">
+<span id="_CPPv3N3PID10lastTargetE"></span><span id="_CPPv2N3PID10lastTargetE"></span><span id="PID::lastTarget__float"></span><span class="target" id="structPID_1abc88714dfb4ad900ca464014be008841"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastTarget</span></span></span><a class="headerlink" href="#_CPPv4N3PID10lastTargetE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID8lastTimeE">
+<span id="_CPPv3N3PID8lastTimeE"></span><span id="_CPPv2N3PID8lastTimeE"></span><span id="PID::lastTime__unsigned-l"></span><span class="target" id="structPID_1afcb8eb131062be169f29fcc0733e7433"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastTime</span></span></span><a class="headerlink" href="#_CPPv4N3PID8lastTimeE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3PID12LastSetPointE">
+<span id="_CPPv3N3PID12LastSetPointE"></span><span id="_CPPv2N3PID12LastSetPointE"></span><span id="PID::LastSetPoint__float"></span><span class="target" id="structPID_1ad4e62d5cd730a2db9767bb04b90e1fc7"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LastSetPoint</span></span></span><a class="headerlink" href="#_CPPv4N3PID12LastSetPointE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../hardware/linefollowing/qtr8.html" class="btn btn-neutral float-left" title="QTR8" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Jayson D.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
