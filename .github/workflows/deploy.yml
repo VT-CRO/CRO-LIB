@@ -38,4 +38,4 @@ jobs:
           folder: doc/_build/html
           branch: gh-pages
           target-folder: lib
-          token: ${{ secrets.GHPAGES_TOKEN }}
+          token: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
