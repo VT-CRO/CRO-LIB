@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+    name: build
     runs-on: ubuntu-latest
 
     steps:
@@ -29,6 +30,7 @@ jobs:
         run: pio run -e teensy41
 
   test:
+    name: test
     runs-on: ubuntu-latest
 
     steps:

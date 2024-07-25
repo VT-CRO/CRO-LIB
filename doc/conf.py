@@ -10,8 +10,8 @@ from sphinx.builders.html import StandaloneHTMLBuilder
 import subprocess, os
 
 project = 'VTCRO-LIB'
-copyright = '2024, Jayson D'
-author = 'Jayson D'
+copyright = '2024, VTCRO'
+author = 'VTCRO'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
