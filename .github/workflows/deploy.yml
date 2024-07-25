@@ -37,5 +37,4 @@ jobs:
         with:
           folder: doc/_build/html
           branch: gh-pages
-          target-folder: lib
           token: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
