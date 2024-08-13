@@ -12,7 +12,7 @@ void QTR_8_task(void * pvParameters)
 
   while (1) {
     QTR_8_sensorRead(qtr_ptr);
-    double err = QTR_8_findPos(qtr_ptr);
+    // double err = QTR_8_findPos(qtr_ptr);
 
     // TODO: find a way to somehow send position to chassis
     
