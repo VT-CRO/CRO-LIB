@@ -18,15 +18,7 @@ PID pidInit(float fKP, float fKI, float fKD, float fEpsilonInner, float fEpsilon
 	return pid;
 }
 
-/**
- * calculate pid output
- *
- * @param pid instance of PID structure
- * @param fSetPoint set point of PID controller
- * @param fProcessVariable sensor/feedback value
- *
- * @return output value constrained from -255 to 255
- */
+
 
 float pidCalculate(PID pid, float fSetPoint, float fProcessVariable, float dt)
 {

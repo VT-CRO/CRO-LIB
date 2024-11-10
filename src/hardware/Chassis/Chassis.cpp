@@ -31,4 +31,9 @@ void Chassis_meccanum_kinematics(Chassis_t* chassis_ptr, geometry_msgs::Twist cm
   double speed_2 = x + y + (w * lw) + chassis_ptr->velocityCorrection;
   double speed_3 = x - y + (w * lw) - chassis_ptr->velocityCorrection;
   double speed_4 = x + y - (w * lw) + chassis_ptr->velocityCorrection;
+
+  chassis_ptr->m1->Motor_start(speed_1);
+  chassis_ptr->m2->Motor_start(speed_2);
+  chassis_ptr->m3->Motor_start(speed_3);
+  chassis_ptr->m4->Motor_start(speed_4);
 }

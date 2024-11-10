@@ -7,13 +7,13 @@ Testing Basics
 ^^^^^^^^^^^^^^
 
 Unit tests are located in the `test` directory which contains its own subfolders.
-The folder structure of the `test` directory should look like:
+The folder structure of the `test` directory should look like::
 
-| test
-| ├── embedded
-| │   └── ...
-| └── modules
-|     └── ...
+    | test
+    | ├── embedded
+    | │   └── ...
+    | └── modules
+    |     └── ...
 
 the `embedded` directory contains all unit tests for hardware-dependent components (motors, sensors, etc.),
 while the `modules` directory contains all unit tests without a hardware dependency (e.g. PID, math libraries, etc.).
