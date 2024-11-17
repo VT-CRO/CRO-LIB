@@ -28,7 +28,6 @@ Implement a unit test for your feature.
 Refer to :ref:`testing guide` guide for details on how to write good tests.
 
 
-
 (generating mocks)
 
 Step 4: Write Documentation
@@ -45,6 +44,11 @@ Ensure your code passess all CI checks before submitting your pull request.
 You can check the status of your commits by checking the Actions tab in the Github web browser.
 
 After resolving all issues, request review from your lead, as this will be required for merging your code into the `dev` branch.
+
+Writing Documentation
+^^^^^^^^^^^^^^^^^^^^^
+
+Another way to contribute is to write documentation for existing code. Refer to :ref:`documentation guide` for more info on how to write documentation.
 
 Reporting and Fixing Issues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

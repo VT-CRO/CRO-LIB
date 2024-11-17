@@ -7,6 +7,7 @@
   <title>QDC &mdash; VTCRO-LIB  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
   
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
@@ -25,6 +26,7 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="../../index.html" class="icon icon-home"> VTCRO-LIB
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -82,6 +84,34 @@
              
   <section id="qdc">
 <h1>QDC<a class="headerlink" href="#qdc" title="Permalink to this headline"></a></h1>
+<p>Include dependency graph for QDC.h:</p>
+<figure class="align-default">
+<div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-7686c84e7a50a8076dba526a79bedeadd0a9a4ef.png" alt="digraph {
+    graph [bgcolor=&quot;#00000000&quot;]
+    node [shape=rectangle style=filled fillcolor=&quot;#FFFFFF&quot; font=Helvetica padding=2]
+    edge [color=&quot;#1414CE&quot;]
+    &quot;1&quot; [label=&quot;/github/workspace/include/hardware/QDC/QDC.h&quot; tooltip=&quot;/github/workspace/include/hardware/QDC/QDC.h&quot; fillcolor=&quot;#BFBFBF&quot;]
+    &quot;2&quot; [label=&quot;arduino_freertos.h&quot; tooltip=&quot;arduino_freertos.h&quot;]
+    &quot;1&quot; -&gt; &quot;2&quot; [dir=forward tooltip=&quot;include&quot;]
+}" class="graphviz" /></div>
+</div>
+</figure>
+<p>This graph shows which files directly or indirectly include QDC.h:</p>
+<figure class="align-default">
+<div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-d844a09fe77d8db73812f523f357c2495bfa7694.png" alt="digraph {
+    graph [bgcolor=&quot;#00000000&quot;]
+    node [shape=rectangle style=filled fillcolor=&quot;#FFFFFF&quot; font=Helvetica padding=2]
+    edge [color=&quot;#1414CE&quot;]
+    &quot;2&quot; [label=&quot;/github/workspace/include/hardware/Encoder/QDC_Encoder.h&quot; tooltip=&quot;/github/workspace/include/hardware/Encoder/QDC_Encoder.h&quot;]
+    &quot;1&quot; [label=&quot;/github/workspace/include/hardware/QDC/QDC.h&quot; tooltip=&quot;/github/workspace/include/hardware/QDC/QDC.h&quot; fillcolor=&quot;#BFBFBF&quot;]
+    &quot;3&quot; [label=&quot;/github/workspace/src/hardware/Encoder/QDC_Encoder.cpp&quot; tooltip=&quot;/github/workspace/src/hardware/Encoder/QDC_Encoder.cpp&quot;]
+    &quot;4&quot; [label=&quot;/github/workspace/src/hardware/QDC/QDC.cpp&quot; tooltip=&quot;/github/workspace/src/hardware/QDC/QDC.cpp&quot;]
+    &quot;2&quot; -&gt; &quot;3&quot; [dir=back tooltip=&quot;include&quot;]
+    &quot;1&quot; -&gt; &quot;2&quot; [dir=back tooltip=&quot;include&quot;]
+    &quot;1&quot; -&gt; &quot;4&quot; [dir=back tooltip=&quot;include&quot;]
+}" class="graphviz" /></div>
+</div>
+</figure>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
 <dl class="cpp macro">
@@ -641,7 +671,19 @@
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv45QDC_t">
 <span id="_CPPv35QDC_t"></span><span id="_CPPv25QDC_t"></span><span id="QDC_t"></span><span class="target" id="structQDC__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_t</span></span></span><a class="headerlink" href="#_CPPv45QDC_t" title="Permalink to this definition"></a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p>Collaboration diagram for QDC_t:</p>
+<figure class="align-default">
+<div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-1651f74535db5d83cde18c58c3b752eb7cb94913.png" alt="digraph {
+    graph [bgcolor=&quot;#00000000&quot;]
+    node [shape=rectangle style=filled fillcolor=&quot;#FFFFFF&quot; font=Helvetica padding=2]
+    edge [color=&quot;#1414CE&quot;]
+    &quot;2&quot; [label=&quot;QDC_config_t&quot; tooltip=&quot;QDC_config_t&quot;]
+    &quot;1&quot; [label=&quot;QDC_t&quot; tooltip=&quot;QDC_t&quot; fillcolor=&quot;#BFBFBF&quot;]
+    &quot;1&quot; -&gt; &quot;2&quot; [dir=forward tooltip=&quot;usage&quot;]
+}" class="graphviz" /></div>
+</div>
+</figure>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5QDC_t7channelE">

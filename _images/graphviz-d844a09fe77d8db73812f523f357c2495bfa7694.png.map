@@ -1,0 +1,9 @@
+<map id="%3" name="%3">
+<area shape="rect" id="node1" title="/github/workspace/include/hardware/Encoder/QDC_Encoder.h" alt="" coords="5,101,613,149"/>
+<area shape="rect" id="node3" title="/github/workspace/src/hardware/Encoder/QDC_Encoder.cpp" alt="" coords="14,197,605,245"/>
+<area shape="poly" id="edge1" title="include" alt="" coords="312,163,312,197,307,197,307,163"/>
+<area shape="rect" id="node2" title="/github/workspace/include/hardware/QDC/QDC.h" alt="" coords="347,5,834,53"/>
+<area shape="poly" id="edge2" title="include" alt="" coords="510,60,379,104,377,99,508,55"/>
+<area shape="rect" id="node4" title="/github/workspace/src/hardware/QDC/QDC.cpp" alt="" coords="637,101,1107,149"/>
+<area shape="poly" id="edge3" title="include" alt="" coords="673,55,804,99,802,104,671,60"/>
+</map>

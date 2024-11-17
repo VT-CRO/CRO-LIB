@@ -7,6 +7,7 @@
   <title>QTR8 &mdash; VTCRO-LIB  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
   
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
@@ -25,6 +26,7 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="../../../index.html" class="icon icon-home"> VTCRO-LIB
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -82,17 +84,28 @@
              
   <section id="qtr8">
 <h1>QTR8<a class="headerlink" href="#qtr8" title="Permalink to this headline"></a></h1>
+<p>Header file for QTR8 sensor definitions. </p>
+<p>
+The QTR8 sensor is an array of infrared sensors. This file contains functions for applications of the QTR8 sensor in line-following. <dl class="simple">
+<dt><strong>Author</strong></dt><dd><p>your name (<a class="reference external" href="mailto:you&#37;&#52;&#48;domain&#46;com">you<span>&#64;</span>domain<span>&#46;</span>com</a>) </p>
+</dd>
+<dt><strong>Date</strong></dt><dd><p>2024-07-31</p>
+</dd>
+</dl>
+</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.NUM_SENSORS">
 <span class="target" id="QTR__8_8h_1add02d1c189e3b727b722638327642a8b"></span><span class="sig-name descname"><span class="n"><span class="pre">NUM_SENSORS</span></span></span><a class="headerlink" href="#c.NUM_SENSORS" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Number of Sensors (TODO: Move to hardware defs) </p>
+</dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QTR_THRESHOLD">
 <span class="target" id="QTR__8_8h_1a2bdaf8141f8c2b07fa385cd7efc1f839"></span><span class="sig-name descname"><span class="n"><span class="pre">QTR_THRESHOLD</span></span></span><a class="headerlink" href="#c.QTR_THRESHOLD" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Threshold </p>
+</dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
@@ -100,43 +113,79 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv410QTR_8_initP7QTR_8_tP8uint16_t8uint16_t">
 <span id="_CPPv310QTR_8_initP7QTR_8_tP8uint16_t8uint16_t"></span><span id="_CPPv210QTR_8_initP7QTR_8_tP8uint16_t8uint16_t"></span><span id="QTR_8_init__QTR_8_tP.uint16_tP.uint16_t"></span><span class="target" id="QTR__8_8h_1aff8e479710754fc6ceda78c8ace9a04b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QTR_8_init</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv47QTR_8_t" title="QTR_8_t"><span class="n"><span class="pre">QTR_8_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qtr_ptr</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pins</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sampleSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410QTR_8_initP7QTR_8_tP8uint16_t8uint16_t" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Initialize a QTR struct object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qtr_ptr</strong> – QTR object to initialize </p></li>
+<li><p><strong>pins</strong> – the pins array </p></li>
+<li><p><strong>sampleSize</strong> – the sample size </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true if successful, false if failed </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv413QTR_8_findPosP7QTR_8_t">
 <span id="_CPPv313QTR_8_findPosP7QTR_8_t"></span><span id="_CPPv213QTR_8_findPosP7QTR_8_t"></span><span id="QTR_8_findPos__QTR_8_tP"></span><span class="target" id="QTR__8_8h_1a3f9ff1bfd7327912616c94ffc7822168"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QTR_8_findPos</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv47QTR_8_t" title="QTR_8_t"><span class="n"><span class="pre">QTR_8_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qtr_ptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413QTR_8_findPosP7QTR_8_t" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Find the center of the line of the QTR. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>qtr_ptr</strong> – QTR object </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>center position of QTR as a double </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv416QTR_8_sensorReadP7QTR_8_t">
 <span id="_CPPv316QTR_8_sensorReadP7QTR_8_t"></span><span id="_CPPv216QTR_8_sensorReadP7QTR_8_t"></span><span id="QTR_8_sensorRead__QTR_8_tP"></span><span class="target" id="QTR__8_8h_1a56a02f5de5d30940af9514ec76ffb006"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QTR_8_sensorRead</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv47QTR_8_t" title="QTR_8_t"><span class="n"><span class="pre">QTR_8_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qtr_ptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416QTR_8_sensorReadP7QTR_8_t" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Update QTR_8 data array. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>qtr_ptr</strong> – QTR object to update </p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv47QTR_8_t">
 <span id="_CPPv37QTR_8_t"></span><span id="_CPPv27QTR_8_t"></span><span id="QTR_8_t"></span><span class="target" id="structQTR__8__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QTR_8_t</span></span></span><a class="headerlink" href="#_CPPv47QTR_8_t" title="Permalink to this definition"></a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><div class="docutils container">
+<em>#include &lt;QTR_8.h&gt;</em></div>
+<p>Struct object representing QTR8 sensor. </p>
+<p>Treat all QTR_8 members as private! </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N7QTR_8_t4pinsE">
 <span id="_CPPv3N7QTR_8_t4pinsE"></span><span id="_CPPv2N7QTR_8_t4pinsE"></span><span id="QTR_8_t::pins__uint16_tP"></span><span class="target" id="structQTR__8__t_1a9f520ef57052c42b99d5c2eae93308f7"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">pins</span></span></span><a class="headerlink" href="#_CPPv4N7QTR_8_t4pinsE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>The struct pins as an array </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N7QTR_8_t4dataE">
 <span id="_CPPv3N7QTR_8_t4dataE"></span><span id="_CPPv2N7QTR_8_t4dataE"></span><span id="QTR_8_t::data__uint16_tP"></span><span class="target" id="structQTR__8__t_1a33ad7e5c00a9b989d5cdecc27793a20d"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><a class="headerlink" href="#_CPPv4N7QTR_8_t4dataE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>The data for each pin as an array </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N7QTR_8_t10sampleSizeE">
 <span id="_CPPv3N7QTR_8_t10sampleSizeE"></span><span id="_CPPv2N7QTR_8_t10sampleSizeE"></span><span id="QTR_8_t::sampleSize__uint16_t"></span><span class="target" id="structQTR__8__t_1aaa6cc276569e6c977b1008f843e65956"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sampleSize</span></span></span><a class="headerlink" href="#_CPPv4N7QTR_8_t10sampleSizeE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>The number of samples to take for each pin </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N7QTR_8_t6qtr_cbE">
 <span id="_CPPv3N7QTR_8_t6qtr_cbE"></span><span id="_CPPv2N7QTR_8_t6qtr_cbE"></span><span class="target" id="structQTR__8__t_1ae36fbc0b099f766ef4f9be03c4226005"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">qtr_cb</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N7QTR_8_t6qtr_cbE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Callback function </p>
+</dd></dl>
 
 </div>
 </dd></dl>

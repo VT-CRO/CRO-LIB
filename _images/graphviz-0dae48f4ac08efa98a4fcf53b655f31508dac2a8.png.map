@@ -1,0 +1,8 @@
+<map id="%3" name="%3">
+<area shape="rect" id="node1" title="/github/workspace/include/hardware/Encoder/QDC_Encoder.h" alt="" coords="5,5,613,53"/>
+<area shape="rect" id="node2" title="hardware/QDC/QDC.h" alt="" coords="118,101,349,149"/>
+<area shape="poly" id="edge2" title="include" alt="" coords="293,55,262,93,258,89,288,52"/>
+<area shape="rect" id="node3" title="arduino_freertos.h" alt="" coords="210,197,409,245"/>
+<area shape="poly" id="edge1" title="include" alt="" coords="334,52,351,74,364,100,369,125,364,150,355,170,343,188,338,185,350,168,359,149,364,125,359,102,346,77,330,55"/>
+<area shape="poly" id="edge3" title="include" alt="" coords="254,148,284,185,280,189,250,151"/>
+</map>

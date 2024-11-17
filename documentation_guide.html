@@ -7,6 +7,7 @@
   <title>How To Write Documentation &mdash; VTCRO-LIB  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
@@ -25,6 +26,7 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="index.html" class="icon icon-home"> VTCRO-LIB
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -79,14 +81,44 @@
 <section id="documenting-your-code">
 <h2>Documenting Your Code<a class="headerlink" href="#documenting-your-code" title="Permalink to this headline"></a></h2>
 <p>In this section, we detail how to comment your code so that it can be read by Doxygen.</p>
-<p>After commenting your code, you need to add extra files sos that it can be found on the website.
-All you need to do is navigate to <cite>doc/api</cite>. The structure of this folder follows the structure of the <cite>include</cite> directory.
+<p>First, you need to document your code with Doxygen comment blocks. Commenting syntax isn’t covered here, but can be read about at: <a class="reference external" href="https://www.doxygen.nl/manual/docblocks.html#docstructure">https://www.doxygen.nl/manual/docblocks.html#docstructure</a>.</p>
+<p>However, there are a few guidelines to follow for documenting. Make sure to include a header comment on all .hpp files you create (refer to other code for examples). It should include the following information:</p>
+<ul class="simple">
+<li><p>Author(s)</p></li>
+<li><p>Last Modified Date</p></li>
+<li><p>A brief description (a 1-sentence overview of what the file is)</p></li>
+<li><p>A longer description (if needed)</p></li>
+</ul>
+<p>Additionally, document classes, structs, functions, etc. with the following information:</p>
+<ul class="simple">
+<li><p>A brief description (a 1-sentence overview of what the object is)</p></li>
+<li><p>A longer description (if needed)</p></li>
+<li><p>Parameters</p></li>
+<li><p>Exceptions (if applicable)</p></li>
+<li><p>Return Values (if applicable)</p></li>
+</ul>
+<p>If you use any formulas or algorithms that may need clarification, be sure to cite the source for future reference. A link to the original document/article is sufficient.</p>
+<p>After commenting your code, you need to add extra files sos that it can be found on the documentation website.
+First, navigate to <cite>doc/api</cite>. The structure of this folder follows the structure of the <cite>include</cite> directory.
 Simply navigate to the correct folder for your module (or create it if necesesary) and create a new .rst file following the template below:</p>
-<p>The path listed above is relative to the <cite>include</cite> directory.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p"> ..</span> <span class="nt">_[your module name]</span>
+<span class="nt"> [Your Module Name]</span>
+<span class="nt"> ==================</span>
+<span class="nt"> .. doxygenfile:</span>: path/to/your/module.hpp
+<span class="nc">:project:</span> VTCRO-LIB
+<span class="nc">:allow-dot-graphs:</span>       .. Optional to enable dependency and call graphs
+</pre></div>
+</div>
+<p>The path listed above is relative to the <cite>include</cite> directory, where all the header files are located.</p>
 </section>
 <section id="writing-guides">
 <h2>Writing Guides<a class="headerlink" href="#writing-guides" title="Permalink to this headline"></a></h2>
-<p>[TODO]</p>
+<p>Sphinx also allows the creation of custom pages, such as this one that contain additional documentation not generated from code.
+The following resources can help familiarize you with writing documentation with reStructuredText:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html</a></p></li>
+<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">https://docutils.sourceforge.io/docs/user/rst/quickref.html</a></p></li>
+</ul>
 </section>
 <section id="previewing-documentation">
 <h2>Previewing Documentation<a class="headerlink" href="#previewing-documentation" title="Permalink to this headline"></a></h2>
@@ -101,9 +133,9 @@ You only need to install the following:</p>
 <li><p>sphinx-rtd-theme</p></li>
 </ul>
 <p>[TODO: Add steps in the dockerfile to set this up automatically]. The last 3 dependencies should just be installed using pip.</p>
-<p>To build the documentation, navigate to the doc directory and run the following command: <cite>make html</cite>.
-The following command allows you to rebuild the documentation whenever a file is changed: <cite>sphinx-autobuild . _build/html</cite>.
-The generated documentation can be viewed by opening <cite>_build/html/index.html</cite> via a web browser.</p>
+<p>To build the documentation, navigate to the doc directory and run the following command: <code class="docutils literal notranslate"><span class="pre">doxygen</span> <span class="pre">&amp;&amp;</span> <span class="pre">make</span> <span class="pre">html</span></code>.
+The following command allows you to rebuild the documentation whenever a file is changed: <code class="docutils literal notranslate"><span class="pre">sphinx-autobuild</span> <span class="pre">.</span> <span class="pre">_build/html</span></code>.
+The generated documentation can be viewed by opening <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> via a web browser.</p>
 </section>
 </section>
 
