@@ -1,16 +1,16 @@
-/////////////////////////////////////////////////////////////
-// Author: Domenic Marcelli  R&D Team VT CRO
-// filename: MotorControl.h
-// Last Modified: 10/27/2023
-// Description:  This the header file for the motor controls.
-/////////////////////////////////////////////////////////////
-
-// Notes: Here is a sensor I found that using the pins
-// https://github.com/roggenkamps/teensy-thermoled/blob/master/tempsens.c
-//  we have four motors
+/**
+ * @file MotorControl.h
+ * @author Domenic Marcelli R&D Team 
+ * @brief This the header file for the motor controls.
+ * @date 2023-10-27
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 
 #ifndef MOTORCONTROL_H_
 #define MOTORCONTROL_H_
+
 
 // #include "arduino_freertos.h"
 #include "Arduino.h"
@@ -22,63 +22,128 @@
 
 #define PID_LOOP_PERIOD 50
 
+/**
+ * @brief Class representing a Motor
+ */
 class MotorControl {
 
 public:
+
+  /**
+   * @brief Construct a new Motor Control object
+   * 
+   * @param pin1 pin 1 of motor controller
+   * @param pin2 pin 2 of motor controller
+   */
   MotorControl(int pin1, int pin2);
 
-  // Sets the PID Params
+  /**
+   * @brief Set up motor PID controller
+   * 
+   * @param P Proportional gain
+   * @param I Integral gain
+   * @param D Derivative gain
+   */
   void Motor_setPIDParams(float P, float I, float D);
 
-  // Enable speed PID control
+  /**
+   * @brief Enabled motor speed control
+   */
   void Motor_enablePIDTask();
 
-  // Starts the motors and changes speed
+  /**
+   * @brief Enables motors to begin running at a speed setpoint
+   * 
+   * @param newSpeed Desired motor speed
+   */
   void Motor_start(int newSpeed);
 
+  /**
+   * @brief Initialize motor pins
+   * 
+   */
   void Motor_pin_init();
-
-  // sets the motor direction
-  // Might not need this
-  //  void Motor_setDirection(int direction, int delay);
 
   // task for freeRTOS
   static void pid_task(void *pidParams);
 
-  // pid loop
+  /**
+   * @brief Motor PID loop function
+   */
   void Motor_pidControlLoop();
 
-  // void Motor_stopMove();
-
+  /**
+   * @brief Get the motor speed
+   * 
+   * @return motor speed as an int
+   */
   int getSpeed();
 
+  /**
+   * @brief Logs motor state to ROSSerial
+   * 
+   * @param nh The current ROS node handler
+   */
   void logState(ros::NodeHandle &nh);
 
 private:
-  // changes the go and no_go pins depending on whether the speed is positive or
-  // negative
-  //  void checkDirection(int speed);
 
+  /**
+   * @brief Boolean indicating if Motor is running PID control
+   */
   bool pidMode;
 
+  /**
+   * @brief Motor speed
+   */
   int speed;
 
+  /**
+   * @brief Motor instantaneous angular velocity
+   * 
+   */
   int current_velocity;
+
+  /**
+   * @brief Target angular velocity
+   */
   int goal_velocity;
 
+  /**
+   * @brief Internal state variable for PID
+   */
   int last_error;
 
+  /**
+   * @brief Struct for holding motor pins
+   */
   struct _PinAssign {
     int in1;
     int in2;
   };
-
   typedef _PinAssign PinAssign;
 
+  /**
+   * @brief Pins
+   */
   PinAssign Assignments;
 
+  /**
+   * @brief Motor PID P Gain
+   * 
+   */
   int motorP;
+
+  /**
+   * @brief Motor PID I Gain
+   * 
+   */
   int motorI;
+
+  /**
+   * @brief Motor PID D Gain
+   * 
+   */
   int motorD;
 };
 // All the variables needed to control the motors

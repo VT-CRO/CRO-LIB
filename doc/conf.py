@@ -17,7 +17,8 @@ author = 'VTCRO'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'breathe'
+    'breathe',
+    "sphinx.ext.graphviz"
 ]
 
 templates_path = ['_templates']
@@ -47,6 +48,7 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False
 }
+html_logo = '_static/logo.png'
 
 breathe_projects = {
     "VTCRO-LIB": "_build/xml/"

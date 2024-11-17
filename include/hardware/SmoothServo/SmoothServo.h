@@ -5,7 +5,7 @@
 // // Description:  This file contains class declarations for
 // //               a servo class with smoother movement
 // /////////////////////////////////////////////////////////////
-#include "Servo.h"
+#include <Servo.h>
 
 class SmoothServo {
     public:
