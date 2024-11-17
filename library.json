@@ -24,7 +24,8 @@
         "owner": "frankjoshua",
         "name": "Rosserial Arduino Library",
         "version": "^0.9.1"
-      }
+      },
+      "Servo"
     ],
     "frameworks": "arduino",
     "platforms": "*"
