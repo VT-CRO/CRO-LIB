@@ -9,15 +9,17 @@
 /////////////////////////////////////////////////////////////
 #include "hardware/Chassis/Chassis.hpp"
 
-void Chassis_init(Chassis_t* chassis_ptr, MotorControl m1, MotorControl m2, MotorControl m3, MotorControl m4) {
+void Chassis_init(Chassis_t *chassis_ptr, MotorControl m1, MotorControl m2,
+                  MotorControl m3, MotorControl m4) {
   // initialize motor tasks here
 }
 
-void Chassis_setVelocityCorrection(Chassis_t* chassis_ptr, uint16_t err) {
+void Chassis_setVelocityCorrection(Chassis_t *chassis_ptr, uint16_t err) {
   chassis_ptr->velocityCorrection = err;
 }
 
-void Chassis_meccanum_kinematics(Chassis_t* chassis_ptr, geometry_msgs::Twist cmd_vel) {
+void Chassis_meccanum_kinematics(Chassis_t *chassis_ptr,
+                                 geometry_msgs::Twist cmd_vel) {
   float x = cmd_vel.linear.x;
   float y = cmd_vel.linear.y;
   float w = cmd_vel.angular.z;
@@ -32,8 +34,8 @@ void Chassis_meccanum_kinematics(Chassis_t* chassis_ptr, geometry_msgs::Twist cm
   double speed_3 = x - y + (w * lw) - chassis_ptr->velocityCorrection;
   double speed_4 = x + y - (w * lw) + chassis_ptr->velocityCorrection;
 
-  chassis_ptr->m1->Motor_start(speed_1);
-  chassis_ptr->m2->Motor_start(speed_2);
-  chassis_ptr->m3->Motor_start(speed_3);
-  chassis_ptr->m4->Motor_start(speed_4);
+  // chassis_ptr->m1->Motor_start(speed_1);
+  // chassis_ptr->m2->Motor_start(speed_2);
+  // chassis_ptr->m3->Motor_start(speed_3);
+  // chassis_ptr->m4->Motor_start(speed_4);
 }
