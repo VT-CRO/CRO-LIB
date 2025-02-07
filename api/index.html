@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>API Reference &mdash; VTCRO-LIB  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -25,12 +28,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> VTCRO-LIB
-            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VTCRO-LIB
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -70,8 +77,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>API Reference</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -82,24 +89,76 @@
            <div itemprop="articleBody">
              
   <section id="api-reference">
-<span id="id1"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
 <section id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline"></a></h2>
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Hardware Modules</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="hardware/chassis.html">Chassis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hardware/motor.html">Motor Control</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hardware/qdc.html">QDC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hardware/smoothservo.html">Smooth Servo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hardware/encoder/qdc_enc.html">QDC Encoder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hardware/linefollowing/qtr8.html">QTR8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/chassis.html">Chassis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/chassis.html#_CPPv412Chassis_initP9Chassis_t"><code class="docutils literal notranslate"><span class="pre">Chassis_init()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/chassis.html#_CPPv429Chassis_setVelocityCorrectionP9Chassis_t8uint16_t"><code class="docutils literal notranslate"><span class="pre">Chassis_setVelocityCorrection()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/chassis.html#_CPPv427Chassis_meccanum_kinematicsP9Chassis_tN13geometry_msgs5TwistE"><code class="docutils literal notranslate"><span class="pre">Chassis_meccanum_kinematics()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/chassis.html#_CPPv49Chassis_t"><code class="docutils literal notranslate"><span class="pre">Chassis_t</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/motor.html">Motor Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/motor.html#_CPPv412MotorControl"><code class="docutils literal notranslate"><span class="pre">MotorControl</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/qdc.html">QDC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv47QDC_pin"><code class="docutils literal notranslate"><span class="pre">QDC_pin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv410QDC_createv"><code class="docutils literal notranslate"><span class="pre">QDC_create()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv413QDC_setConfigP5QDC_tP12QDC_config_t"><code class="docutils literal notranslate"><span class="pre">QDC_setConfig()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv414QDC_makeConfigv"><code class="docutils literal notranslate"><span class="pre">QDC_makeConfig()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv418QDC_mapDigitalPinsP5QDC_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"><code class="docutils literal notranslate"><span class="pre">QDC_mapDigitalPins()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv420QDC_enableInterruptsP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_enableInterrupts()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv419QDC_attachInterruptP5QDC_tPFvvE"><code class="docutils literal notranslate"><span class="pre">QDC_attachInterrupt()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv421QDC_disableInterruptsP5QDC_t8uint32_t"><code class="docutils literal notranslate"><span class="pre">QDC_disableInterrupts()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv423QDC_clearInterruptFlagsP5QDC_t8uint32_t"><code class="docutils literal notranslate"><span class="pre">QDC_clearInterruptFlags()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv48QDC_initP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_init()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv419QDC_setInitialCountP5QDC_t8uint32_t"><code class="docutils literal notranslate"><span class="pre">QDC_setInitialCount()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv415QDC_getPositionP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getPosition()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv419QDC_getPositionHoldP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getPositionHold()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv425QDC_getPositionDifferenceP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getPositionDifference()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv429QDC_getPositionDifferenceHoldP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getPositionDifferenceHold()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv418QDC_getRevolutionsP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getRevolutions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv422QDC_getRevolutionsHoldP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getRevolutionsHold()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv420QDC_getCTRLIRQStatusP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getCTRLIRQStatus()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv421QDC_getCTRL2IRQStatusP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getCTRL2IRQStatus()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv412QDC_config_t"><code class="docutils literal notranslate"><span class="pre">QDC_config_t</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv413QDC_channel_t"><code class="docutils literal notranslate"><span class="pre">QDC_channel_t</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/qdc.html#_CPPv45QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_t</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/smoothservo.html">Smooth Servo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/smoothservo.html#_CPPv411SmoothServo"><code class="docutils literal notranslate"><span class="pre">SmoothServo</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/encoder/qdc_enc.html">QDC Encoder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/encoder/qdc_enc.html#_CPPv419QDC_Encoder_state_t"><code class="docutils literal notranslate"><span class="pre">QDC_Encoder_state_t</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/encoder/qdc_enc.html#_CPPv415Encoder_state_t"><code class="docutils literal notranslate"><span class="pre">Encoder_state_t</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/encoder/qdc_enc.html#_CPPv411QDC_Encoder"><code class="docutils literal notranslate"><span class="pre">QDC_Encoder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/linefollowing/qtr8.html">QTR8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/linefollowing/qtr8.html#_CPPv410QTR_8_initP7QTR_8_tP8uint16_t8uint16_t"><code class="docutils literal notranslate"><span class="pre">QTR_8_init()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/linefollowing/qtr8.html#_CPPv413QTR_8_findPosP7QTR_8_t"><code class="docutils literal notranslate"><span class="pre">QTR_8_findPos()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/linefollowing/qtr8.html#_CPPv416QTR_8_sensorReadP7QTR_8_t"><code class="docutils literal notranslate"><span class="pre">QTR_8_sensorRead()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/linefollowing/qtr8.html#_CPPv47QTR_8_t"><code class="docutils literal notranslate"><span class="pre">QTR_8_t</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Software Modules</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="modules/pid.html">PID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/pid.html">PID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/pid.html#_CPPv47pidInitfffffff"><code class="docutils literal notranslate"><span class="pre">pidInit()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/pid.html#_CPPv412pidCalculate3PIDfff"><code class="docutils literal notranslate"><span class="pre">pidCalculate()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/pid.html#_CPPv43PID"><code class="docutils literal notranslate"><span class="pre">PID</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>

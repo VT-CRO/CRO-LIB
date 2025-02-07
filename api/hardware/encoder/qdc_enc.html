@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QDC Encoder &mdash; VTCRO-LIB  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=eafc0fe6" />
+
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+  
+        <script src="../../../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -25,12 +28,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html" class="icon icon-home"> VTCRO-LIB
-            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            VTCRO-LIB
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -48,7 +55,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../motor.html">Motor Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../qdc.html">QDC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../smoothservo.html">Smooth Servo</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">QDC Encoder</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">QDC Encoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv419QDC_Encoder_state_t"><code class="docutils literal notranslate"><span class="pre">QDC_Encoder_state_t</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv415Encoder_state_t"><code class="docutils literal notranslate"><span class="pre">Encoder_state_t</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv411QDC_Encoder"><code class="docutils literal notranslate"><span class="pre">QDC_Encoder</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../linefollowing/qtr8.html">QTR8</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/pid.html">PID</a></li>
 </ul>
@@ -70,9 +82,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../index.html">API Reference</a> &raquo;</li>
-      <li>QDC Encoder</li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">API Reference</a></li>
+      <li class="breadcrumb-item active">QDC Encoder</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/api/hardware/encoder/qdc_enc.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -83,7 +95,7 @@
            <div itemprop="articleBody">
              
   <section id="qdc-encoder">
-<h1>QDC Encoder<a class="headerlink" href="#qdc-encoder" title="Permalink to this headline"></a></h1>
+<h1>QDC Encoder<a class="headerlink" href="#qdc-encoder" title="Link to this heading"></a></h1>
 <p>Include dependency graph for QDC_Encoder.h:</p>
 <figure class="align-default">
 <div align="center" class="align-center"><div class="graphviz"><img src="../../../_images/graphviz-0dae48f4ac08efa98a4fcf53b655f31508dac2a8.png" alt="digraph {
@@ -125,7 +137,7 @@ This file contains class and function declarations for an encoder based on the Q
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.MAX_NUM_ENCODER_INSTANCES">
-<span class="target" id="QDC__Encoder_8h_1aa63376cdf1cacac4769cbef75fd1feaa"></span><span class="sig-name descname"><span class="n"><span class="pre">MAX_NUM_ENCODER_INSTANCES</span></span></span><a class="headerlink" href="#c.MAX_NUM_ENCODER_INSTANCES" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC__Encoder_8h_1aa63376cdf1cacac4769cbef75fd1feaa"></span><span class="sig-name descname"><span class="n"><span class="pre">MAX_NUM_ENCODER_INSTANCES</span></span></span><a class="headerlink" href="#c.MAX_NUM_ENCODER_INSTANCES" title="Link to this definition"></a><br /></dt>
 <dd><p>This macro defines the maximum number of encoder instances that the user may instantiate at a time. </p>
 <p>The Teensy 4.x contains 4 QDC channels, so only 4 QDC Encoders may be instantiated at a time. </p>
 </dd></dl>
@@ -135,14 +147,14 @@ This file contains class and function declarations for an encoder based on the Q
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv419QDC_Encoder_state_t">
-<span id="_CPPv319QDC_Encoder_state_t"></span><span id="_CPPv219QDC_Encoder_state_t"></span><span id="QDC_Encoder_state_t"></span><span class="target" id="QDC__Encoder_8h_1a7d86c3a606eebf9a2c31a18aadbd5ae0"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv415Encoder_state_t" title="Encoder_state_t"><span class="n"><span class="pre">Encoder_state_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_Encoder_state_t</span></span></span><a class="headerlink" href="#_CPPv419QDC_Encoder_state_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv319QDC_Encoder_state_t"></span><span id="_CPPv219QDC_Encoder_state_t"></span><span id="QDC_Encoder_state_t"></span><span class="target" id="QDC__Encoder_8h_1a7d86c3a606eebf9a2c31a18aadbd5ae0"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv415Encoder_state_t" title="Encoder_state_t"><span class="n"><span class="pre">Encoder_state_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_Encoder_state_t</span></span></span><a class="headerlink" href="#_CPPv419QDC_Encoder_state_t" title="Link to this definition"></a><br /></dt>
 <dd><p>A struct to store the state of the encoder. </p>
 </dd></dl>
 
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv415Encoder_state_t">
-<span id="_CPPv315Encoder_state_t"></span><span id="_CPPv215Encoder_state_t"></span><span id="Encoder_state_t"></span><span class="target" id="structEncoder__state__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Encoder_state_t</span></span></span><a class="headerlink" href="#_CPPv415Encoder_state_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv315Encoder_state_t"></span><span id="_CPPv215Encoder_state_t"></span><span id="Encoder_state_t"></span><span class="target" id="structEncoder__state__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Encoder_state_t</span></span></span><a class="headerlink" href="#_CPPv415Encoder_state_t" title="Link to this definition"></a><br /></dt>
 <dd><div class="docutils container">
 <em>#include &lt;QDC_Encoder.h&gt;</em></div>
 <p>A struct to store the state of the encoder. </p>
@@ -150,13 +162,13 @@ This file contains class and function declarations for an encoder based on the Q
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N15Encoder_state_t3posE">
-<span id="_CPPv3N15Encoder_state_t3posE"></span><span id="_CPPv2N15Encoder_state_t3posE"></span><span id="Encoder_state_t::pos__i"></span><span class="target" id="structEncoder__state__t_1abe3909bea9fb3b25cac24f875f6aaf7b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pos</span></span></span><a class="headerlink" href="#_CPPv4N15Encoder_state_t3posE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N15Encoder_state_t3posE"></span><span id="_CPPv2N15Encoder_state_t3posE"></span><span id="Encoder_state_t::pos__i"></span><span class="target" id="structEncoder__state__t_1abe3909bea9fb3b25cac24f875f6aaf7b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pos</span></span></span><a class="headerlink" href="#_CPPv4N15Encoder_state_t3posE" title="Link to this definition"></a><br /></dt>
 <dd><p>The position of the encoder </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N15Encoder_state_t7posDiffE">
-<span id="_CPPv3N15Encoder_state_t7posDiffE"></span><span id="_CPPv2N15Encoder_state_t7posDiffE"></span><span id="Encoder_state_t::posDiff__i"></span><span class="target" id="structEncoder__state__t_1a4da1540ce9daf2cd9f20e7758bd57192"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">posDiff</span></span></span><a class="headerlink" href="#_CPPv4N15Encoder_state_t7posDiffE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N15Encoder_state_t7posDiffE"></span><span id="_CPPv2N15Encoder_state_t7posDiffE"></span><span id="Encoder_state_t::posDiff__i"></span><span class="target" id="structEncoder__state__t_1a4da1540ce9daf2cd9f20e7758bd57192"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">posDiff</span></span></span><a class="headerlink" href="#_CPPv4N15Encoder_state_t7posDiffE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -164,7 +176,7 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv411QDC_Encoder">
-<span id="_CPPv311QDC_Encoder"></span><span id="_CPPv211QDC_Encoder"></span><span id="QDC_Encoder"></span><span class="target" id="classQDC__Encoder"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_Encoder</span></span></span><a class="headerlink" href="#_CPPv411QDC_Encoder" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv311QDC_Encoder"></span><span id="_CPPv211QDC_Encoder"></span><span id="QDC_Encoder"></span><span class="target" id="classQDC__Encoder"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_Encoder</span></span></span><a class="headerlink" href="#_CPPv411QDC_Encoder" title="Link to this definition"></a><br /></dt>
 <dd><div class="docutils container">
 <em>#include &lt;QDC_Encoder.h&gt;</em></div>
 <p>This class represents an Encoder based on the Teens 4.x QDC peripheral. </p>
@@ -172,7 +184,7 @@ This file contains class and function declarations for an encoder based on the Q
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder7QDC_isrE">
-<span id="_CPPv3N11QDC_Encoder7QDC_isrE"></span><span id="_CPPv2N11QDC_Encoder7QDC_isrE"></span><span id="QDC_Encoder::QDC_isr"></span><span class="target" id="classQDC__Encoder_1a23f714dc6f18bace6222e966d2711f84"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_isr</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7QDC_isrE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder7QDC_isrE"></span><span id="_CPPv2N11QDC_Encoder7QDC_isrE"></span><span id="QDC_Encoder::QDC_isr"></span><span class="target" id="classQDC__Encoder_1a23f714dc6f18bace6222e966d2711f84"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_isr</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7QDC_isrE" title="Link to this definition"></a><br /></dt>
 <dd><p>A typedef for QDC_isr functions. </p>
 </dd></dl>
 
@@ -181,11 +193,11 @@ This file contains class and function declarations for an encoder based on the Q
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t">
-<span id="_CPPv3N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="_CPPv2N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="QDC_Encoder::QDC_Encoder__uint8_t.uint8_t.uint8_t.uint8_t.uint8_t.uint8_t.uint8_t"></span><span class="target" id="classQDC__Encoder_1a25cc341edab5911a6c95a5b37edf8bce"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_Encoder</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">channel</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phaseA</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phaseB</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">home</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">trigger</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin_pus</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="_CPPv2N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="QDC_Encoder::QDC_Encoder__uint8_t.uint8_t.uint8_t.uint8_t.uint8_t.uint8_t.uint8_t"></span><span class="target" id="classQDC__Encoder_1a25cc341edab5911a6c95a5b37edf8bce"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_Encoder</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">channel</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phaseA</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phaseB</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">home</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">trigger</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin_pus</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder11QDC_EncoderE7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Construct a new QDC Encoder object. </p>
 <p>TODO: Explain what each pin does</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>channel</strong> – The QDC channel to use (between 1-MAX_NUM_ENCODER_INSTANCES) </p></li>
 <li><p><strong>phaseA</strong> – PhaseA signal pin number </p></li>
@@ -201,16 +213,16 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_EncoderD0Ev">
-<span id="_CPPv3N11QDC_EncoderD0Ev"></span><span id="_CPPv2N11QDC_EncoderD0Ev"></span><span id="QDC_Encoder::~QDC_Encoder"></span><span class="target" id="classQDC__Encoder_1aeb811cd4ee07f9712dae4e9c86d0a530"></span><span class="sig-name descname"><span class="n"><span class="pre">~QDC_Encoder</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_EncoderD0Ev" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_EncoderD0Ev"></span><span id="_CPPv2N11QDC_EncoderD0Ev"></span><span id="QDC_Encoder::~QDC_Encoder"></span><span class="target" id="classQDC__Encoder_1aeb811cd4ee07f9712dae4e9c86d0a530"></span><span class="sig-name descname"><span class="n"><span class="pre">~QDC_Encoder</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_EncoderD0Ev" title="Link to this definition"></a><br /></dt>
 <dd><p>Destroy the qdc encoder object. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder9setConfigEP12QDC_config_t">
-<span id="_CPPv3N11QDC_Encoder9setConfigEP12QDC_config_t"></span><span id="_CPPv2N11QDC_Encoder9setConfigEP12QDC_config_t"></span><span id="QDC_Encoder::setConfig__QDC_config_tP"></span><span class="target" id="classQDC__Encoder_1a7a1c9bd1059144343a2cb93aebf656e4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setConfig</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../qdc.html#_CPPv412QDC_config_t" title="QDC_config_t"><span class="n"><span class="pre">QDC_config_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder9setConfigEP12QDC_config_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder9setConfigEP12QDC_config_t"></span><span id="_CPPv2N11QDC_Encoder9setConfigEP12QDC_config_t"></span><span id="QDC_Encoder::setConfig__QDC_config_tP"></span><span class="target" id="classQDC__Encoder_1a7a1c9bd1059144343a2cb93aebf656e4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setConfig</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../qdc.html#_CPPv412QDC_config_t" title="QDC_config_t"><span class="n"><span class="pre">QDC_config_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder9setConfigEP12QDC_config_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Set the QDC peripheral configuration. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>config</strong> – The configuration as a <a class="reference internal" href="../qdc.html#structQDC__config__t"><span class="std std-ref">QDC_config_t</span></a> pointer </p>
 </dd>
 </dl>
@@ -218,16 +230,16 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder16enableInterruptsEv">
-<span id="_CPPv3N11QDC_Encoder16enableInterruptsEv"></span><span id="_CPPv2N11QDC_Encoder16enableInterruptsEv"></span><span id="QDC_Encoder::enableInterrupts"></span><span class="target" id="classQDC__Encoder_1a226b1adbdb552a3168ba90160dc05548"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableInterrupts</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder16enableInterruptsEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder16enableInterruptsEv"></span><span id="_CPPv2N11QDC_Encoder16enableInterruptsEv"></span><span id="QDC_Encoder::enableInterrupts"></span><span class="target" id="classQDC__Encoder_1a226b1adbdb552a3168ba90160dc05548"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableInterrupts</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder16enableInterruptsEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Enable all encoder interrupts. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder17disableInterruptsE7uint8_t">
-<span id="_CPPv3N11QDC_Encoder17disableInterruptsE7uint8_t"></span><span id="_CPPv2N11QDC_Encoder17disableInterruptsE7uint8_t"></span><span id="QDC_Encoder::disableInterrupts__uint8_t"></span><span class="target" id="classQDC__Encoder_1a55d1c2fb79c5bee00eefa5d6be168971"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disableInterrupts</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder17disableInterruptsE7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder17disableInterruptsE7uint8_t"></span><span id="_CPPv2N11QDC_Encoder17disableInterruptsE7uint8_t"></span><span id="QDC_Encoder::disableInterrupts__uint8_t"></span><span class="target" id="classQDC__Encoder_1a55d1c2fb79c5bee00eefa5d6be168971"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disableInterrupts</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder17disableInterruptsE7uint8_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Disable an encoder interrupt. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>flag</strong> – Flag for the ISR to disable </p>
 </dd>
 </dl>
@@ -235,10 +247,10 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder19clearInterruptFlagsE7uint8_t">
-<span id="_CPPv3N11QDC_Encoder19clearInterruptFlagsE7uint8_t"></span><span id="_CPPv2N11QDC_Encoder19clearInterruptFlagsE7uint8_t"></span><span id="QDC_Encoder::clearInterruptFlags__uint8_t"></span><span class="target" id="classQDC__Encoder_1a71fe1810892e974c21b75642b2a4fe05"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearInterruptFlags</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder19clearInterruptFlagsE7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder19clearInterruptFlagsE7uint8_t"></span><span id="_CPPv2N11QDC_Encoder19clearInterruptFlagsE7uint8_t"></span><span id="QDC_Encoder::clearInterruptFlags__uint8_t"></span><span class="target" id="classQDC__Encoder_1a71fe1810892e974c21b75642b2a4fe05"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearInterruptFlags</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder19clearInterruptFlagsE7uint8_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Clears interrupt flags. Call at the end of a QDC_ISR. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>flag</strong> – Flag of ISR to clear </p>
 </dd>
 </dl>
@@ -246,16 +258,16 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder4initEv">
-<span id="_CPPv3N11QDC_Encoder4initEv"></span><span id="_CPPv2N11QDC_Encoder4initEv"></span><span id="QDC_Encoder::init"></span><span class="target" id="classQDC__Encoder_1a2e14e838e0d535986623bf438e5081cb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder4initEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder4initEv"></span><span id="_CPPv2N11QDC_Encoder4initEv"></span><span id="QDC_Encoder::init"></span><span class="target" id="classQDC__Encoder_1a2e14e838e0d535986623bf438e5081cb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder4initEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Initializes the Encoder. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder15setInitialCountE8uint32_t">
-<span id="_CPPv3N11QDC_Encoder15setInitialCountE8uint32_t"></span><span id="_CPPv2N11QDC_Encoder15setInitialCountE8uint32_t"></span><span id="QDC_Encoder::setInitialCount__uint32_t"></span><span class="target" id="classQDC__Encoder_1a43a03fb6c1b3b7e5c61e1ac8b44a7965"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setInitialCount</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">initial_pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder15setInitialCountE8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder15setInitialCountE8uint32_t"></span><span id="_CPPv2N11QDC_Encoder15setInitialCountE8uint32_t"></span><span id="QDC_Encoder::setInitialCount__uint32_t"></span><span class="target" id="classQDC__Encoder_1a43a03fb6c1b3b7e5c61e1ac8b44a7965"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setInitialCount</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">initial_pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder15setInitialCountE8uint32_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Set the Initial Count object. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>initial_pos</strong> – The initial count </p>
 </dd>
 </dl>
@@ -263,10 +275,10 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder11getPositionEv">
-<span id="_CPPv3N11QDC_Encoder11getPositionEv"></span><span id="_CPPv2N11QDC_Encoder11getPositionEv"></span><span id="QDC_Encoder::getPosition"></span><span class="target" id="classQDC__Encoder_1af4a498f473353038f35fe5e57a1791f4"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPosition</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder11getPositionEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder11getPositionEv"></span><span id="_CPPv2N11QDC_Encoder11getPositionEv"></span><span id="QDC_Encoder::getPosition"></span><span class="target" id="classQDC__Encoder_1af4a498f473353038f35fe5e57a1791f4"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPosition</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder11getPositionEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get Encoder position. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Encoder position as uint16_t </p>
 </dd>
 </dl>
@@ -274,10 +286,10 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder15getPositionHoldEv">
-<span id="_CPPv3N11QDC_Encoder15getPositionHoldEv"></span><span id="_CPPv2N11QDC_Encoder15getPositionHoldEv"></span><span id="QDC_Encoder::getPositionHold"></span><span class="target" id="classQDC__Encoder_1aab8ea5d324b8df64ef9f1c361e477ccd"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionHold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder15getPositionHoldEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder15getPositionHoldEv"></span><span id="_CPPv2N11QDC_Encoder15getPositionHoldEv"></span><span id="QDC_Encoder::getPositionHold"></span><span class="target" id="classQDC__Encoder_1aab8ea5d324b8df64ef9f1c361e477ccd"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionHold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder15getPositionHoldEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get Encoder position hold (what is this?). </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Encoder position hold as uint16_t </p>
 </dd>
 </dl>
@@ -285,10 +297,10 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder21getPositionDifferenceEv">
-<span id="_CPPv3N11QDC_Encoder21getPositionDifferenceEv"></span><span id="_CPPv2N11QDC_Encoder21getPositionDifferenceEv"></span><span id="QDC_Encoder::getPositionDifference"></span><span class="target" id="classQDC__Encoder_1a1394f00515a64592fec2a21b786cea11"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionDifference</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder21getPositionDifferenceEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder21getPositionDifferenceEv"></span><span id="_CPPv2N11QDC_Encoder21getPositionDifferenceEv"></span><span id="QDC_Encoder::getPositionDifference"></span><span class="target" id="classQDC__Encoder_1a1394f00515a64592fec2a21b786cea11"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionDifference</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder21getPositionDifferenceEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get position difference from last Encoder position read. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Encoder position difference as uint16_t </p>
 </dd>
 </dl>
@@ -296,10 +308,10 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder25getPositionDifferenceHoldEv">
-<span id="_CPPv3N11QDC_Encoder25getPositionDifferenceHoldEv"></span><span id="_CPPv2N11QDC_Encoder25getPositionDifferenceHoldEv"></span><span id="QDC_Encoder::getPositionDifferenceHold"></span><span class="target" id="classQDC__Encoder_1a114e5f3fce60150f57e5453678733805"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionDifferenceHold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder25getPositionDifferenceHoldEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder25getPositionDifferenceHoldEv"></span><span id="_CPPv2N11QDC_Encoder25getPositionDifferenceHoldEv"></span><span id="QDC_Encoder::getPositionDifferenceHold"></span><span class="target" id="classQDC__Encoder_1a114e5f3fce60150f57e5453678733805"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionDifferenceHold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder25getPositionDifferenceHoldEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get position hold difference from last Encoder position hold read. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Encoder position hold difference as uint16_t </p>
 </dd>
 </dl>
@@ -307,10 +319,10 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder14getRevolutionsEv">
-<span id="_CPPv3N11QDC_Encoder14getRevolutionsEv"></span><span id="_CPPv2N11QDC_Encoder14getRevolutionsEv"></span><span id="QDC_Encoder::getRevolutions"></span><span class="target" id="classQDC__Encoder_1a0076d18b60c5e2a3f03d347c761b441f"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRevolutions</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder14getRevolutionsEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder14getRevolutionsEv"></span><span id="_CPPv2N11QDC_Encoder14getRevolutionsEv"></span><span id="QDC_Encoder::getRevolutions"></span><span class="target" id="classQDC__Encoder_1a0076d18b60c5e2a3f03d347c761b441f"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRevolutions</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder14getRevolutionsEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the number of revolutions of the Encoder. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Number of encoder revolutions as uint16_t </p>
 </dd>
 </dl>
@@ -318,10 +330,10 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder18getRevolutionsHoldEv">
-<span id="_CPPv3N11QDC_Encoder18getRevolutionsHoldEv"></span><span id="_CPPv2N11QDC_Encoder18getRevolutionsHoldEv"></span><span id="QDC_Encoder::getRevolutionsHold"></span><span class="target" id="classQDC__Encoder_1a6f651782b5ea5f3759fdf0e11979a96f"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRevolutionsHold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder18getRevolutionsHoldEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder18getRevolutionsHoldEv"></span><span id="_CPPv2N11QDC_Encoder18getRevolutionsHoldEv"></span><span id="QDC_Encoder::getRevolutionsHold"></span><span class="target" id="classQDC__Encoder_1a6f651782b5ea5f3759fdf0e11979a96f"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRevolutionsHold</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder18getRevolutionsHoldEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the number of hold revolutions of the Encoder. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Number of encoder hold revolutions as uint16_t </p>
 </dd>
 </dl>
@@ -329,10 +341,10 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder8getSpeedEv">
-<span id="_CPPv3N11QDC_Encoder8getSpeedEv"></span><span id="_CPPv2N11QDC_Encoder8getSpeedEv"></span><span id="QDC_Encoder::getSpeed"></span><span class="target" id="classQDC__Encoder_1ae681589b82b43c457091e85aa5adfcb6"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSpeed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder8getSpeedEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder8getSpeedEv"></span><span id="_CPPv2N11QDC_Encoder8getSpeedEv"></span><span id="QDC_Encoder::getSpeed"></span><span class="target" id="classQDC__Encoder_1ae681589b82b43c457091e85aa5adfcb6"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSpeed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder8getSpeedEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Calculates the encoder rotational speed. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Encoder rotational speed as uint16_t </p>
 </dd>
 </dl>
@@ -340,7 +352,7 @@ This file contains class and function declarations for an encoder based on the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder9self_testEv">
-<span id="_CPPv3N11QDC_Encoder9self_testEv"></span><span id="_CPPv2N11QDC_Encoder9self_testEv"></span><span id="QDC_Encoder::self_test"></span><span class="target" id="classQDC__Encoder_1ae1188e0bac4b1679a6dd58a0dedd53b3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">self_test</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder9self_testEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder9self_testEv"></span><span id="_CPPv2N11QDC_Encoder9self_testEv"></span><span id="QDC_Encoder::self_test"></span><span class="target" id="classQDC__Encoder_1ae1188e0bac4b1679a6dd58a0dedd53b3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">self_test</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder9self_testEv" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -348,25 +360,25 @@ This file contains class and function declarations for an encoder based on the Q
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder7isrEnc1Ev">
-<span id="_CPPv3N11QDC_Encoder7isrEnc1Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc1Ev"></span><span id="QDC_Encoder::isrEnc1"></span><span class="target" id="classQDC__Encoder_1a1709fd495ad9655ffb1b8ee44b026733"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc1</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc1Ev" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder7isrEnc1Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc1Ev"></span><span id="QDC_Encoder::isrEnc1"></span><span class="target" id="classQDC__Encoder_1a1709fd495ad9655ffb1b8ee44b026733"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc1</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc1Ev" title="Link to this definition"></a><br /></dt>
 <dd><p>ISR for QDC channel 1. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder7isrEnc2Ev">
-<span id="_CPPv3N11QDC_Encoder7isrEnc2Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc2Ev"></span><span id="QDC_Encoder::isrEnc2"></span><span class="target" id="classQDC__Encoder_1aa123c6246ae4719a1f902878756c9d47"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc2</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc2Ev" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder7isrEnc2Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc2Ev"></span><span id="QDC_Encoder::isrEnc2"></span><span class="target" id="classQDC__Encoder_1aa123c6246ae4719a1f902878756c9d47"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc2</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc2Ev" title="Link to this definition"></a><br /></dt>
 <dd><p>ISR for QDC channel 1. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder7isrEnc3Ev">
-<span id="_CPPv3N11QDC_Encoder7isrEnc3Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc3Ev"></span><span id="QDC_Encoder::isrEnc3"></span><span class="target" id="classQDC__Encoder_1aa4cc5fe359e9d8480b58a5d0a8e3902b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc3</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc3Ev" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder7isrEnc3Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc3Ev"></span><span id="QDC_Encoder::isrEnc3"></span><span class="target" id="classQDC__Encoder_1aa4cc5fe359e9d8480b58a5d0a8e3902b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc3</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc3Ev" title="Link to this definition"></a><br /></dt>
 <dd><p>ISR for QDC channel 1. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder7isrEnc4Ev">
-<span id="_CPPv3N11QDC_Encoder7isrEnc4Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc4Ev"></span><span id="QDC_Encoder::isrEnc4"></span><span class="target" id="classQDC__Encoder_1af4995006b589c098d9986813a226461f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc4</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc4Ev" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder7isrEnc4Ev"></span><span id="_CPPv2N11QDC_Encoder7isrEnc4Ev"></span><span id="QDC_Encoder::isrEnc4"></span><span class="target" id="classQDC__Encoder_1af4995006b589c098d9986813a226461f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrEnc4</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder7isrEnc4Ev" title="Link to this definition"></a><br /></dt>
 <dd><p>ISR for QDC channel 1. </p>
 </dd></dl>
 
@@ -375,7 +387,7 @@ This file contains class and function declarations for an encoder based on the Q
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder3isrEv">
-<span id="_CPPv3N11QDC_Encoder3isrEv"></span><span id="_CPPv2N11QDC_Encoder3isrEv"></span><span id="QDC_Encoder::isr"></span><span class="target" id="classQDC__Encoder_1ab5de2cdedc1129932838df4edc0a0461"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isr</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder3isrEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder3isrEv"></span><span id="_CPPv2N11QDC_Encoder3isrEv"></span><span id="QDC_Encoder::isr"></span><span class="target" id="classQDC__Encoder_1ab5de2cdedc1129932838df4edc0a0461"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isr</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11QDC_Encoder3isrEv" title="Link to this definition"></a><br /></dt>
 <dd><p>ISR function to run every time an ISR is triggered. </p>
 </dd></dl>
 
@@ -384,25 +396,25 @@ This file contains class and function declarations for an encoder based on the Q
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder3qdcE">
-<span id="_CPPv3N11QDC_Encoder3qdcE"></span><span id="_CPPv2N11QDC_Encoder3qdcE"></span><span id="QDC_Encoder::qdc__QDC_t"></span><span class="target" id="classQDC__Encoder_1a0efe4e90784c302cc925b5d0e9037458"></span><a class="reference internal" href="../qdc.html#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qdc</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder3qdcE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder3qdcE"></span><span id="_CPPv2N11QDC_Encoder3qdcE"></span><span id="QDC_Encoder::qdc__QDC_t"></span><span class="target" id="classQDC__Encoder_1a0efe4e90784c302cc925b5d0e9037458"></span><a class="reference internal" href="../qdc.html#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qdc</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder3qdcE" title="Link to this definition"></a><br /></dt>
 <dd><p>The attached QDC peripheral as <a class="reference internal" href="../qdc.html#structQDC__t"><span class="std std-ref">QDC_t</span></a>. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder12indexCounterE">
-<span id="_CPPv3N11QDC_Encoder12indexCounterE"></span><span id="_CPPv2N11QDC_Encoder12indexCounterE"></span><span id="QDC_Encoder::indexCounter__uint16_t"></span><span class="target" id="classQDC__Encoder_1a4b3b06e11737d2a3d37f07d1538e6c1d"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">indexCounter</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder12indexCounterE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder12indexCounterE"></span><span id="_CPPv2N11QDC_Encoder12indexCounterE"></span><span id="QDC_Encoder::indexCounter__uint16_t"></span><span class="target" id="classQDC__Encoder_1a4b3b06e11737d2a3d37f07d1538e6c1d"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">indexCounter</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder12indexCounterE" title="Link to this definition"></a><br /></dt>
 <dd><p>Counter variable to store number of times index position is reached. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder11homeCounterE">
-<span id="_CPPv3N11QDC_Encoder11homeCounterE"></span><span id="_CPPv2N11QDC_Encoder11homeCounterE"></span><span id="QDC_Encoder::homeCounter__uint16_t"></span><span class="target" id="classQDC__Encoder_1a1eb1e128845959140bba8200558a29ff"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">homeCounter</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder11homeCounterE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder11homeCounterE"></span><span id="_CPPv2N11QDC_Encoder11homeCounterE"></span><span id="QDC_Encoder::homeCounter__uint16_t"></span><span class="target" id="classQDC__Encoder_1a1eb1e128845959140bba8200558a29ff"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">homeCounter</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder11homeCounterE" title="Link to this definition"></a><br /></dt>
 <dd><p>Counter variable to store number of times home position is reached. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder16compareValueFlagE">
-<span id="_CPPv3N11QDC_Encoder16compareValueFlagE"></span><span id="_CPPv2N11QDC_Encoder16compareValueFlagE"></span><span id="QDC_Encoder::compareValueFlag__uint16_t"></span><span class="target" id="classQDC__Encoder_1afffb06b772c57c0c0edb42b90ec52377"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compareValueFlag</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder16compareValueFlagE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder16compareValueFlagE"></span><span id="_CPPv2N11QDC_Encoder16compareValueFlagE"></span><span id="QDC_Encoder::compareValueFlag__uint16_t"></span><span class="target" id="classQDC__Encoder_1afffb06b772c57c0c0edb42b90ec52377"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compareValueFlag</span></span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder16compareValueFlagE" title="Link to this definition"></a><br /></dt>
 <dd><p>What is this??? </p>
 </dd></dl>
 
@@ -411,14 +423,14 @@ This file contains class and function declarations for an encoder based on the Q
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-static-attributes">Private Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder9instancesE">
-<span id="_CPPv3N11QDC_Encoder9instancesE"></span><span id="_CPPv2N11QDC_Encoder9instancesE"></span><span id="QDC_Encoder::instances__QDC_EncoderPA"></span><span class="target" id="classQDC__Encoder_1a352987507b83e76ef49821d095b26fdd"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">instances</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">5</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder9instancesE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder9instancesE"></span><span id="_CPPv2N11QDC_Encoder9instancesE"></span><span id="QDC_Encoder::instances__QDC_EncoderPA"></span><span class="target" id="classQDC__Encoder_1a352987507b83e76ef49821d095b26fdd"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">instances</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">5</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder9instancesE" title="Link to this definition"></a><br /></dt>
 <dd><p>Array holding instances of this class. </p>
 <p>This array is automatically updated as instances of this class are created and destroyed. The 0th element is not used. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N11QDC_Encoder4isrsE">
-<span id="_CPPv3N11QDC_Encoder4isrsE"></span><span id="_CPPv2N11QDC_Encoder4isrsE"></span><span id="QDC_Encoder::isrs__QDC_isrA"></span><span class="target" id="classQDC__Encoder_1a330dd65700e3c7e34f4df637a7d001a2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7QDC_isrE" title="QDC_Encoder::QDC_isr"><span class="n"><span class="pre">QDC_isr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrs</span></span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7isrEnc1Ev" title="QDC_Encoder::isrEnc1"><span class="n"><span class="pre">isrEnc1</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7isrEnc2Ev" title="QDC_Encoder::isrEnc2"><span class="n"><span class="pre">isrEnc2</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7isrEnc3Ev" title="QDC_Encoder::isrEnc3"><span class="n"><span class="pre">isrEnc3</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7isrEnc4Ev" title="QDC_Encoder::isrEnc4"><span class="n"><span class="pre">isrEnc4</span></span></a><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder4isrsE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N11QDC_Encoder4isrsE"></span><span id="_CPPv2N11QDC_Encoder4isrsE"></span><span id="QDC_Encoder::isrs__QDC_isrA"></span><span class="target" id="classQDC__Encoder_1a330dd65700e3c7e34f4df637a7d001a2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7QDC_isrE" title="QDC_Encoder::QDC_isr"><span class="n"><span class="pre">QDC_isr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isrs</span></span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7isrEnc1Ev" title="QDC_Encoder::isrEnc1"><span class="n"><span class="pre">isrEnc1</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7isrEnc2Ev" title="QDC_Encoder::isrEnc2"><span class="n"><span class="pre">isrEnc2</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7isrEnc3Ev" title="QDC_Encoder::isrEnc3"><span class="n"><span class="pre">isrEnc3</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411QDC_Encoder" title="QDC_Encoder"><span class="n"><span class="pre">QDC_Encoder</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N11QDC_Encoder7isrEnc4Ev" title="QDC_Encoder::isrEnc4"><span class="n"><span class="pre">isrEnc4</span></span></a><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N11QDC_Encoder4isrsE" title="Link to this definition"></a><br /></dt>
 <dd><p>Array holding ISRs for each encoder. </p>
 </dd></dl>
 

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chassis &mdash; VTCRO-LIB  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
+  
+        <script src="../../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -25,12 +28,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> VTCRO-LIB
-            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            VTCRO-LIB
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -44,7 +51,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../testing_guide.html">How To Write Tests</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#table-of-contents">Table of Contents</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Chassis</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Chassis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv412Chassis_initP9Chassis_t"><code class="docutils literal notranslate"><span class="pre">Chassis_init()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv429Chassis_setVelocityCorrectionP9Chassis_t8uint16_t"><code class="docutils literal notranslate"><span class="pre">Chassis_setVelocityCorrection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv427Chassis_meccanum_kinematicsP9Chassis_tN13geometry_msgs5TwistE"><code class="docutils literal notranslate"><span class="pre">Chassis_meccanum_kinematics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv49Chassis_t"><code class="docutils literal notranslate"><span class="pre">Chassis_t</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="motor.html">Motor Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qdc.html">QDC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="smoothservo.html">Smooth Servo</a></li>
@@ -70,9 +83,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">API Reference</a> &raquo;</li>
-      <li>Chassis</li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">API Reference</a></li>
+      <li class="breadcrumb-item active">Chassis</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/api/hardware/chassis.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -83,15 +96,16 @@
            <div itemprop="articleBody">
              
   <section id="chassis">
-<h1>Chassis<a class="headerlink" href="#chassis" title="Permalink to this headline"></a></h1>
+<h1>Chassis<a class="headerlink" href="#chassis" title="Link to this heading"></a></h1>
 <p>Include dependency graph for Chassis.hpp:</p>
 <figure class="align-default">
-<div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-cf1d4c96fd35e30800168b8003d6b36710d69f47.png" alt="digraph {
+<div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-0345f0d84eee365c0c79d3ad7f7038c74d0ce520.png" alt="digraph {
     graph [bgcolor=&quot;#00000000&quot;]
     node [shape=rectangle style=filled fillcolor=&quot;#FFFFFF&quot; font=Helvetica padding=2]
     edge [color=&quot;#1414CE&quot;]
     &quot;1&quot; [label=&quot;/github/workspace/include/hardware/Chassis/Chassis.hpp&quot; tooltip=&quot;/github/workspace/include/hardware/Chassis/Chassis.hpp&quot; fillcolor=&quot;#BFBFBF&quot;]
     &quot;6&quot; [label=&quot;hardware/Motor/MotorControl.h&quot; tooltip=&quot;hardware/Motor/MotorControl.h&quot;]
+    &quot;10&quot; [label=&quot;util/PID.hpp&quot; tooltip=&quot;util/PID.hpp&quot;]
     &quot;7&quot; [label=&quot;Arduino.h&quot; tooltip=&quot;Arduino.h&quot;]
     &quot;2&quot; [label=&quot;arduino_freertos.h&quot; tooltip=&quot;arduino_freertos.h&quot;]
     &quot;8&quot; [label=&quot;avr/io.h&quot; tooltip=&quot;avr/io.h&quot;]
@@ -108,6 +122,7 @@
     &quot;6&quot; -&gt; &quot;4&quot; [dir=forward tooltip=&quot;include&quot;]
     &quot;6&quot; -&gt; &quot;8&quot; [dir=forward tooltip=&quot;include&quot;]
     &quot;6&quot; -&gt; &quot;9&quot; [dir=forward tooltip=&quot;include&quot;]
+    &quot;6&quot; -&gt; &quot;10&quot; [dir=forward tooltip=&quot;include&quot;]
 }" class="graphviz" /></div>
 </div>
 </figure>
@@ -135,12 +150,12 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.NUM_MOTORS">
-<span class="target" id="Chassis_8hpp_1a52b56a381e777b55e1b59019d9ee072e"></span><span class="sig-name descname"><span class="n"><span class="pre">NUM_MOTORS</span></span></span><a class="headerlink" href="#c.NUM_MOTORS" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="Chassis_8hpp_1a52b56a381e777b55e1b59019d9ee072e"></span><span class="sig-name descname"><span class="n"><span class="pre">NUM_MOTORS</span></span></span><a class="headerlink" href="#c.NUM_MOTORS" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.tskCHASSIS_PRIORITY">
-<span class="target" id="Chassis_8hpp_1a5b850e0c8046d1ed9b1d9a66f5defeda"></span><span class="sig-name descname"><span class="n"><span class="pre">tskCHASSIS_PRIORITY</span></span></span><a class="headerlink" href="#c.tskCHASSIS_PRIORITY" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="Chassis_8hpp_1a5b850e0c8046d1ed9b1d9a66f5defeda"></span><span class="sig-name descname"><span class="n"><span class="pre">tskCHASSIS_PRIORITY</span></span></span><a class="headerlink" href="#c.tskCHASSIS_PRIORITY" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -148,10 +163,10 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv412Chassis_initP9Chassis_t">
-<span id="_CPPv312Chassis_initP9Chassis_t"></span><span id="_CPPv212Chassis_initP9Chassis_t"></span><span id="Chassis_init__Chassis_tP"></span><span class="target" id="Chassis_8hpp_1ab6a3aaf662bd9df327b45a06bdcfd085"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Chassis_init</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv49Chassis_t" title="Chassis_t"><span class="n"><span class="pre">Chassis_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">chassis_ptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412Chassis_initP9Chassis_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv312Chassis_initP9Chassis_t"></span><span id="_CPPv212Chassis_initP9Chassis_t"></span><span id="Chassis_init__Chassis_tP"></span><span class="target" id="Chassis_8hpp_1ab6a3aaf662bd9df327b45a06bdcfd085"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Chassis_init</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv49Chassis_t" title="Chassis_t"><span class="n"><span class="pre">Chassis_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">chassis_ptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412Chassis_initP9Chassis_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Initializes chassis object. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>chassis_ptr</strong> – The chassis object to be initialized </p>
 </dd>
 </dl>
@@ -159,10 +174,10 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv429Chassis_setVelocityCorrectionP9Chassis_t8uint16_t">
-<span id="_CPPv329Chassis_setVelocityCorrectionP9Chassis_t8uint16_t"></span><span id="_CPPv229Chassis_setVelocityCorrectionP9Chassis_t8uint16_t"></span><span id="Chassis_setVelocityCorrection__Chassis_tP.uint16_t"></span><span class="target" id="Chassis_8hpp_1a3f1dd453deb60037462474eaf6614184"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Chassis_setVelocityCorrection</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv49Chassis_t" title="Chassis_t"><span class="n"><span class="pre">Chassis_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">chassis_ptr</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">err</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429Chassis_setVelocityCorrectionP9Chassis_t8uint16_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv329Chassis_setVelocityCorrectionP9Chassis_t8uint16_t"></span><span id="_CPPv229Chassis_setVelocityCorrectionP9Chassis_t8uint16_t"></span><span id="Chassis_setVelocityCorrection__Chassis_tP.uint16_t"></span><span class="target" id="Chassis_8hpp_1a3f1dd453deb60037462474eaf6614184"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Chassis_setVelocityCorrection</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv49Chassis_t" title="Chassis_t"><span class="n"><span class="pre">Chassis_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">chassis_ptr</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">err</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429Chassis_setVelocityCorrectionP9Chassis_t8uint16_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Sets line following error for Chassis drive control. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>chassis_ptr</strong> – The chassis object </p></li>
 <li><p><strong>err</strong> – The line following error </p></li>
@@ -173,10 +188,10 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv427Chassis_meccanum_kinematicsP9Chassis_tN13geometry_msgs5TwistE">
-<span id="_CPPv327Chassis_meccanum_kinematicsP9Chassis_tN13geometry_msgs5TwistE"></span><span id="_CPPv227Chassis_meccanum_kinematicsP9Chassis_tN13geometry_msgs5TwistE"></span><span id="Chassis_meccanum_kinematics__Chassis_tP.geometry_msgs::Twist"></span><span class="target" id="Chassis_8hpp_1ae682088e649ab878097c207840fee016"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Chassis_meccanum_kinematics</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv49Chassis_t" title="Chassis_t"><span class="n"><span class="pre">Chassis_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">chassis_ptr</span></span>, <span class="n"><span class="pre">geometry_msgs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Twist</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cmd_vel</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427Chassis_meccanum_kinematicsP9Chassis_tN13geometry_msgs5TwistE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv327Chassis_meccanum_kinematicsP9Chassis_tN13geometry_msgs5TwistE"></span><span id="_CPPv227Chassis_meccanum_kinematicsP9Chassis_tN13geometry_msgs5TwistE"></span><span id="Chassis_meccanum_kinematics__Chassis_tP.geometry_msgs::Twist"></span><span class="target" id="Chassis_8hpp_1ae682088e649ab878097c207840fee016"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Chassis_meccanum_kinematics</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv49Chassis_t" title="Chassis_t"><span class="n"><span class="pre">Chassis_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">chassis_ptr</span></span>, <span class="n"><span class="pre">geometry_msgs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Twist</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cmd_vel</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427Chassis_meccanum_kinematicsP9Chassis_tN13geometry_msgs5TwistE" title="Link to this definition"></a><br /></dt>
 <dd><p>Calculates Chassis wheel speeds from a velocity command. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>chassis_ptr</strong> – The chassis object </p></li>
 <li><p><strong>cmd_vel</strong> – The command velocity as a ROS geometry_msgs/Twist </p></li>
@@ -188,7 +203,7 @@
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv49Chassis_t">
-<span id="_CPPv39Chassis_t"></span><span id="_CPPv29Chassis_t"></span><span id="Chassis_t"></span><span class="target" id="structChassis__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Chassis_t</span></span></span><a class="headerlink" href="#_CPPv49Chassis_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv39Chassis_t"></span><span id="_CPPv29Chassis_t"></span><span id="Chassis_t"></span><span class="target" id="structChassis__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Chassis_t</span></span></span><a class="headerlink" href="#_CPPv49Chassis_t" title="Link to this definition"></a><br /></dt>
 <dd><div class="docutils container">
 <em>#include &lt;Chassis.hpp&gt;</em></div>
 <p>Collaboration diagram for Chassis_t:</p>
@@ -204,51 +219,51 @@
 </div>
 </figure>
 <p>This class specifies the class interface for the chassis. </p>
-<p>This class provides a class interface for a non-holonomic chassis with meccanum wheels. The chassis, with the corresponding wheel numbers is as such: <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="w">             </span><span class="o">^</span><span class="w">  </span><span class="o">+</span><span class="n">x</span><span class="w"></span>
-<span class="w">             </span><span class="o">|</span><span class="w"></span>
-<span class="w">      </span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">---------</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
-<span class="w">       </span><span class="o">|</span><span class="w">   </span><span class="n">Front</span><span class="w">   </span><span class="o">|</span><span class="w"></span>
-<span class="n">y</span><span class="w"> </span><span class="o">&lt;---</span><span class="w"> </span><span class="o">|</span><span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="n">z</span><span class="o">+</span><span class="w">  </span><span class="o">|</span><span class="w"></span>
-<span class="w">       </span><span class="o">|</span><span class="w">           </span><span class="o">|</span><span class="w"></span>
-<span class="w">      </span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">---------</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"></span>
+<p>This class provides a class interface for a non-holonomic chassis with meccanum wheels. The chassis, with the corresponding wheel numbers is as such: <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="w">             </span><span class="o">^</span><span class="w">  </span><span class="o">+</span><span class="n">x</span>
+<span class="w">             </span><span class="o">|</span>
+<span class="w">      </span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">---------</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="w">       </span><span class="o">|</span><span class="w">   </span><span class="n">Front</span><span class="w">   </span><span class="o">|</span>
+<span class="n">y</span><span class="w"> </span><span class="o">&lt;---</span><span class="w"> </span><span class="o">|</span><span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="n">z</span><span class="o">+</span><span class="w">  </span><span class="o">|</span>
+<span class="w">       </span><span class="o">|</span><span class="w">           </span><span class="o">|</span>
+<span class="w">      </span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">---------</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
- </p>
+</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9Chassis_t2m1E">
-<span id="_CPPv3N9Chassis_t2m1E"></span><span id="_CPPv2N9Chassis_t2m1E"></span><span id="Chassis_t::m1__MotorControlP"></span><span class="target" id="structChassis__t_1a86e852413bfdb8ac7a820de41869f08d"></span><a class="reference internal" href="motor.html#_CPPv412MotorControl" title="MotorControl"><span class="n"><span class="pre">MotorControl</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m1</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t2m1E" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N9Chassis_t2m1E"></span><span id="_CPPv2N9Chassis_t2m1E"></span><span id="Chassis_t::m1__MotorControlP"></span><span class="target" id="structChassis__t_1a86e852413bfdb8ac7a820de41869f08d"></span><a class="reference internal" href="motor.html#_CPPv412MotorControl" title="MotorControl"><span class="n"><span class="pre">MotorControl</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m1</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t2m1E" title="Link to this definition"></a><br /></dt>
 <dd><p>Motor 1 </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9Chassis_t2m2E">
-<span id="_CPPv3N9Chassis_t2m2E"></span><span id="_CPPv2N9Chassis_t2m2E"></span><span id="Chassis_t::m2__MotorControlP"></span><span class="target" id="structChassis__t_1a7a2fe49bf8318162cb92fd944007afc4"></span><a class="reference internal" href="motor.html#_CPPv412MotorControl" title="MotorControl"><span class="n"><span class="pre">MotorControl</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m2</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t2m2E" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N9Chassis_t2m2E"></span><span id="_CPPv2N9Chassis_t2m2E"></span><span id="Chassis_t::m2__MotorControlP"></span><span class="target" id="structChassis__t_1a7a2fe49bf8318162cb92fd944007afc4"></span><a class="reference internal" href="motor.html#_CPPv412MotorControl" title="MotorControl"><span class="n"><span class="pre">MotorControl</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m2</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t2m2E" title="Link to this definition"></a><br /></dt>
 <dd><p>Motor 2 </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9Chassis_t2m3E">
-<span id="_CPPv3N9Chassis_t2m3E"></span><span id="_CPPv2N9Chassis_t2m3E"></span><span id="Chassis_t::m3__MotorControlP"></span><span class="target" id="structChassis__t_1a3ae04607e3ca925eddb4003f3c6981f6"></span><a class="reference internal" href="motor.html#_CPPv412MotorControl" title="MotorControl"><span class="n"><span class="pre">MotorControl</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m3</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t2m3E" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N9Chassis_t2m3E"></span><span id="_CPPv2N9Chassis_t2m3E"></span><span id="Chassis_t::m3__MotorControlP"></span><span class="target" id="structChassis__t_1a3ae04607e3ca925eddb4003f3c6981f6"></span><a class="reference internal" href="motor.html#_CPPv412MotorControl" title="MotorControl"><span class="n"><span class="pre">MotorControl</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m3</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t2m3E" title="Link to this definition"></a><br /></dt>
 <dd><p>Motor 3 </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9Chassis_t2m4E">
-<span id="_CPPv3N9Chassis_t2m4E"></span><span id="_CPPv2N9Chassis_t2m4E"></span><span id="Chassis_t::m4__MotorControlP"></span><span class="target" id="structChassis__t_1a108f9d12ba4e2ab93401bbdd00795299"></span><a class="reference internal" href="motor.html#_CPPv412MotorControl" title="MotorControl"><span class="n"><span class="pre">MotorControl</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m4</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t2m4E" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N9Chassis_t2m4E"></span><span id="_CPPv2N9Chassis_t2m4E"></span><span id="Chassis_t::m4__MotorControlP"></span><span class="target" id="structChassis__t_1a108f9d12ba4e2ab93401bbdd00795299"></span><a class="reference internal" href="motor.html#_CPPv412MotorControl" title="MotorControl"><span class="n"><span class="pre">MotorControl</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m4</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t2m4E" title="Link to this definition"></a><br /></dt>
 <dd><p>Motor 4 </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9Chassis_t18velocityCorrectionE">
-<span id="_CPPv3N9Chassis_t18velocityCorrectionE"></span><span id="_CPPv2N9Chassis_t18velocityCorrectionE"></span><span id="Chassis_t::velocityCorrection__uint16_t"></span><span class="target" id="structChassis__t_1ad1c5a8ba022a30c1c83bfa635df1fb28"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocityCorrection</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t18velocityCorrectionE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N9Chassis_t18velocityCorrectionE"></span><span id="_CPPv2N9Chassis_t18velocityCorrectionE"></span><span id="Chassis_t::velocityCorrection__uint16_t"></span><span class="target" id="structChassis__t_1ad1c5a8ba022a30c1c83bfa635df1fb28"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocityCorrection</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t18velocityCorrectionE" title="Link to this definition"></a><br /></dt>
 <dd><p>state variable for velocity correction when line following </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9Chassis_t22velocityCorrectionGainE">
-<span id="_CPPv3N9Chassis_t22velocityCorrectionGainE"></span><span id="_CPPv2N9Chassis_t22velocityCorrectionGainE"></span><span id="Chassis_t::velocityCorrectionGain__double"></span><span class="target" id="structChassis__t_1a255e2b9a34e6d71c6d15bfda37f0d48d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocityCorrectionGain</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t22velocityCorrectionGainE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N9Chassis_t22velocityCorrectionGainE"></span><span id="_CPPv2N9Chassis_t22velocityCorrectionGainE"></span><span id="Chassis_t::velocityCorrectionGain__double"></span><span class="target" id="structChassis__t_1a255e2b9a34e6d71c6d15bfda37f0d48d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocityCorrectionGain</span></span></span><a class="headerlink" href="#_CPPv4N9Chassis_t22velocityCorrectionGainE" title="Link to this definition"></a><br /></dt>
 <dd><p>velocity correction gain </p>
 </dd></dl>
 

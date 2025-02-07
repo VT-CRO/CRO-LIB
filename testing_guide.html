@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How To Write Tests &mdash; VTCRO-LIB  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -25,12 +28,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> VTCRO-LIB
-            <img src="_static/logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            VTCRO-LIB
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -62,8 +69,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>How To Write Tests</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">How To Write Tests</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/testing_guide.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -74,16 +81,16 @@
            <div itemprop="articleBody">
              
   <section id="how-to-write-tests">
-<span id="testing-guide"></span><h1>How To Write Tests<a class="headerlink" href="#how-to-write-tests" title="Permalink to this headline"></a></h1>
+<span id="testing-guide"></span><h1>How To Write Tests<a class="headerlink" href="#how-to-write-tests" title="Link to this heading"></a></h1>
 <section id="testing-basics">
-<h2>Testing Basics<a class="headerlink" href="#testing-basics" title="Permalink to this headline"></a></h2>
+<h2>Testing Basics<a class="headerlink" href="#testing-basics" title="Link to this heading"></a></h2>
 <p>Unit tests are located in the <cite>test</cite> directory which contains its own subfolders.
 The folder structure of the <cite>test</cite> directory should look like:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>| test
-| ├── embedded
-| │   └── ...
-| └── modules
-|     └── ...
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">|</span><span class="w"> </span><span class="n">test</span>
+<span class="o">|</span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="n">embedded</span>
+<span class="o">|</span><span class="w"> </span><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="p">...</span>
+<span class="o">|</span><span class="w"> </span><span class="err">└──</span><span class="w"> </span><span class="n">modules</span>
+<span class="o">|</span><span class="w">     </span><span class="err">└──</span><span class="w"> </span><span class="p">...</span>
 </pre></div>
 </div>
 <p>the <cite>embedded</cite> directory contains all unit tests for hardware-dependent components (motors, sensors, etc.),
@@ -92,7 +99,7 @@ while the <cite>modules</cite> directory contains all unit tests without a hardw
 <p>[TODO: How to run tests, process for running hardware vs. software tests]</p>
 </section>
 <section id="generating-mocks">
-<h2>Generating Mocks<a class="headerlink" href="#generating-mocks" title="Permalink to this headline"></a></h2>
+<h2>Generating Mocks<a class="headerlink" href="#generating-mocks" title="Link to this heading"></a></h2>
 <p>For certain features, it may be helpful to generate mocks to aid in testing.</p>
 </section>
 </section>

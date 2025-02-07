@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Motor Control &mdash; VTCRO-LIB  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
+  
+        <script src="../../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -25,12 +28,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> VTCRO-LIB
-            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            VTCRO-LIB
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -45,7 +52,10 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#table-of-contents">Table of Contents</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="chassis.html">Chassis</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Motor Control</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Motor Control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv412MotorControl"><code class="docutils literal notranslate"><span class="pre">MotorControl</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="qdc.html">QDC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="smoothservo.html">Smooth Servo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="encoder/qdc_enc.html">QDC Encoder</a></li>
@@ -70,9 +80,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">API Reference</a> &raquo;</li>
-      <li>Motor Control</li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">API Reference</a></li>
+      <li class="breadcrumb-item active">Motor Control</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/api/hardware/motor.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -83,14 +93,15 @@
            <div itemprop="articleBody">
              
   <section id="motor-control">
-<h1>Motor Control<a class="headerlink" href="#motor-control" title="Permalink to this headline"></a></h1>
+<h1>Motor Control<a class="headerlink" href="#motor-control" title="Link to this heading"></a></h1>
 <p>Include dependency graph for MotorControl.h:</p>
 <figure class="align-default">
-<div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-2ef5f3f5c863da9f1ff3087633ef7ed18e2449d1.png" alt="digraph {
+<div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-b223ff672462da8a84f75404b8673ee412b0a486.png" alt="digraph {
     graph [bgcolor=&quot;#00000000&quot;]
     node [shape=rectangle style=filled fillcolor=&quot;#FFFFFF&quot; font=Helvetica padding=2]
     edge [color=&quot;#1414CE&quot;]
     &quot;1&quot; [label=&quot;/github/workspace/include/hardware/Motor/MotorControl.h&quot; tooltip=&quot;/github/workspace/include/hardware/Motor/MotorControl.h&quot; fillcolor=&quot;#BFBFBF&quot;]
+    &quot;6&quot; [label=&quot;util/PID.hpp&quot; tooltip=&quot;util/PID.hpp&quot;]
     &quot;2&quot; [label=&quot;Arduino.h&quot; tooltip=&quot;Arduino.h&quot;]
     &quot;4&quot; [label=&quot;avr/io.h&quot; tooltip=&quot;avr/io.h&quot;]
     &quot;5&quot; [label=&quot;avr/pgmspace.h&quot; tooltip=&quot;avr/pgmspace.h&quot;]
@@ -99,12 +110,13 @@
     &quot;1&quot; -&gt; &quot;3&quot; [dir=forward tooltip=&quot;include&quot;]
     &quot;1&quot; -&gt; &quot;4&quot; [dir=forward tooltip=&quot;include&quot;]
     &quot;1&quot; -&gt; &quot;5&quot; [dir=forward tooltip=&quot;include&quot;]
+    &quot;1&quot; -&gt; &quot;6&quot; [dir=forward tooltip=&quot;include&quot;]
 }" class="graphviz" /></div>
 </div>
 </figure>
 <p>This graph shows which files directly or indirectly include MotorControl.h:</p>
 <figure class="align-default">
-<div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-1349d8ffb538850228648c3b32a3217fb08a4a1c.png" alt="digraph {
+<div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-173869a646797fda89f6a7fc8b92b2665c8270c0.png" alt="digraph {
     graph [bgcolor=&quot;#00000000&quot;]
     node [shape=rectangle style=filled fillcolor=&quot;#FFFFFF&quot; font=Helvetica padding=2]
     edge [color=&quot;#1414CE&quot;]
@@ -112,11 +124,9 @@
     &quot;1&quot; [label=&quot;/github/workspace/include/hardware/Motor/MotorControl.h&quot; tooltip=&quot;/github/workspace/include/hardware/Motor/MotorControl.h&quot; fillcolor=&quot;#BFBFBF&quot;]
     &quot;3&quot; [label=&quot;/github/workspace/src/hardware/Chassis/Chassis.cpp&quot; tooltip=&quot;/github/workspace/src/hardware/Chassis/Chassis.cpp&quot;]
     &quot;4&quot; [label=&quot;/github/workspace/src/hardware/Motor/MotorControl.cpp&quot; tooltip=&quot;/github/workspace/src/hardware/Motor/MotorControl.cpp&quot;]
-    &quot;5&quot; [label=&quot;/github/workspace/src/main.cpp&quot; tooltip=&quot;/github/workspace/src/main.cpp&quot;]
     &quot;2&quot; -&gt; &quot;3&quot; [dir=back tooltip=&quot;include&quot;]
     &quot;1&quot; -&gt; &quot;2&quot; [dir=back tooltip=&quot;include&quot;]
     &quot;1&quot; -&gt; &quot;4&quot; [dir=back tooltip=&quot;include&quot;]
-    &quot;1&quot; -&gt; &quot;5&quot; [dir=back tooltip=&quot;include&quot;]
 }" class="graphviz" /></div>
 </div>
 </figure>
@@ -134,18 +144,18 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.tskPID_PRIORITY">
-<span class="target" id="MotorControl_8h_1acff40ce2e364f03d5816458309a1beab"></span><span class="sig-name descname"><span class="n"><span class="pre">tskPID_PRIORITY</span></span></span><a class="headerlink" href="#c.tskPID_PRIORITY" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="MotorControl_8h_1acff40ce2e364f03d5816458309a1beab"></span><span class="sig-name descname"><span class="n"><span class="pre">tskPID_PRIORITY</span></span></span><a class="headerlink" href="#c.tskPID_PRIORITY" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.PID_LOOP_PERIOD">
-<span class="target" id="MotorControl_8h_1a508a24d4b2554f94dd6131ae989bb4eb"></span><span class="sig-name descname"><span class="n"><span class="pre">PID_LOOP_PERIOD</span></span></span><a class="headerlink" href="#c.PID_LOOP_PERIOD" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="MotorControl_8h_1a508a24d4b2554f94dd6131ae989bb4eb"></span><span class="sig-name descname"><span class="n"><span class="pre">PID_LOOP_PERIOD</span></span></span><a class="headerlink" href="#c.PID_LOOP_PERIOD" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv412MotorControl">
-<span id="_CPPv312MotorControl"></span><span id="_CPPv212MotorControl"></span><span id="MotorControl"></span><span class="target" id="classMotorControl"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MotorControl</span></span></span><a class="headerlink" href="#_CPPv412MotorControl" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv312MotorControl"></span><span id="_CPPv212MotorControl"></span><span id="MotorControl"></span><span class="target" id="classMotorControl"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MotorControl</span></span></span><a class="headerlink" href="#_CPPv412MotorControl" title="Link to this definition"></a><br /></dt>
 <dd><div class="docutils container">
 <em>#include &lt;MotorControl.h&gt;</em></div>
 <p>Class representing a Motor. </p>
@@ -153,10 +163,10 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl12MotorControlEii">
-<span id="_CPPv3N12MotorControl12MotorControlEii"></span><span id="_CPPv2N12MotorControl12MotorControlEii"></span><span id="MotorControl::MotorControl__i.i"></span><span class="target" id="classMotorControl_1a228a29b93a2faa9ff7f5e80204aafd67"></span><span class="sig-name descname"><span class="n"><span class="pre">MotorControl</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl12MotorControlEii" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl12MotorControlEii"></span><span id="_CPPv2N12MotorControl12MotorControlEii"></span><span id="MotorControl::MotorControl__i.i"></span><span class="target" id="classMotorControl_1a228a29b93a2faa9ff7f5e80204aafd67"></span><span class="sig-name descname"><span class="n"><span class="pre">MotorControl</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl12MotorControlEii" title="Link to this definition"></a><br /></dt>
 <dd><p>Construct a new Motor Control object. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pin1</strong> – pin 1 of motor controller </p></li>
 <li><p><strong>pin2</strong> – pin 2 of motor controller </p></li>
@@ -167,10 +177,10 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl18Motor_setPIDParamsEfff">
-<span id="_CPPv3N12MotorControl18Motor_setPIDParamsEfff"></span><span id="_CPPv2N12MotorControl18Motor_setPIDParamsEfff"></span><span id="MotorControl::Motor_setPIDParams__float.float.float"></span><span class="target" id="classMotorControl_1a5ed2d4915da81e051cb7493877b18ad5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_setPIDParams</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">P</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">I</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">D</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl18Motor_setPIDParamsEfff" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl18Motor_setPIDParamsEfff"></span><span id="_CPPv2N12MotorControl18Motor_setPIDParamsEfff"></span><span id="MotorControl::Motor_setPIDParams__float.float.float"></span><span class="target" id="classMotorControl_1a5ed2d4915da81e051cb7493877b18ad5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_setPIDParams</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">P</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">I</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">D</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl18Motor_setPIDParamsEfff" title="Link to this definition"></a><br /></dt>
 <dd><p>Set up motor <a class="reference internal" href="../modules/pid.html#structPID"><span class="std std-ref">PID</span></a> controller. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>P</strong> – Proportional gain </p></li>
 <li><p><strong>I</strong> – Integral gain </p></li>
@@ -181,62 +191,57 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl19Motor_enablePIDTaskEv">
-<span id="_CPPv3N12MotorControl19Motor_enablePIDTaskEv"></span><span id="_CPPv2N12MotorControl19Motor_enablePIDTaskEv"></span><span id="MotorControl::Motor_enablePIDTask"></span><span class="target" id="classMotorControl_1a07749320602ea84e8d0ac5d4bf1a3df9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_enablePIDTask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl19Motor_enablePIDTaskEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Enabled motor speed control. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl11Motor_startEi">
-<span id="_CPPv3N12MotorControl11Motor_startEi"></span><span id="_CPPv2N12MotorControl11Motor_startEi"></span><span id="MotorControl::Motor_start__i"></span><span class="target" id="classMotorControl_1ab12c39dcd8c923d16c129016430a4622"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_start</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newSpeed</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl11Motor_startEi" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl18Motor_setGoalSpeedEf">
+<span id="_CPPv3N12MotorControl18Motor_setGoalSpeedEf"></span><span id="_CPPv2N12MotorControl18Motor_setGoalSpeedEf"></span><span id="MotorControl::Motor_setGoalSpeed__float"></span><span class="target" id="classMotorControl_1aa468a538c79c963798508ff07587c90f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_setGoalSpeed</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newSpeed</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl18Motor_setGoalSpeedEf" title="Link to this definition"></a><br /></dt>
 <dd><p>Enables motors to begin running at a speed setpoint. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>newSpeed</strong> – Desired motor speed </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl12Motor_updateEv">
+<span id="_CPPv3N12MotorControl12Motor_updateEv"></span><span id="_CPPv2N12MotorControl12Motor_updateEv"></span><span id="MotorControl::Motor_update"></span><span class="target" id="classMotorControl_1ae792b14f614b116a2e004c43b9b95077"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_update</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl12Motor_updateEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl14Motor_pin_initEv">
-<span id="_CPPv3N12MotorControl14Motor_pin_initEv"></span><span id="_CPPv2N12MotorControl14Motor_pin_initEv"></span><span id="MotorControl::Motor_pin_init"></span><span class="target" id="classMotorControl_1ae47ed8fecb72e6006696245f9249d2c6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_pin_init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl14Motor_pin_initEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl14Motor_pin_initEv"></span><span id="_CPPv2N12MotorControl14Motor_pin_initEv"></span><span id="MotorControl::Motor_pin_init"></span><span class="target" id="classMotorControl_1ae47ed8fecb72e6006696245f9249d2c6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_pin_init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl14Motor_pin_initEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Initialize motor pins. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl20Motor_pidControlLoopEv">
-<span id="_CPPv3N12MotorControl20Motor_pidControlLoopEv"></span><span id="_CPPv2N12MotorControl20Motor_pidControlLoopEv"></span><span id="MotorControl::Motor_pidControlLoop"></span><span class="target" id="classMotorControl_1a5b084155337d05a68c868f19c5005054"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_pidControlLoop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl20Motor_pidControlLoopEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl20Motor_pidControlLoopEv"></span><span id="_CPPv2N12MotorControl20Motor_pidControlLoopEv"></span><span id="MotorControl::Motor_pidControlLoop"></span><span class="target" id="classMotorControl_1a5b084155337d05a68c868f19c5005054"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_pidControlLoop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl20Motor_pidControlLoopEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Motor <a class="reference internal" href="../modules/pid.html#structPID"><span class="std std-ref">PID</span></a> loop function. </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl8getSpeedEv">
-<span id="_CPPv3N12MotorControl8getSpeedEv"></span><span id="_CPPv2N12MotorControl8getSpeedEv"></span><span id="MotorControl::getSpeed"></span><span class="target" id="classMotorControl_1a97215acadcee9d2d57c2f1c62e7538a8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSpeed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl8getSpeedEv" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl24Motor_calcPWMFeedForwardEv">
+<span id="_CPPv3N12MotorControl24Motor_calcPWMFeedForwardEv"></span><span id="_CPPv2N12MotorControl24Motor_calcPWMFeedForwardEv"></span><span id="MotorControl::Motor_calcPWMFeedForward"></span><span class="target" id="classMotorControl_1a91f4f9afd204113a953982a63086e028"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_calcPWMFeedForward</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl24Motor_calcPWMFeedForwardEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl17Motor_setPositionEi">
+<span id="_CPPv3N12MotorControl17Motor_setPositionEi"></span><span id="_CPPv2N12MotorControl17Motor_setPositionEi"></span><span id="MotorControl::Motor_setPosition__i"></span><span class="target" id="classMotorControl_1ac2d623bebc3faa60808b9c10ca4e4ad6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_setPosition</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ticks</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl17Motor_setPositionEi" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl14Motor_getSpeedEv">
+<span id="_CPPv3N12MotorControl14Motor_getSpeedEv"></span><span id="_CPPv2N12MotorControl14Motor_getSpeedEv"></span><span id="MotorControl::Motor_getSpeed"></span><span class="target" id="classMotorControl_1a97d93950272bffa19fa32123cce36fb0"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_getSpeed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl14Motor_getSpeedEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the motor speed. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>motor speed as an int </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl8logStateERN3ros10NodeHandleE">
-<span id="_CPPv3N12MotorControl8logStateERN3ros10NodeHandleE"></span><span id="_CPPv2N12MotorControl8logStateERN3ros10NodeHandleE"></span><span id="MotorControl::logState__ros::NodeHandleR"></span><span class="target" id="classMotorControl_1a038640636f9599fac2265fefa0feef51"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logState</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ros</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">NodeHandle</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">nh</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl8logStateERN3ros10NodeHandleE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Logs motor state to ROSSerial. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>nh</strong> – The current ROS node handler </p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl8pid_taskEPv">
-<span id="_CPPv3N12MotorControl8pid_taskEPv"></span><span id="_CPPv2N12MotorControl8pid_taskEPv"></span><span id="MotorControl::pid_task__voidP"></span><span class="target" id="classMotorControl_1a99f440a948acd6773e64aec0bdf0f943"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pid_task</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pidParams</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl8pid_taskEPv" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl19Motor_enablePIDModeEb">
+<span id="_CPPv3N12MotorControl19Motor_enablePIDModeEb"></span><span id="_CPPv2N12MotorControl19Motor_enablePIDModeEb"></span><span id="MotorControl::Motor_enablePIDMode__b"></span><span class="target" id="classMotorControl_1ae6f47cd259985984851b4fa91ab9db67"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Motor_enablePIDMode</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">enable</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12MotorControl19Motor_enablePIDModeEb" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -244,7 +249,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-types">Private Types</p>
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl9PinAssignE">
-<span id="_CPPv3N12MotorControl9PinAssignE"></span><span id="_CPPv2N12MotorControl9PinAssignE"></span><span id="MotorControl::PinAssign"></span><span class="target" id="classMotorControl_1a0a69f3718833b286fdb810c24cd5f979"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12MotorControl10_PinAssignE" title="MotorControl::_PinAssign"><span class="n"><span class="pre">_PinAssign</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PinAssign</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl9PinAssignE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl9PinAssignE"></span><span id="_CPPv2N12MotorControl9PinAssignE"></span><span id="MotorControl::PinAssign"></span><span class="target" id="classMotorControl_1a0a69f3718833b286fdb810c24cd5f979"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12MotorControl10_PinAssignE" title="MotorControl::_PinAssign"><span class="n"><span class="pre">_PinAssign</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PinAssign</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl9PinAssignE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -252,73 +257,70 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl7pidModeE">
-<span id="_CPPv3N12MotorControl7pidModeE"></span><span id="_CPPv2N12MotorControl7pidModeE"></span><span id="MotorControl::pidMode__b"></span><span class="target" id="classMotorControl_1a2b4279619c1bd8f529184402e14bd3c2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pidMode</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl7pidModeE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl7pidModeE"></span><span id="_CPPv2N12MotorControl7pidModeE"></span><span id="MotorControl::pidMode__b"></span><span class="target" id="classMotorControl_1a2b4279619c1bd8f529184402e14bd3c2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pidMode</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl7pidModeE" title="Link to this definition"></a><br /></dt>
 <dd><p>Boolean indicating if Motor is running <a class="reference internal" href="../modules/pid.html#structPID"><span class="std std-ref">PID</span></a> control. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl5speedE">
-<span id="_CPPv3N12MotorControl5speedE"></span><span id="_CPPv2N12MotorControl5speedE"></span><span id="MotorControl::speed__i"></span><span class="target" id="classMotorControl_1af5e3b53a49c4a153037f62f4f69d26f9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">speed</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl5speedE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Motor speed. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl3pwmE">
+<span id="_CPPv3N12MotorControl3pwmE"></span><span id="_CPPv2N12MotorControl3pwmE"></span><span id="MotorControl::pwm__i"></span><span class="target" id="classMotorControl_1a519d7386e52836ae0504082569f55bde"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pwm</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl3pwmE" title="Link to this definition"></a><br /></dt>
+<dd><p>Motor pwm. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl16current_velocityE">
-<span id="_CPPv3N12MotorControl16current_velocityE"></span><span id="_CPPv2N12MotorControl16current_velocityE"></span><span id="MotorControl::current_velocity__i"></span><span class="target" id="classMotorControl_1a7559ccf7e50d0914c1c53b8a78d92d78"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current_velocity</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl16current_velocityE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl16current_velocityE"></span><span id="_CPPv2N12MotorControl16current_velocityE"></span><span id="MotorControl::current_velocity__float"></span><span class="target" id="classMotorControl_1ad1e965d83f69752054c42c1bdf5f6891"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current_velocity</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl16current_velocityE" title="Link to this definition"></a><br /></dt>
 <dd><p>Motor instantaneous angular velocity. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl13goal_velocityE">
-<span id="_CPPv3N12MotorControl13goal_velocityE"></span><span id="_CPPv2N12MotorControl13goal_velocityE"></span><span id="MotorControl::goal_velocity__i"></span><span class="target" id="classMotorControl_1acbeaa41986480597abe9fbbb5386a234"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">goal_velocity</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl13goal_velocityE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl13goal_velocityE"></span><span id="_CPPv2N12MotorControl13goal_velocityE"></span><span id="MotorControl::goal_velocity__float"></span><span class="target" id="classMotorControl_1aafa49764c1492c06be0eb05523d08175"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">goal_velocity</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl13goal_velocityE" title="Link to this definition"></a><br /></dt>
 <dd><p>Target angular velocity. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl10last_errorE">
-<span id="_CPPv3N12MotorControl10last_errorE"></span><span id="_CPPv2N12MotorControl10last_errorE"></span><span id="MotorControl::last_error__i"></span><span class="target" id="classMotorControl_1a66f1aa3821ab7ed3d0aef9204ac1eacf"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">last_error</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl10last_errorE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Internal state variable for <a class="reference internal" href="../modules/pid.html#structPID"><span class="std std-ref">PID</span></a>. </p>
-</dd></dl>
-
-<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl11AssignmentsE">
-<span id="_CPPv3N12MotorControl11AssignmentsE"></span><span id="_CPPv2N12MotorControl11AssignmentsE"></span><span id="MotorControl::Assignments__PinAssign"></span><span class="target" id="classMotorControl_1abb8c297d93ee2bf2df1a9193961d010e"></span><a class="reference internal" href="#_CPPv4N12MotorControl9PinAssignE" title="MotorControl::PinAssign"><span class="n"><span class="pre">PinAssign</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Assignments</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl11AssignmentsE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl11AssignmentsE"></span><span id="_CPPv2N12MotorControl11AssignmentsE"></span><span id="MotorControl::Assignments__PinAssign"></span><span class="target" id="classMotorControl_1abb8c297d93ee2bf2df1a9193961d010e"></span><a class="reference internal" href="#_CPPv4N12MotorControl9PinAssignE" title="MotorControl::PinAssign"><span class="n"><span class="pre">PinAssign</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Assignments</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl11AssignmentsE" title="Link to this definition"></a><br /></dt>
 <dd><p>Pins. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl6motorPE">
-<span id="_CPPv3N12MotorControl6motorPE"></span><span id="_CPPv2N12MotorControl6motorPE"></span><span id="MotorControl::motorP__i"></span><span class="target" id="classMotorControl_1ad4aa29040a11fec1a4bab34610df6cd2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motorP</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl6motorPE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Motor <a class="reference internal" href="../modules/pid.html#structPID"><span class="std std-ref">PID</span></a> P Gain. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl3pidE">
+<span id="_CPPv3N12MotorControl3pidE"></span><span id="_CPPv2N12MotorControl3pidE"></span><span id="MotorControl::pid__PID"></span><span class="target" id="classMotorControl_1ab0d4a9b6a37f7fe4e1622aa2b9480480"></span><a class="reference internal" href="../modules/pid.html#_CPPv43PID" title="PID"><span class="n"><span class="pre">PID</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pid</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl3pidE" title="Link to this definition"></a><br /></dt>
+<dd><p>Motor <a class="reference internal" href="../modules/pid.html#structPID"><span class="std std-ref">PID</span></a>. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl6motorIE">
-<span id="_CPPv3N12MotorControl6motorIE"></span><span id="_CPPv2N12MotorControl6motorIE"></span><span id="MotorControl::motorI__i"></span><span class="target" id="classMotorControl_1afd48e30c499d378abce960327b637620"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motorI</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl6motorIE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Motor <a class="reference internal" href="../modules/pid.html#structPID"><span class="std std-ref">PID</span></a> I Gain. </p>
-</dd></dl>
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl12last_pidTimeE">
+<span id="_CPPv3N12MotorControl12last_pidTimeE"></span><span id="_CPPv2N12MotorControl12last_pidTimeE"></span><span id="MotorControl::last_pidTime__unsigned-l"></span><span class="target" id="classMotorControl_1a9423d1254b7adb545b0fd9354cf1dd51"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">last_pidTime</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl12last_pidTimeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl6motorDE">
-<span id="_CPPv3N12MotorControl6motorDE"></span><span id="_CPPv2N12MotorControl6motorDE"></span><span id="MotorControl::motorD__i"></span><span class="target" id="classMotorControl_1a76221093c9fe882ce72d15561ab7202a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motorD</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl6motorDE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Motor <a class="reference internal" href="../modules/pid.html#structPID"><span class="std std-ref">PID</span></a> D Gain. </p>
-</dd></dl>
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl17lastPositionTicksE">
+<span id="_CPPv3N12MotorControl17lastPositionTicksE"></span><span id="_CPPv2N12MotorControl17lastPositionTicksE"></span><span id="MotorControl::lastPositionTicks__i"></span><span class="target" id="classMotorControl_1a0f107dd52c4f0b6a014d4c2712c3091f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastPositionTicks</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl17lastPositionTicksE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12MotorControl8positionE">
+<span id="_CPPv3N12MotorControl8positionE"></span><span id="_CPPv2N12MotorControl8positionE"></span><span id="MotorControl::position__i"></span><span class="target" id="classMotorControl_1a76d1520761926b29879bc50dc1080459"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">position</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl8positionE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
 
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl10_PinAssignE">
-<span id="_CPPv3N12MotorControl10_PinAssignE"></span><span id="_CPPv2N12MotorControl10_PinAssignE"></span><span id="MotorControl::_PinAssign"></span><span class="target" id="structMotorControl_1_1__PinAssign"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_PinAssign</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl10_PinAssignE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl10_PinAssignE"></span><span id="_CPPv2N12MotorControl10_PinAssignE"></span><span id="MotorControl::_PinAssign"></span><span class="target" id="structMotorControl_1_1__PinAssign"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_PinAssign</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl10_PinAssignE" title="Link to this definition"></a><br /></dt>
 <dd><p>Struct for holding motor pins. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl10_PinAssign3in1E">
-<span id="_CPPv3N12MotorControl10_PinAssign3in1E"></span><span id="_CPPv2N12MotorControl10_PinAssign3in1E"></span><span id="MotorControl::_PinAssign::in1__i"></span><span class="target" id="structMotorControl_1_1__PinAssign_1adf01741f713b1d9647d3615f61cf075e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">in1</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl10_PinAssign3in1E" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl10_PinAssign3in1E"></span><span id="_CPPv2N12MotorControl10_PinAssign3in1E"></span><span id="MotorControl::_PinAssign::in1__i"></span><span class="target" id="structMotorControl_1_1__PinAssign_1adf01741f713b1d9647d3615f61cf075e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">in1</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl10_PinAssign3in1E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12MotorControl10_PinAssign3in2E">
-<span id="_CPPv3N12MotorControl10_PinAssign3in2E"></span><span id="_CPPv2N12MotorControl10_PinAssign3in2E"></span><span id="MotorControl::_PinAssign::in2__i"></span><span class="target" id="structMotorControl_1_1__PinAssign_1a54221b9c5e225d1e7a656b66a9523c38"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">in2</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl10_PinAssign3in2E" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12MotorControl10_PinAssign3in2E"></span><span id="_CPPv2N12MotorControl10_PinAssign3in2E"></span><span id="MotorControl::_PinAssign::in2__i"></span><span class="target" id="structMotorControl_1_1__PinAssign_1a54221b9c5e225d1e7a656b66a9523c38"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">in2</span></span></span><a class="headerlink" href="#_CPPv4N12MotorControl10_PinAssign3in2E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QDC &mdash; VTCRO-LIB  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
+  
+        <script src="../../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -25,12 +28,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> VTCRO-LIB
-            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            VTCRO-LIB
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -46,7 +53,31 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#table-of-contents">Table of Contents</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="chassis.html">Chassis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="motor.html">Motor Control</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">QDC</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">QDC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv47QDC_pin"><code class="docutils literal notranslate"><span class="pre">QDC_pin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv410QDC_createv"><code class="docutils literal notranslate"><span class="pre">QDC_create()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv413QDC_setConfigP5QDC_tP12QDC_config_t"><code class="docutils literal notranslate"><span class="pre">QDC_setConfig()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv414QDC_makeConfigv"><code class="docutils literal notranslate"><span class="pre">QDC_makeConfig()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv418QDC_mapDigitalPinsP5QDC_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"><code class="docutils literal notranslate"><span class="pre">QDC_mapDigitalPins()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv420QDC_enableInterruptsP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_enableInterrupts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv419QDC_attachInterruptP5QDC_tPFvvE"><code class="docutils literal notranslate"><span class="pre">QDC_attachInterrupt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv421QDC_disableInterruptsP5QDC_t8uint32_t"><code class="docutils literal notranslate"><span class="pre">QDC_disableInterrupts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv423QDC_clearInterruptFlagsP5QDC_t8uint32_t"><code class="docutils literal notranslate"><span class="pre">QDC_clearInterruptFlags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv48QDC_initP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_init()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv419QDC_setInitialCountP5QDC_t8uint32_t"><code class="docutils literal notranslate"><span class="pre">QDC_setInitialCount()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv415QDC_getPositionP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getPosition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv419QDC_getPositionHoldP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getPositionHold()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv425QDC_getPositionDifferenceP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getPositionDifference()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv429QDC_getPositionDifferenceHoldP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getPositionDifferenceHold()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv418QDC_getRevolutionsP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getRevolutions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv422QDC_getRevolutionsHoldP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getRevolutionsHold()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv420QDC_getCTRLIRQStatusP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getCTRLIRQStatus()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv421QDC_getCTRL2IRQStatusP5QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_getCTRL2IRQStatus()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv412QDC_config_t"><code class="docutils literal notranslate"><span class="pre">QDC_config_t</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv413QDC_channel_t"><code class="docutils literal notranslate"><span class="pre">QDC_channel_t</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv45QDC_t"><code class="docutils literal notranslate"><span class="pre">QDC_t</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="smoothservo.html">Smooth Servo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="encoder/qdc_enc.html">QDC Encoder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="linefollowing/qtr8.html">QTR8</a></li>
@@ -70,9 +101,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">API Reference</a> &raquo;</li>
-      <li>QDC</li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">API Reference</a></li>
+      <li class="breadcrumb-item active">QDC</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/api/hardware/qdc.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -83,7 +114,7 @@
            <div itemprop="articleBody">
              
   <section id="qdc">
-<h1>QDC<a class="headerlink" href="#qdc" title="Permalink to this headline"></a></h1>
+<h1>QDC<a class="headerlink" href="#qdc" title="Link to this heading"></a></h1>
 <p>Include dependency graph for QDC.h:</p>
 <figure class="align-default">
 <div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-7686c84e7a50a8076dba526a79bedeadd0a9a4ef.png" alt="digraph {
@@ -116,267 +147,267 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_HIRQ_MASK">
-<span class="target" id="QDC_8h_1a0559c4fd40accb491731087853a78af2"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_HIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_HIRQ_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a0559c4fd40accb491731087853a78af2"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_HIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_HIRQ_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_HIE_MASK">
-<span class="target" id="QDC_8h_1a82940cda61902ea20aee367289125eff"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_HIE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_HIE_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a82940cda61902ea20aee367289125eff"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_HIE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_HIE_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_HIP_MASK">
-<span class="target" id="QDC_8h_1a29b682194e989a1bc2374126b4cd589c"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_HIP_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_HIP_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a29b682194e989a1bc2374126b4cd589c"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_HIP_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_HIP_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_HNE_MASK">
-<span class="target" id="QDC_8h_1a28002a607d70628912668681939b813e"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_HNE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_HNE_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a28002a607d70628912668681939b813e"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_HNE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_HNE_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_SWIP_MASK">
-<span class="target" id="QDC_8h_1a27248a06fa1558fae4e01cf652c0a502"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_SWIP_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_SWIP_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a27248a06fa1558fae4e01cf652c0a502"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_SWIP_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_SWIP_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_REV_MASK">
-<span class="target" id="QDC_8h_1ac35a63976169339f2a569e11c62b2021"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_REV_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_REV_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1ac35a63976169339f2a569e11c62b2021"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_REV_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_REV_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_PH1_MASK">
-<span class="target" id="QDC_8h_1a04c85e3b1d8c643c55984af2a7d93ad3"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_PH1_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_PH1_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a04c85e3b1d8c643c55984af2a7d93ad3"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_PH1_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_PH1_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_XIRQ_MASK">
-<span class="target" id="QDC_8h_1abc585cd4598c6cc03a5651de02233245"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_XIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_XIRQ_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1abc585cd4598c6cc03a5651de02233245"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_XIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_XIRQ_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_XIE_MASK">
-<span class="target" id="QDC_8h_1aa02f7a879df36865d408095516aa8e6a"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_XIE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_XIE_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1aa02f7a879df36865d408095516aa8e6a"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_XIE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_XIE_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_XIP_MASK">
-<span class="target" id="QDC_8h_1abdeebd7a4e01316808d310507d3ee2a3"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_XIP_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_XIP_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1abdeebd7a4e01316808d310507d3ee2a3"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_XIP_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_XIP_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_XNE_MASK">
-<span class="target" id="QDC_8h_1ac558fbe4e84d0104f7bf315790ef6a60"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_XNE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_XNE_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1ac558fbe4e84d0104f7bf315790ef6a60"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_XNE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_XNE_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_DIRQ_MASK">
-<span class="target" id="QDC_8h_1a6e594d51dfa0b0e01099345d71ff9699"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_DIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_DIRQ_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a6e594d51dfa0b0e01099345d71ff9699"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_DIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_DIRQ_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_DIE_MASK">
-<span class="target" id="QDC_8h_1a8274f1696bd11cea346b87674500f50f"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_DIE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_DIE_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a8274f1696bd11cea346b87674500f50f"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_DIE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_DIE_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_WDE_MASK">
-<span class="target" id="QDC_8h_1a821ed75aa7d9d4d5991d131ed52c2692"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_WDE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_WDE_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a821ed75aa7d9d4d5991d131ed52c2692"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_WDE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_WDE_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_CMPIRQ_MASK">
-<span class="target" id="QDC_8h_1affc40be09b5b39b9164d654f27374e4d"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_CMPIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_CMPIRQ_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1affc40be09b5b39b9164d654f27374e4d"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_CMPIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_CMPIRQ_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_CMPIE_MASK">
-<span class="target" id="QDC_8h_1adc965c14ae3f2da638f4d4d3ab8ea043"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_CMPIE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_CMPIE_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1adc965c14ae3f2da638f4d4d3ab8ea043"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_CMPIE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL_CMPIE_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_SABIRQ_MASK">
-<span class="target" id="QDC_8h_1a97bae3eb0e5602ca61fe14048e5bf28d"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_SABIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_SABIRQ_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a97bae3eb0e5602ca61fe14048e5bf28d"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_SABIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_SABIRQ_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_OUTCTL_MASK">
-<span class="target" id="QDC_8h_1ac378512f94342da0f647bd31a07a1c9b"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_OUTCTL_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_OUTCTL_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1ac378512f94342da0f647bd31a07a1c9b"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_OUTCTL_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_OUTCTL_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_REVMOD_MASK">
-<span class="target" id="QDC_8h_1a2266090dcb43fd95b8af71ddc94a74f4"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_REVMOD_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_REVMOD_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a2266090dcb43fd95b8af71ddc94a74f4"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_REVMOD_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_REVMOD_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_ROIRQ_MASK">
-<span class="target" id="QDC_8h_1af7d9264b60d5914de76bdda6a2e9a036"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_ROIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_ROIRQ_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1af7d9264b60d5914de76bdda6a2e9a036"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_ROIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_ROIRQ_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_ROEI_MASK">
-<span class="target" id="QDC_8h_1a3403aa05d879d328adf4e4b91e4a84ff"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_ROEI_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_ROEI_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a3403aa05d879d328adf4e4b91e4a84ff"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_ROEI_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_ROEI_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_RUIRQ_MASK">
-<span class="target" id="QDC_8h_1a409f3d553f18a1f44a9cb488ffe13552"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_RUIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_RUIRQ_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a409f3d553f18a1f44a9cb488ffe13552"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_RUIRQ_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_RUIRQ_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_RUIE_MASK">
-<span class="target" id="QDC_8h_1aafc1367ed4ee24d099a8852feb71b1ed"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_RUIE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_RUIE_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1aafc1367ed4ee24d099a8852feb71b1ed"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_RUIE_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_RUIE_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_DIR_MASK">
-<span class="target" id="QDC_8h_1a9978152dd1b3ff34fb74372b58a4591b"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_DIR_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_DIR_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a9978152dd1b3ff34fb74372b58a4591b"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_DIR_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_DIR_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_MOD_MASK">
-<span class="target" id="QDC_8h_1a02b3d9654526daa0fe7f485b205a14b2"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_MOD_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_MOD_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a02b3d9654526daa0fe7f485b205a14b2"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_MOD_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_MOD_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_UPDPOS_MASK">
-<span class="target" id="QDC_8h_1a6bd62979a62fa6585d17d7bd3c25bbb4"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_UPDPOS_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_UPDPOS_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a6bd62979a62fa6585d17d7bd3c25bbb4"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_UPDPOS_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_UPDPOS_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_UPDHLD_MASK">
-<span class="target" id="QDC_8h_1abc1276977051b75791b299b02803d679"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_UPDHLD_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_UPDHLD_MASK" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1abc1276977051b75791b299b02803d679"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_UPDHLD_MASK</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_UPDHLD_MASK" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_FILT_PRSC">
-<span class="target" id="QDC_8h_1acd1a0414a7754cb963f209e2e338c603"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_FILT_PRSC</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QDC_FILT_PRSC" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1acd1a0414a7754cb963f209e2e338c603"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_FILT_PRSC</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QDC_FILT_PRSC" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_FILT_CNT">
-<span class="target" id="QDC_8h_1a4657289bc1543e6d972b40119b1a13cf"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_FILT_CNT</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QDC_FILT_CNT" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a4657289bc1543e6d972b40119b1a13cf"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_FILT_CNT</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QDC_FILT_CNT" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_FILT_PER">
-<span class="target" id="QDC_8h_1ad5b7ce236748e5b2b1b3e3f64d17ac88"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_FILT_PER</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QDC_FILT_PER" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1ad5b7ce236748e5b2b1b3e3f64d17ac88"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_FILT_PER</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QDC_FILT_PER" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL_W1C_FLAGS">
-<span class="target" id="QDC_8h_1a44452bfb5ab31c421a3e16b2472befe4"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_W1C_FLAGS</span></span></span><a class="headerlink" href="#c.QDC_CTRL_W1C_FLAGS" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a44452bfb5ab31c421a3e16b2472befe4"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL_W1C_FLAGS</span></span></span><a class="headerlink" href="#c.QDC_CTRL_W1C_FLAGS" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_CTRL2_W1C_FLAGS">
-<span class="target" id="QDC_8h_1af7e8f25a46dc8563ec8497c2e64a73d5"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_W1C_FLAGS</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_W1C_FLAGS" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1af7e8f25a46dc8563ec8497c2e64a73d5"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_CTRL2_W1C_FLAGS</span></span></span><a class="headerlink" href="#c.QDC_CTRL2_W1C_FLAGS" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.DISABLE">
-<span class="target" id="QDC_8h_1a99496f7308834e8b220f7894efa0b6ab"></span><span class="sig-name descname"><span class="n"><span class="pre">DISABLE</span></span></span><a class="headerlink" href="#c.DISABLE" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a99496f7308834e8b220f7894efa0b6ab"></span><span class="sig-name descname"><span class="n"><span class="pre">DISABLE</span></span></span><a class="headerlink" href="#c.DISABLE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.ENABLE">
-<span class="target" id="QDC_8h_1a514ad415fb6125ba296793df7d1a468a"></span><span class="sig-name descname"><span class="n"><span class="pre">ENABLE</span></span></span><a class="headerlink" href="#c.ENABLE" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a514ad415fb6125ba296793df7d1a468a"></span><span class="sig-name descname"><span class="n"><span class="pre">ENABLE</span></span></span><a class="headerlink" href="#c.ENABLE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_NORMAL_MODE">
-<span class="target" id="QDC_8h_1a47d289e64ec03e8cada582157ac0f4e0"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_NORMAL_MODE</span></span></span><a class="headerlink" href="#c.QDC_NORMAL_MODE" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a47d289e64ec03e8cada582157ac0f4e0"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_NORMAL_MODE</span></span></span><a class="headerlink" href="#c.QDC_NORMAL_MODE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_PHASEA_MODE">
-<span class="target" id="QDC_8h_1af8aaab0935ce7d7ff66945062f6078f2"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_PHASEA_MODE</span></span></span><a class="headerlink" href="#c.QDC_PHASEA_MODE" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1af8aaab0935ce7d7ff66945062f6078f2"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_PHASEA_MODE</span></span></span><a class="headerlink" href="#c.QDC_PHASEA_MODE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_RISING_EDGE_TRIG">
-<span class="target" id="QDC_8h_1ad9244cc833562003c8e75526cfad3d36"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_RISING_EDGE_TRIG</span></span></span><a class="headerlink" href="#c.QDC_RISING_EDGE_TRIG" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1ad9244cc833562003c8e75526cfad3d36"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_RISING_EDGE_TRIG</span></span></span><a class="headerlink" href="#c.QDC_RISING_EDGE_TRIG" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_FALLING_EDGE_TRIG">
-<span class="target" id="QDC_8h_1a0862a84d0b5c9834c03ead5860d6750a"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_FALLING_EDGE_TRIG</span></span></span><a class="headerlink" href="#c.QDC_FALLING_EDGE_TRIG" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a0862a84d0b5c9834c03ead5860d6750a"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_FALLING_EDGE_TRIG</span></span></span><a class="headerlink" href="#c.QDC_FALLING_EDGE_TRIG" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_POS_MATCH_COMP_MODE">
-<span class="target" id="QDC_8h_1ac0c13d1b3837b1d5b265a69505bafe6b"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_POS_MATCH_COMP_MODE</span></span></span><a class="headerlink" href="#c.QDC_POS_MATCH_COMP_MODE" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1ac0c13d1b3837b1d5b265a69505bafe6b"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_POS_MATCH_COMP_MODE</span></span></span><a class="headerlink" href="#c.QDC_POS_MATCH_COMP_MODE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_POS_MATCH_POS_MODE">
-<span class="target" id="QDC_8h_1addfd03cb2f6b2068fcfde6fda1dc2344"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_POS_MATCH_POS_MODE</span></span></span><a class="headerlink" href="#c.QDC_POS_MATCH_POS_MODE" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1addfd03cb2f6b2068fcfde6fda1dc2344"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_POS_MATCH_POS_MODE</span></span></span><a class="headerlink" href="#c.QDC_POS_MATCH_POS_MODE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_REV_COND_INDEX">
-<span class="target" id="QDC_8h_1a98033e14ef810fca76426a626ed82cc1"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_REV_COND_INDEX</span></span></span><a class="headerlink" href="#c.QDC_REV_COND_INDEX" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a98033e14ef810fca76426a626ed82cc1"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_REV_COND_INDEX</span></span></span><a class="headerlink" href="#c.QDC_REV_COND_INDEX" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_REV_COND_MOD">
-<span class="target" id="QDC_8h_1a17c5a693d2f047f942791eb75a2e2d87"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_REV_COND_MOD</span></span></span><a class="headerlink" href="#c.QDC_REV_COND_MOD" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a17c5a693d2f047f942791eb75a2e2d87"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_REV_COND_MOD</span></span></span><a class="headerlink" href="#c.QDC_REV_COND_MOD" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_HOMETransistionEnable">
-<span class="target" id="QDC_8h_1af2166c0c5a4806b24177848fa184b00b"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_HOMETransistionEnable</span></span></span><a class="headerlink" href="#c.QDC_HOMETransistionEnable" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1af2166c0c5a4806b24177848fa184b00b"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_HOMETransistionEnable</span></span></span><a class="headerlink" href="#c.QDC_HOMETransistionEnable" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_INDEXPulseEnable">
-<span class="target" id="QDC_8h_1a1aaa3f52ed9f55a3cd6974b6d7cddd43"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_INDEXPulseEnable</span></span></span><a class="headerlink" href="#c.QDC_INDEXPulseEnable" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a1aaa3f52ed9f55a3cd6974b6d7cddd43"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_INDEXPulseEnable</span></span></span><a class="headerlink" href="#c.QDC_INDEXPulseEnable" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_positionCompareEnable">
-<span class="target" id="QDC_8h_1aa22a697eb7155abb0275441861d607a4"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionCompareEnable</span></span></span><a class="headerlink" href="#c.QDC_positionCompareEnable" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1aa22a697eb7155abb0275441861d607a4"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionCompareEnable</span></span></span><a class="headerlink" href="#c.QDC_positionCompareEnable" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_positionROEnable">
-<span class="target" id="QDC_8h_1a57a0b7d0521d5da486b164b717735720"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionROEnable</span></span></span><a class="headerlink" href="#c.QDC_positionROEnable" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a57a0b7d0521d5da486b164b717735720"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionROEnable</span></span></span><a class="headerlink" href="#c.QDC_positionROEnable" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_positionRUEnable">
-<span class="target" id="QDC_8h_1a39f792385300d668be811cfaebe78a49"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionRUEnable</span></span></span><a class="headerlink" href="#c.QDC_positionRUEnable" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a39f792385300d668be811cfaebe78a49"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionRUEnable</span></span></span><a class="headerlink" href="#c.QDC_positionRUEnable" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_HOMETransitionFlag">
-<span class="target" id="QDC_8h_1adc9f88693d481847737c13bdce8542b5"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_HOMETransitionFlag</span></span></span><a class="headerlink" href="#c.QDC_HOMETransitionFlag" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1adc9f88693d481847737c13bdce8542b5"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_HOMETransitionFlag</span></span></span><a class="headerlink" href="#c.QDC_HOMETransitionFlag" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_INDEXPulseFlag">
-<span class="target" id="QDC_8h_1a5e94fa5c43943fcec5fcf4e7604f496c"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_INDEXPulseFlag</span></span></span><a class="headerlink" href="#c.QDC_INDEXPulseFlag" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a5e94fa5c43943fcec5fcf4e7604f496c"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_INDEXPulseFlag</span></span></span><a class="headerlink" href="#c.QDC_INDEXPulseFlag" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_positionCompareFlag">
-<span class="target" id="QDC_8h_1aaef338c58a13d05c41e31095131fa122"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionCompareFlag</span></span></span><a class="headerlink" href="#c.QDC_positionCompareFlag" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1aaef338c58a13d05c41e31095131fa122"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionCompareFlag</span></span></span><a class="headerlink" href="#c.QDC_positionCompareFlag" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_positionROFlag">
-<span class="target" id="QDC_8h_1aebd55afbfb4ec9384e3d476b0b0f3ccc"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionROFlag</span></span></span><a class="headerlink" href="#c.QDC_positionROFlag" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1aebd55afbfb4ec9384e3d476b0b0f3ccc"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionROFlag</span></span></span><a class="headerlink" href="#c.QDC_positionROFlag" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_positionRUFlag">
-<span class="target" id="QDC_8h_1a6e4ec4f74a5e83dd3ca2158e7b5fcc1a"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionRUFlag</span></span></span><a class="headerlink" href="#c.QDC_positionRUFlag" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1a6e4ec4f74a5e83dd3ca2158e7b5fcc1a"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_positionRUFlag</span></span></span><a class="headerlink" href="#c.QDC_positionRUFlag" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.QDC_lastDirectionFlag">
-<span class="target" id="QDC_8h_1aca020b3f8031a9f9c56d4444f19996a8"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_lastDirectionFlag</span></span></span><a class="headerlink" href="#c.QDC_lastDirectionFlag" title="Permalink to this definition"></a><br /></dt>
+<span class="target" id="QDC_8h_1aca020b3f8031a9f9c56d4444f19996a8"></span><span class="sig-name descname"><span class="n"><span class="pre">QDC_lastDirectionFlag</span></span></span><a class="headerlink" href="#c.QDC_lastDirectionFlag" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -384,31 +415,31 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
 <dl class="cpp enum">
 <dt class="sig sig-object cpp" id="_CPPv47QDC_pin">
-<span id="_CPPv37QDC_pin"></span><span id="_CPPv27QDC_pin"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_pin</span></span></span><a class="headerlink" href="#_CPPv47QDC_pin" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv37QDC_pin"></span><span id="_CPPv27QDC_pin"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_pin</span></span></span><a class="headerlink" href="#_CPPv47QDC_pin" title="Link to this definition"></a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N7QDC_pin6PHASEAE">
-<span id="_CPPv3N7QDC_pin6PHASEAE"></span><span id="_CPPv2N7QDC_pin6PHASEAE"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44a7c43df9dcb89a58850ae7440c013bab0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PHASEA</span></span></span><a class="headerlink" href="#_CPPv4N7QDC_pin6PHASEAE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N7QDC_pin6PHASEAE"></span><span id="_CPPv2N7QDC_pin6PHASEAE"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44a7c43df9dcb89a58850ae7440c013bab0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PHASEA</span></span></span><a class="headerlink" href="#_CPPv4N7QDC_pin6PHASEAE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N7QDC_pin6PHASEBE">
-<span id="_CPPv3N7QDC_pin6PHASEBE"></span><span id="_CPPv2N7QDC_pin6PHASEBE"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44a50e429aba60753dc32d82e1300c782c8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PHASEB</span></span></span><a class="headerlink" href="#_CPPv4N7QDC_pin6PHASEBE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N7QDC_pin6PHASEBE"></span><span id="_CPPv2N7QDC_pin6PHASEBE"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44a50e429aba60753dc32d82e1300c782c8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PHASEB</span></span></span><a class="headerlink" href="#_CPPv4N7QDC_pin6PHASEBE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N7QDC_pin4HOMEE">
-<span id="_CPPv3N7QDC_pin4HOMEE"></span><span id="_CPPv2N7QDC_pin4HOMEE"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44a8f280224da64e98f2d52d50ec43bc197"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HOME</span></span></span><a class="headerlink" href="#_CPPv4N7QDC_pin4HOMEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N7QDC_pin4HOMEE"></span><span id="_CPPv2N7QDC_pin4HOMEE"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44a8f280224da64e98f2d52d50ec43bc197"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HOME</span></span></span><a class="headerlink" href="#_CPPv4N7QDC_pin4HOMEE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N7QDC_pin5INDEXE">
-<span id="_CPPv3N7QDC_pin5INDEXE"></span><span id="_CPPv2N7QDC_pin5INDEXE"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44a5f0c05bad71a7b0dd266aae7ce4b3579"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INDEX</span></span></span><a class="headerlink" href="#_CPPv4N7QDC_pin5INDEXE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N7QDC_pin5INDEXE"></span><span id="_CPPv2N7QDC_pin5INDEXE"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44a5f0c05bad71a7b0dd266aae7ce4b3579"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INDEX</span></span></span><a class="headerlink" href="#_CPPv4N7QDC_pin5INDEXE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N7QDC_pin7TRIGGERE">
-<span id="_CPPv3N7QDC_pin7TRIGGERE"></span><span id="_CPPv2N7QDC_pin7TRIGGERE"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44a16be61c7643c97ef03953cad704f0345"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TRIGGER</span></span></span><a class="headerlink" href="#_CPPv4N7QDC_pin7TRIGGERE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N7QDC_pin7TRIGGERE"></span><span id="_CPPv2N7QDC_pin7TRIGGERE"></span><span class="target" id="QDC_8h_1a75cb14af106004dba49c52daff1d9d44a16be61c7643c97ef03953cad704f0345"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TRIGGER</span></span></span><a class="headerlink" href="#_CPPv4N7QDC_pin7TRIGGERE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -418,193 +449,193 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv410QDC_createv">
-<span id="_CPPv310QDC_createv"></span><span id="_CPPv210QDC_createv"></span><span id="QDC_create"></span><span class="target" id="QDC_8h_1a5c21642b3a453c246130256435ee3b85"></span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_create</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410QDC_createv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv310QDC_createv"></span><span id="_CPPv210QDC_createv"></span><span id="QDC_create"></span><span class="target" id="QDC_8h_1a5c21642b3a453c246130256435ee3b85"></span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_create</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410QDC_createv" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv413QDC_setConfigP5QDC_tP12QDC_config_t">
-<span id="_CPPv313QDC_setConfigP5QDC_tP12QDC_config_t"></span><span id="_CPPv213QDC_setConfigP5QDC_tP12QDC_config_t"></span><span id="QDC_setConfig__QDC_tP.QDC_config_tP"></span><span class="target" id="QDC_8h_1aa5fc302079e48ca62f70520a1e253fb6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_setConfig</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <a class="reference internal" href="#_CPPv412QDC_config_t" title="QDC_config_t"><span class="n"><span class="pre">QDC_config_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413QDC_setConfigP5QDC_tP12QDC_config_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv313QDC_setConfigP5QDC_tP12QDC_config_t"></span><span id="_CPPv213QDC_setConfigP5QDC_tP12QDC_config_t"></span><span id="QDC_setConfig__QDC_tP.QDC_config_tP"></span><span class="target" id="QDC_8h_1aa5fc302079e48ca62f70520a1e253fb6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_setConfig</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <a class="reference internal" href="#_CPPv412QDC_config_t" title="QDC_config_t"><span class="n"><span class="pre">QDC_config_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413QDC_setConfigP5QDC_tP12QDC_config_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv414QDC_makeConfigv">
-<span id="_CPPv314QDC_makeConfigv"></span><span id="_CPPv214QDC_makeConfigv"></span><span id="QDC_makeConfig"></span><span class="target" id="QDC_8h_1af69ec78b384fb02cbb063c3e211f3a46"></span><a class="reference internal" href="#_CPPv412QDC_config_t" title="QDC_config_t"><span class="n"><span class="pre">QDC_config_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_makeConfig</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414QDC_makeConfigv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv314QDC_makeConfigv"></span><span id="_CPPv214QDC_makeConfigv"></span><span id="QDC_makeConfig"></span><span class="target" id="QDC_8h_1af69ec78b384fb02cbb063c3e211f3a46"></span><a class="reference internal" href="#_CPPv412QDC_config_t" title="QDC_config_t"><span class="n"><span class="pre">QDC_config_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_makeConfig</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414QDC_makeConfigv" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv418QDC_mapDigitalPinsP5QDC_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t">
-<span id="_CPPv318QDC_mapDigitalPinsP5QDC_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="_CPPv218QDC_mapDigitalPinsP5QDC_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="QDC_mapDigitalPins__QDC_tP.uint8_t.uint8_t.uint8_t.uint8_t.uint8_t.uint8_t"></span><span class="target" id="QDC_8h_1a26c1c16c29882874da31b83d2431bf43"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_mapDigitalPins</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phaseA</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phaseB</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">home</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">trigger</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin_pus</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418QDC_mapDigitalPinsP5QDC_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv318QDC_mapDigitalPinsP5QDC_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="_CPPv218QDC_mapDigitalPinsP5QDC_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="QDC_mapDigitalPins__QDC_tP.uint8_t.uint8_t.uint8_t.uint8_t.uint8_t.uint8_t"></span><span class="target" id="QDC_8h_1a26c1c16c29882874da31b83d2431bf43"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_mapDigitalPins</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phaseA</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phaseB</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">home</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">trigger</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pin_pus</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418QDC_mapDigitalPinsP5QDC_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t7uint8_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv420QDC_enableInterruptsP5QDC_t">
-<span id="_CPPv320QDC_enableInterruptsP5QDC_t"></span><span id="_CPPv220QDC_enableInterruptsP5QDC_t"></span><span id="QDC_enableInterrupts__QDC_tP"></span><span class="target" id="QDC_8h_1aac6de907fec74a1c126dbefc83e0764c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_enableInterrupts</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420QDC_enableInterruptsP5QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv320QDC_enableInterruptsP5QDC_t"></span><span id="_CPPv220QDC_enableInterruptsP5QDC_t"></span><span id="QDC_enableInterrupts__QDC_tP"></span><span class="target" id="QDC_8h_1aac6de907fec74a1c126dbefc83e0764c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_enableInterrupts</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420QDC_enableInterruptsP5QDC_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419QDC_attachInterruptP5QDC_tPFvvE">
-<span id="_CPPv319QDC_attachInterruptP5QDC_tPFvvE"></span><span id="_CPPv219QDC_attachInterruptP5QDC_tPFvvE"></span><span class="target" id="QDC_8h_1a5c71ee82d923f2e9e1b085d45f34bb41"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_attachInterrupt</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">isr</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419QDC_attachInterruptP5QDC_tPFvvE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv319QDC_attachInterruptP5QDC_tPFvvE"></span><span id="_CPPv219QDC_attachInterruptP5QDC_tPFvvE"></span><span class="target" id="QDC_8h_1a5c71ee82d923f2e9e1b085d45f34bb41"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_attachInterrupt</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">isr</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419QDC_attachInterruptP5QDC_tPFvvE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv421QDC_disableInterruptsP5QDC_t8uint32_t">
-<span id="_CPPv321QDC_disableInterruptsP5QDC_t8uint32_t"></span><span id="_CPPv221QDC_disableInterruptsP5QDC_t8uint32_t"></span><span id="QDC_disableInterrupts__QDC_tP.uint32_t"></span><span class="target" id="QDC_8h_1a8f4714ecd8a8709be27418ea8231956b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_disableInterrupts</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421QDC_disableInterruptsP5QDC_t8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv321QDC_disableInterruptsP5QDC_t8uint32_t"></span><span id="_CPPv221QDC_disableInterruptsP5QDC_t8uint32_t"></span><span id="QDC_disableInterrupts__QDC_tP.uint32_t"></span><span class="target" id="QDC_8h_1a8f4714ecd8a8709be27418ea8231956b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_disableInterrupts</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421QDC_disableInterruptsP5QDC_t8uint32_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv423QDC_clearInterruptFlagsP5QDC_t8uint32_t">
-<span id="_CPPv323QDC_clearInterruptFlagsP5QDC_t8uint32_t"></span><span id="_CPPv223QDC_clearInterruptFlagsP5QDC_t8uint32_t"></span><span id="QDC_clearInterruptFlags__QDC_tP.uint32_t"></span><span class="target" id="QDC_8h_1adb91455208153cfc9e6c95d10cf5e909"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_clearInterruptFlags</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423QDC_clearInterruptFlagsP5QDC_t8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv323QDC_clearInterruptFlagsP5QDC_t8uint32_t"></span><span id="_CPPv223QDC_clearInterruptFlagsP5QDC_t8uint32_t"></span><span id="QDC_clearInterruptFlags__QDC_tP.uint32_t"></span><span class="target" id="QDC_8h_1adb91455208153cfc9e6c95d10cf5e909"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_clearInterruptFlags</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423QDC_clearInterruptFlagsP5QDC_t8uint32_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv48QDC_initP5QDC_t">
-<span id="_CPPv38QDC_initP5QDC_t"></span><span id="_CPPv28QDC_initP5QDC_t"></span><span id="QDC_init__QDC_tP"></span><span class="target" id="QDC_8h_1aca5feccc91a19f95ddc68a12c2b6f7b5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_init</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48QDC_initP5QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv38QDC_initP5QDC_t"></span><span id="_CPPv28QDC_initP5QDC_t"></span><span id="QDC_init__QDC_tP"></span><span class="target" id="QDC_8h_1aca5feccc91a19f95ddc68a12c2b6f7b5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_init</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48QDC_initP5QDC_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419QDC_setInitialCountP5QDC_t8uint32_t">
-<span id="_CPPv319QDC_setInitialCountP5QDC_t8uint32_t"></span><span id="_CPPv219QDC_setInitialCountP5QDC_t8uint32_t"></span><span id="QDC_setInitialCount__QDC_tP.uint32_t"></span><span class="target" id="QDC_8h_1a74acbfa7b802a8f3b9e7563743abf980"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_setInitialCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">initial_pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419QDC_setInitialCountP5QDC_t8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv319QDC_setInitialCountP5QDC_t8uint32_t"></span><span id="_CPPv219QDC_setInitialCountP5QDC_t8uint32_t"></span><span id="QDC_setInitialCount__QDC_tP.uint32_t"></span><span class="target" id="QDC_8h_1a74acbfa7b802a8f3b9e7563743abf980"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_setInitialCount</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">initial_pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419QDC_setInitialCountP5QDC_t8uint32_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv415QDC_getPositionP5QDC_t">
-<span id="_CPPv315QDC_getPositionP5QDC_t"></span><span id="_CPPv215QDC_getPositionP5QDC_t"></span><span id="QDC_getPosition__QDC_tP"></span><span class="target" id="QDC_8h_1ae1cb690893743e58e387096ca6b5cb1b"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getPosition</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415QDC_getPositionP5QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv315QDC_getPositionP5QDC_t"></span><span id="_CPPv215QDC_getPositionP5QDC_t"></span><span id="QDC_getPosition__QDC_tP"></span><span class="target" id="QDC_8h_1ae1cb690893743e58e387096ca6b5cb1b"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getPosition</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415QDC_getPositionP5QDC_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419QDC_getPositionHoldP5QDC_t">
-<span id="_CPPv319QDC_getPositionHoldP5QDC_t"></span><span id="_CPPv219QDC_getPositionHoldP5QDC_t"></span><span id="QDC_getPositionHold__QDC_tP"></span><span class="target" id="QDC_8h_1a231f3cb8ab5aee90f237a410351fda1d"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getPositionHold</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419QDC_getPositionHoldP5QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv319QDC_getPositionHoldP5QDC_t"></span><span id="_CPPv219QDC_getPositionHoldP5QDC_t"></span><span id="QDC_getPositionHold__QDC_tP"></span><span class="target" id="QDC_8h_1a231f3cb8ab5aee90f237a410351fda1d"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getPositionHold</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419QDC_getPositionHoldP5QDC_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv425QDC_getPositionDifferenceP5QDC_t">
-<span id="_CPPv325QDC_getPositionDifferenceP5QDC_t"></span><span id="_CPPv225QDC_getPositionDifferenceP5QDC_t"></span><span id="QDC_getPositionDifference__QDC_tP"></span><span class="target" id="QDC_8h_1aa6688a0fb786d2fe7233ec58ff2c6ccf"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getPositionDifference</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425QDC_getPositionDifferenceP5QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv325QDC_getPositionDifferenceP5QDC_t"></span><span id="_CPPv225QDC_getPositionDifferenceP5QDC_t"></span><span id="QDC_getPositionDifference__QDC_tP"></span><span class="target" id="QDC_8h_1aa6688a0fb786d2fe7233ec58ff2c6ccf"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getPositionDifference</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425QDC_getPositionDifferenceP5QDC_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv429QDC_getPositionDifferenceHoldP5QDC_t">
-<span id="_CPPv329QDC_getPositionDifferenceHoldP5QDC_t"></span><span id="_CPPv229QDC_getPositionDifferenceHoldP5QDC_t"></span><span id="QDC_getPositionDifferenceHold__QDC_tP"></span><span class="target" id="QDC_8h_1a73098c54839c63b758f4a09ce81ce4b4"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getPositionDifferenceHold</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429QDC_getPositionDifferenceHoldP5QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv329QDC_getPositionDifferenceHoldP5QDC_t"></span><span id="_CPPv229QDC_getPositionDifferenceHoldP5QDC_t"></span><span id="QDC_getPositionDifferenceHold__QDC_tP"></span><span class="target" id="QDC_8h_1a73098c54839c63b758f4a09ce81ce4b4"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getPositionDifferenceHold</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429QDC_getPositionDifferenceHoldP5QDC_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv418QDC_getRevolutionsP5QDC_t">
-<span id="_CPPv318QDC_getRevolutionsP5QDC_t"></span><span id="_CPPv218QDC_getRevolutionsP5QDC_t"></span><span id="QDC_getRevolutions__QDC_tP"></span><span class="target" id="QDC_8h_1a0548766e9b9d8fc5af1bb0e71011ed18"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getRevolutions</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418QDC_getRevolutionsP5QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv318QDC_getRevolutionsP5QDC_t"></span><span id="_CPPv218QDC_getRevolutionsP5QDC_t"></span><span id="QDC_getRevolutions__QDC_tP"></span><span class="target" id="QDC_8h_1a0548766e9b9d8fc5af1bb0e71011ed18"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getRevolutions</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418QDC_getRevolutionsP5QDC_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv422QDC_getRevolutionsHoldP5QDC_t">
-<span id="_CPPv322QDC_getRevolutionsHoldP5QDC_t"></span><span id="_CPPv222QDC_getRevolutionsHoldP5QDC_t"></span><span id="QDC_getRevolutionsHold__QDC_tP"></span><span class="target" id="QDC_8h_1aa28e5495228789686918116449833d57"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getRevolutionsHold</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422QDC_getRevolutionsHoldP5QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv322QDC_getRevolutionsHoldP5QDC_t"></span><span id="_CPPv222QDC_getRevolutionsHoldP5QDC_t"></span><span id="QDC_getRevolutionsHold__QDC_tP"></span><span class="target" id="QDC_8h_1aa28e5495228789686918116449833d57"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getRevolutionsHold</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422QDC_getRevolutionsHoldP5QDC_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv420QDC_getCTRLIRQStatusP5QDC_t">
-<span id="_CPPv320QDC_getCTRLIRQStatusP5QDC_t"></span><span id="_CPPv220QDC_getCTRLIRQStatusP5QDC_t"></span><span id="QDC_getCTRLIRQStatus__QDC_tP"></span><span class="target" id="QDC_8h_1a89d0416dbea085a758256ccea5557e2a"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getCTRLIRQStatus</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420QDC_getCTRLIRQStatusP5QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv320QDC_getCTRLIRQStatusP5QDC_t"></span><span id="_CPPv220QDC_getCTRLIRQStatusP5QDC_t"></span><span id="QDC_getCTRLIRQStatus__QDC_tP"></span><span class="target" id="QDC_8h_1a89d0416dbea085a758256ccea5557e2a"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getCTRLIRQStatus</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420QDC_getCTRLIRQStatusP5QDC_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv421QDC_getCTRL2IRQStatusP5QDC_t">
-<span id="_CPPv321QDC_getCTRL2IRQStatusP5QDC_t"></span><span id="_CPPv221QDC_getCTRL2IRQStatusP5QDC_t"></span><span id="QDC_getCTRL2IRQStatus__QDC_tP"></span><span class="target" id="QDC_8h_1add6545eb739f33a4775daf9fe953fab4"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getCTRL2IRQStatus</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421QDC_getCTRL2IRQStatusP5QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv321QDC_getCTRL2IRQStatusP5QDC_t"></span><span id="_CPPv221QDC_getCTRL2IRQStatusP5QDC_t"></span><span id="QDC_getCTRL2IRQStatus__QDC_tP"></span><span class="target" id="QDC_8h_1add6545eb739f33a4775daf9fe953fab4"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_getCTRL2IRQStatus</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45QDC_t" title="QDC_t"><span class="n"><span class="pre">QDC_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">qdc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421QDC_getCTRL2IRQStatusP5QDC_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv412QDC_config_t">
-<span id="_CPPv312QDC_config_t"></span><span id="_CPPv212QDC_config_t"></span><span id="QDC_config_t"></span><span class="target" id="structQDC__config__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_config_t</span></span></span><a class="headerlink" href="#_CPPv412QDC_config_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv312QDC_config_t"></span><span id="_CPPv212QDC_config_t"></span><span id="QDC_config_t"></span><span class="target" id="structQDC__config__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_config_t</span></span></span><a class="headerlink" href="#_CPPv412QDC_config_t" title="Link to this definition"></a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t22enableReverseDirectionE">
-<span id="_CPPv3N12QDC_config_t22enableReverseDirectionE"></span><span id="_CPPv2N12QDC_config_t22enableReverseDirectionE"></span><span id="QDC_config_t::enableReverseDirection__b"></span><span class="target" id="structQDC__config__t_1a21988a95df871be1d1289e37af1e48a6"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableReverseDirection</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t22enableReverseDirectionE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t22enableReverseDirectionE"></span><span id="_CPPv2N12QDC_config_t22enableReverseDirectionE"></span><span id="QDC_config_t::enableReverseDirection__b"></span><span class="target" id="structQDC__config__t_1a21988a95df871be1d1289e37af1e48a6"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableReverseDirection</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t22enableReverseDirectionE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t15decoderWorkModeE">
-<span id="_CPPv3N12QDC_config_t15decoderWorkModeE"></span><span id="_CPPv2N12QDC_config_t15decoderWorkModeE"></span><span id="QDC_config_t::decoderWorkMode__b"></span><span class="target" id="structQDC__config__t_1a34260c625e17dd41e4dc2ea7250c61f2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">decoderWorkMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t15decoderWorkModeE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t15decoderWorkModeE"></span><span id="_CPPv2N12QDC_config_t15decoderWorkModeE"></span><span id="QDC_config_t::decoderWorkMode__b"></span><span class="target" id="structQDC__config__t_1a34260c625e17dd41e4dc2ea7250c61f2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">decoderWorkMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t15decoderWorkModeE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t15HOMETriggerModeE">
-<span id="_CPPv3N12QDC_config_t15HOMETriggerModeE"></span><span id="_CPPv2N12QDC_config_t15HOMETriggerModeE"></span><span id="QDC_config_t::HOMETriggerMode__uint8_t"></span><span class="target" id="structQDC__config__t_1adfb75eb5b44ea5de62d87e1c71b6d54a"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HOMETriggerMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t15HOMETriggerModeE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t15HOMETriggerModeE"></span><span id="_CPPv2N12QDC_config_t15HOMETriggerModeE"></span><span id="QDC_config_t::HOMETriggerMode__uint8_t"></span><span class="target" id="structQDC__config__t_1adfb75eb5b44ea5de62d87e1c71b6d54a"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HOMETriggerMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t15HOMETriggerModeE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t16INDEXTriggerModeE">
-<span id="_CPPv3N12QDC_config_t16INDEXTriggerModeE"></span><span id="_CPPv2N12QDC_config_t16INDEXTriggerModeE"></span><span id="QDC_config_t::INDEXTriggerMode__uint8_t"></span><span class="target" id="structQDC__config__t_1a3668b25ebf3c9a39afb209fa0dcde750"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INDEXTriggerMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t16INDEXTriggerModeE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t16INDEXTriggerModeE"></span><span id="_CPPv2N12QDC_config_t16INDEXTriggerModeE"></span><span id="QDC_config_t::INDEXTriggerMode__uint8_t"></span><span class="target" id="structQDC__config__t_1a3668b25ebf3c9a39afb209fa0dcde750"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INDEXTriggerMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t16INDEXTriggerModeE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t12clearCounterE">
-<span id="_CPPv3N12QDC_config_t12clearCounterE"></span><span id="_CPPv2N12QDC_config_t12clearCounterE"></span><span id="QDC_config_t::clearCounter__b"></span><span class="target" id="structQDC__config__t_1a96d40cbd279a9b34df367a7e7b4c7cfb"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearCounter</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t12clearCounterE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t12clearCounterE"></span><span id="_CPPv2N12QDC_config_t12clearCounterE"></span><span id="QDC_config_t::clearCounter__b"></span><span class="target" id="structQDC__config__t_1a96d40cbd279a9b34df367a7e7b4c7cfb"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearCounter</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t12clearCounterE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t16clearHoldCounterE">
-<span id="_CPPv3N12QDC_config_t16clearHoldCounterE"></span><span id="_CPPv2N12QDC_config_t16clearHoldCounterE"></span><span id="QDC_config_t::clearHoldCounter__b"></span><span class="target" id="structQDC__config__t_1a0b8eadc3f594fb511df0c2915af1a608"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearHoldCounter</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t16clearHoldCounterE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t16clearHoldCounterE"></span><span id="_CPPv2N12QDC_config_t16clearHoldCounterE"></span><span id="QDC_config_t::clearHoldCounter__b"></span><span class="target" id="structQDC__config__t_1a0b8eadc3f594fb511df0c2915af1a608"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearHoldCounter</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t16clearHoldCounterE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t11filterCountE">
-<span id="_CPPv3N12QDC_config_t11filterCountE"></span><span id="_CPPv2N12QDC_config_t11filterCountE"></span><span id="QDC_config_t::filterCount__uint16_t"></span><span class="target" id="structQDC__config__t_1a3be9f3aa521b695f29b0af6a885beaae"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filterCount</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t11filterCountE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t11filterCountE"></span><span id="_CPPv2N12QDC_config_t11filterCountE"></span><span id="QDC_config_t::filterCount__uint16_t"></span><span class="target" id="structQDC__config__t_1a3be9f3aa521b695f29b0af6a885beaae"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filterCount</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t11filterCountE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t18filterSamplePeriodE">
-<span id="_CPPv3N12QDC_config_t18filterSamplePeriodE"></span><span id="_CPPv2N12QDC_config_t18filterSamplePeriodE"></span><span id="QDC_config_t::filterSamplePeriod__uint16_t"></span><span class="target" id="structQDC__config__t_1abcc02cdfa42f40f4174305ce0625811e"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filterSamplePeriod</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t18filterSamplePeriodE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t18filterSamplePeriodE"></span><span id="_CPPv2N12QDC_config_t18filterSamplePeriodE"></span><span id="QDC_config_t::filterSamplePeriod__uint16_t"></span><span class="target" id="structQDC__config__t_1abcc02cdfa42f40f4174305ce0625811e"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filterSamplePeriod</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t18filterSamplePeriodE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t17positionMatchModeE">
-<span id="_CPPv3N12QDC_config_t17positionMatchModeE"></span><span id="_CPPv2N12QDC_config_t17positionMatchModeE"></span><span id="QDC_config_t::positionMatchMode__b"></span><span class="target" id="structQDC__config__t_1a9fc7ef0f842014ddfc82cee88515cc5c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionMatchMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t17positionMatchModeE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t17positionMatchModeE"></span><span id="_CPPv2N12QDC_config_t17positionMatchModeE"></span><span id="QDC_config_t::positionMatchMode__b"></span><span class="target" id="structQDC__config__t_1a9fc7ef0f842014ddfc82cee88515cc5c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionMatchMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t17positionMatchModeE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t19positionCompareModeE">
-<span id="_CPPv3N12QDC_config_t19positionCompareModeE"></span><span id="_CPPv2N12QDC_config_t19positionCompareModeE"></span><span id="QDC_config_t::positionCompareMode__b"></span><span class="target" id="structQDC__config__t_1a9c9b879bab1ea128cf701d28f39b0ce4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionCompareMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t19positionCompareModeE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t19positionCompareModeE"></span><span id="_CPPv2N12QDC_config_t19positionCompareModeE"></span><span id="QDC_config_t::positionCompareMode__b"></span><span class="target" id="structQDC__config__t_1a9c9b879bab1ea128cf701d28f39b0ce4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionCompareMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t19positionCompareModeE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t18positionCompareValE">
-<span id="_CPPv3N12QDC_config_t18positionCompareValE"></span><span id="_CPPv2N12QDC_config_t18positionCompareValE"></span><span id="QDC_config_t::positionCompareVal__uint32_t"></span><span class="target" id="structQDC__config__t_1a7eb979a40e667d4a1f20c60188d824be"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionCompareVal</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t18positionCompareValE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t18positionCompareValE"></span><span id="_CPPv2N12QDC_config_t18positionCompareValE"></span><span id="QDC_config_t::positionCompareVal__uint32_t"></span><span class="target" id="structQDC__config__t_1a7eb979a40e667d4a1f20c60188d824be"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionCompareVal</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t18positionCompareValE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t24revolutionCountConditionE">
-<span id="_CPPv3N12QDC_config_t24revolutionCountConditionE"></span><span id="_CPPv2N12QDC_config_t24revolutionCountConditionE"></span><span id="QDC_config_t::revolutionCountCondition__b"></span><span class="target" id="structQDC__config__t_1a8e0e5a967d18661ed1f38e4ecad37be3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">revolutionCountCondition</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t24revolutionCountConditionE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t24revolutionCountConditionE"></span><span id="_CPPv2N12QDC_config_t24revolutionCountConditionE"></span><span id="QDC_config_t::revolutionCountCondition__b"></span><span class="target" id="structQDC__config__t_1a8e0e5a967d18661ed1f38e4ecad37be3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">revolutionCountCondition</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t24revolutionCountConditionE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t21enableModuloCountModeE">
-<span id="_CPPv3N12QDC_config_t21enableModuloCountModeE"></span><span id="_CPPv2N12QDC_config_t21enableModuloCountModeE"></span><span id="QDC_config_t::enableModuloCountMode__b"></span><span class="target" id="structQDC__config__t_1ac481a69043958bbc0ccd02c95e930211"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableModuloCountMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t21enableModuloCountModeE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t21enableModuloCountModeE"></span><span id="_CPPv2N12QDC_config_t21enableModuloCountModeE"></span><span id="QDC_config_t::enableModuloCountMode__b"></span><span class="target" id="structQDC__config__t_1ac481a69043958bbc0ccd02c95e930211"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableModuloCountMode</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t21enableModuloCountModeE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t20positionModulusValueE">
-<span id="_CPPv3N12QDC_config_t20positionModulusValueE"></span><span id="_CPPv2N12QDC_config_t20positionModulusValueE"></span><span id="QDC_config_t::positionModulusValue__uint32_t"></span><span class="target" id="structQDC__config__t_1aaf3981cadb767d5d815d1ea5527d6b63"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionModulusValue</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t20positionModulusValueE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t20positionModulusValueE"></span><span id="_CPPv2N12QDC_config_t20positionModulusValueE"></span><span id="QDC_config_t::positionModulusValue__uint32_t"></span><span class="target" id="structQDC__config__t_1aaf3981cadb767d5d815d1ea5527d6b63"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionModulusValue</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t20positionModulusValueE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t18positionInitialValE">
-<span id="_CPPv3N12QDC_config_t18positionInitialValE"></span><span id="_CPPv2N12QDC_config_t18positionInitialValE"></span><span id="QDC_config_t::positionInitialVal__uint32_t"></span><span class="target" id="structQDC__config__t_1a8a7a10f3485e912aa0a8cb41a494031d"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionInitialVal</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t18positionInitialValE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t18positionInitialValE"></span><span id="_CPPv2N12QDC_config_t18positionInitialValE"></span><span id="QDC_config_t::positionInitialVal__uint32_t"></span><span class="target" id="structQDC__config__t_1a8a7a10f3485e912aa0a8cb41a494031d"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionInitialVal</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t18positionInitialValE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t12positionROIEE">
-<span id="_CPPv3N12QDC_config_t12positionROIEE"></span><span id="_CPPv2N12QDC_config_t12positionROIEE"></span><span id="QDC_config_t::positionROIE__uint8_t"></span><span class="target" id="structQDC__config__t_1a97ceff21a29e7720246522d85834eb29"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionROIE</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t12positionROIEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t12positionROIEE"></span><span id="_CPPv2N12QDC_config_t12positionROIEE"></span><span id="QDC_config_t::positionROIE__uint8_t"></span><span class="target" id="structQDC__config__t_1a97ceff21a29e7720246522d85834eb29"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionROIE</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t12positionROIEE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t12positionRUIEE">
-<span id="_CPPv3N12QDC_config_t12positionRUIEE"></span><span id="_CPPv2N12QDC_config_t12positionRUIEE"></span><span id="QDC_config_t::positionRUIE__uint8_t"></span><span class="target" id="structQDC__config__t_1ae40fc0a6bce4f98819379bf0e93eb257"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionRUIE</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t12positionRUIEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t12positionRUIEE"></span><span id="_CPPv2N12QDC_config_t12positionRUIEE"></span><span id="QDC_config_t::positionRUIE__uint8_t"></span><span class="target" id="structQDC__config__t_1ae40fc0a6bce4f98819379bf0e93eb257"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionRUIE</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t12positionRUIEE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t12IndexTriggerE">
-<span id="_CPPv3N12QDC_config_t12IndexTriggerE"></span><span id="_CPPv2N12QDC_config_t12IndexTriggerE"></span><span id="QDC_config_t::IndexTrigger__b"></span><span class="target" id="structQDC__config__t_1a2ef7539c71f2e7181cb18d594a0a251c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IndexTrigger</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t12IndexTriggerE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t12IndexTriggerE"></span><span id="_CPPv2N12QDC_config_t12IndexTriggerE"></span><span id="QDC_config_t::IndexTrigger__b"></span><span class="target" id="structQDC__config__t_1a2ef7539c71f2e7181cb18d594a0a251c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IndexTrigger</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t12IndexTriggerE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12QDC_config_t11HomeTriggerE">
-<span id="_CPPv3N12QDC_config_t11HomeTriggerE"></span><span id="_CPPv2N12QDC_config_t11HomeTriggerE"></span><span id="QDC_config_t::HomeTrigger__b"></span><span class="target" id="structQDC__config__t_1a079a4b15cec11fe76b3b4fdcaf1b5717"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HomeTrigger</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t11HomeTriggerE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N12QDC_config_t11HomeTriggerE"></span><span id="_CPPv2N12QDC_config_t11HomeTriggerE"></span><span id="QDC_config_t::HomeTrigger__b"></span><span class="target" id="structQDC__config__t_1a079a4b15cec11fe76b3b4fdcaf1b5717"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HomeTrigger</span></span></span><a class="headerlink" href="#_CPPv4N12QDC_config_t11HomeTriggerE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -612,57 +643,57 @@
 
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv413QDC_channel_t">
-<span id="_CPPv313QDC_channel_t"></span><span id="_CPPv213QDC_channel_t"></span><span id="QDC_channel_t"></span><span class="target" id="structQDC__channel__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_channel_t</span></span></span><a class="headerlink" href="#_CPPv413QDC_channel_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv313QDC_channel_t"></span><span id="_CPPv213QDC_channel_t"></span><span id="QDC_channel_t"></span><span class="target" id="structQDC__channel__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_channel_t</span></span></span><a class="headerlink" href="#_CPPv413QDC_channel_t" title="Link to this definition"></a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13QDC_channel_t6enc_chE">
-<span id="_CPPv3N13QDC_channel_t6enc_chE"></span><span id="_CPPv2N13QDC_channel_t6enc_chE"></span><span id="QDC_channel_t::enc_ch__uint8_t"></span><span class="target" id="structQDC__channel__t_1a797af2b483374b5d83609f55a8e600bb"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enc_ch</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t6enc_chE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N13QDC_channel_t6enc_chE"></span><span id="_CPPv2N13QDC_channel_t6enc_chE"></span><span id="QDC_channel_t::enc_ch__uint8_t"></span><span class="target" id="structQDC__channel__t_1a797af2b483374b5d83609f55a8e600bb"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enc_ch</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t6enc_chE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13QDC_channel_t3ENCE">
-<span id="_CPPv3N13QDC_channel_t3ENCE"></span><span id="_CPPv2N13QDC_channel_t3ENCE"></span><span id="QDC_channel_t::ENC__IMXRT_ENC_tVP"></span><span class="target" id="structQDC__channel__t_1ab8be9bc083b7e94c8cc5794e98418e48"></span><span class="k"><span class="pre">volatile</span></span><span class="w"> </span><span class="n"><span class="pre">IMXRT_ENC_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">ENC</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t3ENCE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N13QDC_channel_t3ENCE"></span><span id="_CPPv2N13QDC_channel_t3ENCE"></span><span id="QDC_channel_t::ENC__IMXRT_ENC_tVP"></span><span class="target" id="structQDC__channel__t_1ab8be9bc083b7e94c8cc5794e98418e48"></span><span class="k"><span class="pre">volatile</span></span><span class="w"> </span><span class="n"><span class="pre">IMXRT_ENC_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">ENC</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t3ENCE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13QDC_channel_t9interruptE">
-<span id="_CPPv3N13QDC_channel_t9interruptE"></span><span id="_CPPv2N13QDC_channel_t9interruptE"></span><span id="QDC_channel_t::interrupt__IRQ_NUMBER_t"></span><span class="target" id="structQDC__channel__t_1ad0c86c2099eb8216313efe77d09fe3bd"></span><span class="n"><span class="pre">IRQ_NUMBER_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interrupt</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t9interruptE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N13QDC_channel_t9interruptE"></span><span id="_CPPv2N13QDC_channel_t9interruptE"></span><span id="QDC_channel_t::interrupt__IRQ_NUMBER_t"></span><span class="target" id="structQDC__channel__t_1ad0c86c2099eb8216313efe77d09fe3bd"></span><span class="n"><span class="pre">IRQ_NUMBER_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interrupt</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t9interruptE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13QDC_channel_t6phaseAE">
-<span id="_CPPv3N13QDC_channel_t6phaseAE"></span><span id="_CPPv2N13QDC_channel_t6phaseAE"></span><span id="QDC_channel_t::phaseA__uint16_t"></span><span class="target" id="structQDC__channel__t_1a8fe089b3820e9f7ecea95d3812c89a4e"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">phaseA</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t6phaseAE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N13QDC_channel_t6phaseAE"></span><span id="_CPPv2N13QDC_channel_t6phaseAE"></span><span id="QDC_channel_t::phaseA__uint16_t"></span><span class="target" id="structQDC__channel__t_1a8fe089b3820e9f7ecea95d3812c89a4e"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">phaseA</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t6phaseAE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13QDC_channel_t6phaseBE">
-<span id="_CPPv3N13QDC_channel_t6phaseBE"></span><span id="_CPPv2N13QDC_channel_t6phaseBE"></span><span id="QDC_channel_t::phaseB__uint16_t"></span><span class="target" id="structQDC__channel__t_1ac07edfaef75344ad13783ea64dd2a473"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">phaseB</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t6phaseBE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N13QDC_channel_t6phaseBE"></span><span id="_CPPv2N13QDC_channel_t6phaseBE"></span><span id="QDC_channel_t::phaseB__uint16_t"></span><span class="target" id="structQDC__channel__t_1ac07edfaef75344ad13783ea64dd2a473"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">phaseB</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t6phaseBE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13QDC_channel_t5indexE">
-<span id="_CPPv3N13QDC_channel_t5indexE"></span><span id="_CPPv2N13QDC_channel_t5indexE"></span><span id="QDC_channel_t::index__uint16_t"></span><span class="target" id="structQDC__channel__t_1ad8e32f6a86d99dfa127bba8538061777"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">index</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t5indexE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N13QDC_channel_t5indexE"></span><span id="_CPPv2N13QDC_channel_t5indexE"></span><span id="QDC_channel_t::index__uint16_t"></span><span class="target" id="structQDC__channel__t_1ad8e32f6a86d99dfa127bba8538061777"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">index</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t5indexE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13QDC_channel_t4homeE">
-<span id="_CPPv3N13QDC_channel_t4homeE"></span><span id="_CPPv2N13QDC_channel_t4homeE"></span><span id="QDC_channel_t::home__uint16_t"></span><span class="target" id="structQDC__channel__t_1afa57a8a7b21ac8fe586c13c9971ec2ce"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">home</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t4homeE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N13QDC_channel_t4homeE"></span><span id="_CPPv2N13QDC_channel_t4homeE"></span><span id="QDC_channel_t::home__uint16_t"></span><span class="target" id="structQDC__channel__t_1afa57a8a7b21ac8fe586c13c9971ec2ce"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">home</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t4homeE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13QDC_channel_t7triggerE">
-<span id="_CPPv3N13QDC_channel_t7triggerE"></span><span id="_CPPv2N13QDC_channel_t7triggerE"></span><span id="QDC_channel_t::trigger__uint16_t"></span><span class="target" id="structQDC__channel__t_1a0fe36189e98baea0d89f384ad7586640"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trigger</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t7triggerE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N13QDC_channel_t7triggerE"></span><span id="_CPPv2N13QDC_channel_t7triggerE"></span><span id="QDC_channel_t::trigger__uint16_t"></span><span class="target" id="structQDC__channel__t_1a0fe36189e98baea0d89f384ad7586640"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trigger</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t7triggerE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13QDC_channel_t19clock_gate_registerE">
-<span id="_CPPv3N13QDC_channel_t19clock_gate_registerE"></span><span id="_CPPv2N13QDC_channel_t19clock_gate_registerE"></span><span id="QDC_channel_t::clock_gate_register__uint32_tVP"></span><span class="target" id="structQDC__channel__t_1a6fd1e1c75cc8b7995848028e2aaec773"></span><span class="k"><span class="pre">volatile</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">clock_gate_register</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t19clock_gate_registerE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N13QDC_channel_t19clock_gate_registerE"></span><span id="_CPPv2N13QDC_channel_t19clock_gate_registerE"></span><span id="QDC_channel_t::clock_gate_register__uint32_tVP"></span><span class="target" id="structQDC__channel__t_1a6fd1e1c75cc8b7995848028e2aaec773"></span><span class="k"><span class="pre">volatile</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">clock_gate_register</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t19clock_gate_registerE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13QDC_channel_t15clock_gate_maskE">
-<span id="_CPPv3N13QDC_channel_t15clock_gate_maskE"></span><span id="_CPPv2N13QDC_channel_t15clock_gate_maskE"></span><span id="QDC_channel_t::clock_gate_mask__uint32_t"></span><span class="target" id="structQDC__channel__t_1aaebd53e692eccc90b5802796ca8d7ed0"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clock_gate_mask</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t15clock_gate_maskE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N13QDC_channel_t15clock_gate_maskE"></span><span id="_CPPv2N13QDC_channel_t15clock_gate_maskE"></span><span id="QDC_channel_t::clock_gate_mask__uint32_t"></span><span class="target" id="structQDC__channel__t_1aaebd53e692eccc90b5802796ca8d7ed0"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clock_gate_mask</span></span></span><a class="headerlink" href="#_CPPv4N13QDC_channel_t15clock_gate_maskE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -670,7 +701,7 @@
 
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv45QDC_t">
-<span id="_CPPv35QDC_t"></span><span id="_CPPv25QDC_t"></span><span id="QDC_t"></span><span class="target" id="structQDC__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_t</span></span></span><a class="headerlink" href="#_CPPv45QDC_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv35QDC_t"></span><span id="_CPPv25QDC_t"></span><span id="QDC_t"></span><span class="target" id="structQDC__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QDC_t</span></span></span><a class="headerlink" href="#_CPPv45QDC_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Collaboration diagram for QDC_t:</p>
 <figure class="align-default">
 <div align="center" class="align-center"><div class="graphviz"><img src="../../_images/graphviz-1651f74535db5d83cde18c58c3b752eb7cb94913.png" alt="digraph {
@@ -687,12 +718,12 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5QDC_t7channelE">
-<span id="_CPPv3N5QDC_t7channelE"></span><span id="_CPPv2N5QDC_t7channelE"></span><span id="QDC_t::channel__uint8_t"></span><span class="target" id="structQDC__t_1a02bcfc6c4e1a08ae7717d55296076915"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">channel</span></span></span><a class="headerlink" href="#_CPPv4N5QDC_t7channelE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N5QDC_t7channelE"></span><span id="_CPPv2N5QDC_t7channelE"></span><span id="QDC_t::channel__uint8_t"></span><span class="target" id="structQDC__t_1a02bcfc6c4e1a08ae7717d55296076915"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">channel</span></span></span><a class="headerlink" href="#_CPPv4N5QDC_t7channelE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5QDC_t6configE">
-<span id="_CPPv3N5QDC_t6configE"></span><span id="_CPPv2N5QDC_t6configE"></span><span id="QDC_t::config__QDC_config_t"></span><span class="target" id="structQDC__t_1ae707405e1d81558f51c2411230497323"></span><a class="reference internal" href="#_CPPv412QDC_config_t" title="QDC_config_t"><span class="n"><span class="pre">QDC_config_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">config</span></span></span><a class="headerlink" href="#_CPPv4N5QDC_t6configE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N5QDC_t6configE"></span><span id="_CPPv2N5QDC_t6configE"></span><span id="QDC_t::config__QDC_config_t"></span><span class="target" id="structQDC__t_1ae707405e1d81558f51c2411230497323"></span><a class="reference internal" href="#_CPPv412QDC_config_t" title="QDC_config_t"><span class="n"><span class="pre">QDC_config_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">config</span></span></span><a class="headerlink" href="#_CPPv4N5QDC_t6configE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
